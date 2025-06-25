@@ -10,6 +10,7 @@ import SwiftUI
 final class ColorViewModel: ObservableObject {
     @Published var swatches: [Swatch] = []
     @Published var colorsBySwatch: [Int: [Color]] = [:]
+    @Published var isShowingGrid: Bool = true
     
     private let mapper: ColorMapperProtocol
     
