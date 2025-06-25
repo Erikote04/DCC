@@ -28,6 +28,9 @@ struct SwatchesView: View {
             }
             .navigationTitle("Dictionary of Color Combinations")
             .navigationBarTitleDisplayMode(.inline)
+            .navigationDestination(for: Color.self) { color in
+                ColorDetailView(color: color)
+            }
             .toolbarBackground(backgroundColor)
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
@@ -35,12 +38,12 @@ struct SwatchesView: View {
                         viewModel.isShowingGrid.toggle()
                     } label: {
                         Image(systemName: viewModel.isShowingGrid ? "square.grid.2x2" : "list.bullet")
-                            .tint(.primary)
                     }
                     .frame(width: 44, height: 44)
                 }
             }
         }
+        .tint(.primary)
     }
 }
 
@@ -66,13 +69,15 @@ fileprivate struct ColorGrid: View {
             Section {
                 if let colors = viewModel.colorsBySwatch[swatch.id] {
                     ForEach(colors) { color in
-                        GeometryReader { geometry in
-                            ColorCell(
-                                color: color,
-                                size: geometry.size.width
-                            )
+                        NavigationLink(value: color) {
+                            GeometryReader { geometry in
+                                ColorCell(
+                                    color: color,
+                                    size: geometry.size.width
+                                )
+                            }
+                            .aspectRatio(1, contentMode: .fit)
                         }
-                        .aspectRatio(1, contentMode: .fit)
                     }
                     .padding()
                 }
@@ -88,7 +93,7 @@ fileprivate struct ColorGrid: View {
 }
 
 fileprivate struct ColorCell: View {
-    let color: Color 
+    let color: Color
     let size: CGFloat
     
     var body: some View {
@@ -129,7 +134,9 @@ fileprivate struct ColorList: View {
             Section {
                 if let colors = viewModel.colorsBySwatch[swatch.id] {
                     ForEach(colors) { color in
-                        ColorRow(color: color)
+                        NavigationLink(value: color) {
+                            ColorRow(color: color)
+                        }
                     }
                 }
             } header: {
@@ -156,14 +163,24 @@ fileprivate struct ColorRow: View {
         ZStack(alignment: .bottom) {
             SwiftUI.Color(color.color)
             
-            VStack(alignment: .leading) {
-                Text(color.name)
-                    .font(.headline)
-                    .foregroundStyle(.primary)
+            HStack {
+                VStack(alignment: .leading) {
+                    Text(color.name)
+                        .font(.headline)
+                        .foregroundStyle(.primary)
+                    
+                    Text(color.hex)
+                        .font(.subheadline)
+                        .foregroundStyle(.primary)
+                }
                 
-                Text(color.hex)
-                    .font(.subheadline)
-                    .foregroundStyle(.primary)
+                Spacer()
+                
+                Image(systemName: "chevron.right")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 24, height: 24)
+                    .accessibilityHidden(true)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding()

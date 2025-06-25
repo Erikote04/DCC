@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Color: Identifiable {
+struct Color: Identifiable, Hashable {
     let id: Int
     let name: String
     let color: SwiftUI.Color
