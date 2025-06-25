@@ -8,12 +8,12 @@
 import SwiftUI
 
 protocol ColorMapperProtocol {
-    static func map(_ color: ColorDTO) -> Color
-    static func map(_ colors: [ColorDTO]) -> [Color]
+    func map(_ color: ColorDTO) -> Color
+    func map(_ colors: [ColorDTO]) -> [Color]
 }
 
 struct ColorMapper: ColorMapperProtocol {
-    static func map(_ color: ColorDTO) -> Color {
+    func map(_ color: ColorDTO) -> Color {
         return Color(
             id: color.id,
             name: color.name,
@@ -28,7 +28,7 @@ struct ColorMapper: ColorMapperProtocol {
         )
     }
 
-    static func map(_ colors: [ColorDTO]) -> [Color] {
+    func map(_ colors: [ColorDTO]) -> [Color] {
         colors.map(map)
     }
 }
