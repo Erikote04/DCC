@@ -26,7 +26,8 @@ struct SwatchesView: View {
                     }
                 }
             }
-            .navigationTitle("Wada Sanzo Colors")
+            .navigationTitle("Dictionary of Color Combinations")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbarBackground(backgroundColor)
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
