@@ -37,11 +37,7 @@ struct SwatchesView: View {
                         }
                     
                     if filteredColors.isEmpty {
-                        ContentUnavailableView(
-                            "No Results",
-                            systemImage: "magnifyingglass",
-                            description: Text("Try another color name.")
-                        )
+                        ContentUnavailableView.search(text: searchText)
                     } else {
                         LazyVStack(alignment: .leading, spacing: 12) {
                             ForEach(filteredColors) { color in
@@ -60,7 +56,7 @@ struct SwatchesView: View {
             .navigationDestination(for: Color.self) { color in
                 ColorDetailView(color: color)
             }
-            .searchable(text: $searchText)
+            .searchable(text: $searchText, prompt: "Search colors")
             .toolbarBackground(backgroundColor)
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {

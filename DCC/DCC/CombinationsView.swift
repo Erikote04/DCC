@@ -11,22 +11,47 @@ struct CombinationsView: View {
     @Environment(\.colorScheme) private var colorScheme
     @EnvironmentObject private var viewModel: ColorViewModel
     
+    @State private var searchText = ""
+    
     var backgroundColor: SwiftUI.Color {
         colorScheme == .dark ? .black : .white
     }
     
+    var filteredCombinations: [Combination] {
+        if searchText.isEmpty {
+            return viewModel.combinations
+        }
+        
+        return viewModel.combinations.filter { combination in
+            let idMatch = String(combination.id).contains(searchText)
+            
+            let colorNameMatch = combination.colors.contains { color in
+                color.name.localizedCaseInsensitiveContains(searchText)
+            }
+            
+            return idMatch || colorNameMatch
+        }
+    }
+    
     var body: some View {
         NavigationStack {
-            List {
-                ForEach(viewModel.combinations) { combination in
-                    CombinationRow(combination: combination)
+            Group {
+                if filteredCombinations.isEmpty && !searchText.isEmpty {
+                    ContentUnavailableView.search(text: searchText)
+                } else {
+                    List {
+                        ForEach(filteredCombinations) { combination in
+                            CombinationRow(combination: combination)
+                        }
+                    }
+                    .listStyle(.plain)
+                    .scrollIndicators(.hidden)
                 }
             }
-            .listStyle(.plain)
-            .scrollIndicators(.hidden)
             .navigationTitle("Combinations")
             .navigationBarTitleDisplayMode(.inline)
             .toolbarBackground(backgroundColor)
+            .searchable(text: $searchText, prompt: "Search combinations by ID or color name")
         }
         .tint(.primary)
     }
