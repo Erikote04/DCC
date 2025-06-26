@@ -10,6 +10,7 @@ import SwiftUI
 final class ColorViewModel: ObservableObject {
     @Published var swatches: [Swatch] = []
     @Published var colorsBySwatch: [Int: [Color]] = [:]
+    @Published var combinations: [Combination] = []
     @Published var isShowingGrid: Bool = true
     
     private let mapper: ColorMapperProtocol
@@ -22,6 +23,7 @@ final class ColorViewModel: ObservableObject {
     private func loadData() {
         loadSwatches()
         loadColors()
+        loadCombinations()
     }
     
     private func loadSwatches() {
@@ -45,4 +47,68 @@ final class ColorViewModel: ObservableObject {
         let colorsBySwatch = mapper.map(colorsDTO)
         self.colorsBySwatch = Dictionary(grouping: colorsBySwatch, by: \.swatchCollection)
     }
+    
+    private func loadCombinations() {
+        let allColors = getAllColors()
+        self.combinations = generateCombinations(from: allColors)
+    }
+    
+    private func generateCombinations(from colors: [Color]) -> [Combination] {
+        var combinations: [Combination] = []
+        var processedCombinationIds: Set<Int> = []
+        
+        for color in colors {
+            for combinationId in color.combinations {
+                if !processedCombinationIds.contains(combinationId) {
+                    processedCombinationIds.insert(combinationId)
+                    
+                    let colorsInCombination = findColorsInCombination(
+                        combinationId: combinationId,
+                        allColors: colors
+                    )
+                    
+                    if !colorsInCombination.isEmpty {
+                        let combination = Combination(
+                            id: combinationId,
+                            colors: colorsInCombination
+                        )
+                        
+                        combinations.append(combination)
+                    }
+                }
+            }
+        }
+        
+        return combinations.sorted { $0.id < $1.id }
+    }
+    
+    private func findColorsInCombination(combinationId: Int, allColors: [Color]) -> [Color] {
+        return allColors
+            .filter { $0.combinations.contains(combinationId) }
+            .sorted { $0.name < $1.name } // Ordenar alfabéticamente por nombre
+    }
+    
+    private func getAllColors() -> [Color] {
+        return colorsBySwatch.values.flatMap { $0 }
+    }
+    
+    func getCombination(by id: Int) -> Combination? {
+        return combinations.first { $0.id == id }
+    }
+    
+    func getDetailedColorsForCombination(id: Int) -> [Color] {
+        guard let combination = getCombination(by: id) else { return [] }
+        return combination.colors
+    }
+    
+    func filterCombinations(containing colorName: String) -> [Combination] {
+        return combinations.filter { combination in
+            combination.colors.contains { $0.name.localizedCaseInsensitiveContains(colorName) }
+        }
+    }
+}
+
+struct Combination: Identifiable {
+    let id: Int
+    let colors: [Color]
 }
