@@ -32,7 +32,7 @@ struct ColorDetailView: View {
                     }
                 }
             
-            ScrollView {
+            ScrollView(showsIndicators: false) {
                 LazyVStack(alignment: .leading, pinnedViews: .sectionHeaders) {
                     Section {
                         ForEach(color.combinations, id: \.self) { combinationId in

@@ -161,6 +161,7 @@ fileprivate struct ColorCell: View {
                 Text(color.name)
                     .font(.headline)
                     .foregroundStyle(.black)
+                    .multilineTextAlignment(.leading)
                 
                 Text(color.hex)
                     .font(.subheadline)
