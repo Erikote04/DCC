@@ -11,6 +11,8 @@ struct SwatchesView: View {
     @Environment(\.colorScheme) private var colorScheme
     @EnvironmentObject private var viewModel: ColorViewModel
     
+    @State private var searchText = ""
+    
     var backgroundColor: SwiftUI.Color {
         colorScheme == .dark ? .black : .white
     }
@@ -18,11 +20,38 @@ struct SwatchesView: View {
     var body: some View {
         NavigationStack {
             ScrollView(showsIndicators: false) {
-                ForEach(viewModel.swatches) { swatch in
-                    if viewModel.isShowingGrid {
-                        ColorGrid(swatch: swatch)
+                if searchText.isEmpty {
+                    ForEach(viewModel.swatches) { swatch in
+                        if viewModel.isShowingGrid {
+                            ColorGrid(swatch: swatch)
+                        } else {
+                            ColorList(swatch: swatch)
+                        }
+                    }
+                } else {
+                    let filteredColors = viewModel.swatches
+                        .compactMap { viewModel.colorsBySwatch[$0.id] }
+                        .flatMap { $0 }
+                        .filter {
+                            $0.name.localizedCaseInsensitiveContains(searchText)
+                        }
+                    
+                    if filteredColors.isEmpty {
+                        ContentUnavailableView(
+                            "No Results",
+                            systemImage: "magnifyingglass",
+                            description: Text("Try another color name.")
+                        )
                     } else {
-                        ColorList(swatch: swatch)
+                        LazyVStack(alignment: .leading, spacing: 12) {
+                            ForEach(filteredColors) { color in
+                                NavigationLink(value: color) {
+                                    SearchResultRow(color: color)
+                                        .padding(.horizontal)
+                                }
+                            }
+                            .padding(.top)
+                        }
                     }
                 }
             }
@@ -31,6 +60,7 @@ struct SwatchesView: View {
             .navigationDestination(for: Color.self) { color in
                 ColorDetailView(color: color)
             }
+            .searchable(text: $searchText)
             .toolbarBackground(backgroundColor)
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
@@ -44,6 +74,33 @@ struct SwatchesView: View {
             }
         }
         .tint(.primary)
+    }
+}
+
+fileprivate struct SearchResultRow: View {
+    let color: Color
+    
+    var body: some View {
+        HStack(spacing: 8) {
+            Circle()
+                .fill(color.color)
+                .stroke(.secondary, lineWidth: 1)
+                .frame(width: 32, height: 32)
+            
+            VStack(alignment: .leading) {
+                Text(color.name)
+                    .font(.headline)
+                    .foregroundStyle(.primary)
+                Text(color.hex)
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+            }
+            
+            Spacer()
+            
+            Image(systemName: "chevron.right")
+                .foregroundColor(.secondary)
+        }
     }
 }
 
@@ -171,7 +228,7 @@ fileprivate struct ColorRow: View {
                     
                     Text(color.hex)
                         .font(.subheadline)
-                        .foregroundStyle(.primary)
+                        .foregroundStyle(.secondary)
                 }
                 
                 Spacer()
