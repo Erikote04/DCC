@@ -18,9 +18,19 @@ struct ColorDetailView: View {
     
     var body: some View {
         VStack {
-            Rectangle()
+            RoundedRectangle(cornerRadius: 12)
                 .fill(color.color)
                 .frame(height: 250)
+                .padding()
+                .shadow(color: .black.opacity(0.4), radius: 8, x: 0, y: 4)
+                .overlay {
+                    if colorScheme == .dark && color.hex == "#000000" {
+                        RoundedRectangle(cornerRadius: 12)
+                            .stroke(.white.opacity(0.2), lineWidth: 2)
+                            .frame(height: 250)
+                            .padding()
+                    }
+                }
             
             ScrollView {
                 LazyVStack(alignment: .leading, pinnedViews: .sectionHeaders) {
