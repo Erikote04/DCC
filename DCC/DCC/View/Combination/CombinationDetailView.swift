@@ -44,6 +44,7 @@ struct CombinationDetailView: View {
                 }
             }
         }
+        .padding(.top, 24)
         .navigationTitle("#\(combination.id)")
         .navigationBarTitleDisplayMode(.inline)
         .navigationDestination(for: Color.self) { color in
