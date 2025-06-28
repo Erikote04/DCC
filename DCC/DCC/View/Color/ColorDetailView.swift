@@ -9,10 +9,11 @@ import SwiftUI
 
 struct ColorDetailView: View {
     @Environment(\.colorScheme) private var colorScheme
+    @EnvironmentObject private var viewModel: ColorCombinationViewModel
     
     let color: Color
     
-    var backgroundColor: SwiftUI.Color {
+    private var backgroundColor: SwiftUI.Color {
         colorScheme == .dark ? .black : .white
     }
     
@@ -36,8 +37,28 @@ struct ColorDetailView: View {
                 LazyVStack(alignment: .leading, pinnedViews: .sectionHeaders) {
                     Section {
                         ForEach(color.combinations, id: \.self) { combinationId in
-                            Text("#\(combinationId)").padding()
-                            Divider()
+                            let combination = viewModel.getCombination(by: combinationId)
+                            
+                            NavigationLink(value: combination) {
+                                VStack {
+                                    HStack {
+                                        VStack(alignment: .leading) {
+                                            Text("#\(combinationId)").padding()
+                                        }
+                                        
+                                        Spacer()
+                                        
+                                        Image(systemName: "chevron.right")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 16, height: 16)
+                                            .foregroundStyle(.secondary)
+                                            .padding()
+                                    }
+                                    
+                                    Divider()
+                                }
+                            }
                         }
                     } header: {
                         VStack(alignment: .leading) {
@@ -53,8 +74,12 @@ struct ColorDetailView: View {
                 }
             }
         }
-        .navigationTitle("Detail")
+        .navigationTitle(color.name)
         .navigationBarTitleDisplayMode(.inline)
+        .navigationDestination(for: Combination.self) { combination in
+            CombinationDetailView(combination: combination)
+        }
+        .toolbarBackground(backgroundColor)
     }
 }
 
@@ -69,4 +94,6 @@ struct ColorDetailView: View {
             swatchCollection: 1
         ))
     }
+    .environmentObject(ColorCombinationViewModel())
+    .tint(.primary)
 }

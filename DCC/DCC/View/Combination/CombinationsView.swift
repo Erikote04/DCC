@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CombinationsView: View {
     @Environment(\.colorScheme) private var colorScheme
-    @EnvironmentObject private var viewModel: ColorViewModel
+    @EnvironmentObject private var viewModel: ColorCombinationViewModel
     
     @State private var searchText = ""
     
@@ -34,26 +34,28 @@ struct CombinationsView: View {
     }
     
     var body: some View {
-        NavigationStack {
-            Group {
-                if filteredCombinations.isEmpty && !searchText.isEmpty {
-                    ContentUnavailableView.search(text: searchText)
-                } else {
-                    List {
-                        ForEach(filteredCombinations) { combination in
+        Group {
+            if filteredCombinations.isEmpty && !searchText.isEmpty {
+                ContentUnavailableView.search(text: searchText)
+            } else {
+                List {
+                    ForEach(filteredCombinations) { combination in
+                        NavigationLink(value: combination) {
                             CombinationRow(combination: combination)
                         }
                     }
-                    .listStyle(.plain)
-                    .scrollIndicators(.hidden)
                 }
+                .listStyle(.plain)
+                .scrollIndicators(.hidden)
             }
-            .navigationTitle("Combinations")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbarBackground(backgroundColor)
-            .searchable(text: $searchText, prompt: "Search combinations by ID or color name")
         }
-        .tint(.primary)
+        .navigationTitle("Combinations")
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationDestination(for: Combination.self) { combination in
+            CombinationDetailView(combination: combination)
+        }
+        .toolbarBackground(backgroundColor)
+        .searchable(text: $searchText, prompt: "Search combinations by ID or color names")
     }
 }
 
@@ -79,7 +81,7 @@ fileprivate struct CombinationRow: View {
             .clipShape(RoundedRectangle(cornerRadius: 8))
             .overlay(
                 RoundedRectangle(cornerRadius: 8)
-                    .stroke(.primary, lineWidth: 2)
+                    .stroke(.tertiary, lineWidth: 2)
             )
             .padding(.horizontal)
             
@@ -89,12 +91,16 @@ fileprivate struct CombinationRow: View {
 }
 
 #Preview("Light") {
-    CombinationsView()
-        .environmentObject(ColorViewModel())
+    NavigationStack {
+        CombinationsView()
+            .environmentObject(ColorCombinationViewModel())
+    }
 }
 
 #Preview("Dark") {
-    CombinationsView()
-        .environmentObject(ColorViewModel())
-        .preferredColorScheme(.dark)
+    NavigationStack {
+        CombinationsView()
+            .environmentObject(ColorCombinationViewModel())
+            .preferredColorScheme(.dark)
+    }
 }

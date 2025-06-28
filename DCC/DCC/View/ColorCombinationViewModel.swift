@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-final class ColorViewModel: ObservableObject {
+final class ColorCombinationViewModel: ObservableObject {
     @Published var swatches: [Swatch] = []
     @Published var colorsBySwatch: [Int: [Color]] = [:]
     @Published var combinations: [Combination] = []
@@ -85,7 +85,7 @@ final class ColorViewModel: ObservableObject {
     private func findColorsInCombination(combinationId: Int, allColors: [Color]) -> [Color] {
         return allColors
             .filter { $0.combinations.contains(combinationId) }
-            .sorted { $0.name < $1.name } // Ordenar alfabéticamente por nombre
+            .sorted { $0.name < $1.name }
     }
     
     private func getAllColors() -> [Color] {
@@ -108,7 +108,7 @@ final class ColorViewModel: ObservableObject {
     }
 }
 
-struct Combination: Identifiable {
+struct Combination: Identifiable, Hashable {
     let id: Int
     let colors: [Color]
 }
