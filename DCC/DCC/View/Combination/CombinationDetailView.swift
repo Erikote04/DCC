@@ -37,14 +37,17 @@ struct CombinationDetailView: View {
     }
     
     var body: some View {
-        ScrollView(showsIndicators: false) {
-            ForEach(combination.colors) { color in
-                NavigationLink(value: color) {
-                    ColorRow(color: color)
+        VStack(spacing: .zero) {
+            GeometryReader { geometry in
+                VStack(spacing: .zero) {
+                    ForEach(combination.colors) { color in
+                        NavigationLink(value: color) {
+                            colorCombinationFrame(for: color, using: geometry)
+                        }
+                    }
                 }
             }
         }
-        .padding(.top, 24)
         .navigationTitle("#\(combination.id)")
         .navigationBarTitleDisplayMode(.inline)
         .navigationDestination(for: Color.self) { color in
@@ -66,6 +69,28 @@ struct CombinationDetailView: View {
                 }
             }
         }
+    }
+    
+    @ViewBuilder
+    private func colorCombinationFrame(for color: Color, using geometry: GeometryProxy) -> some View {
+        Rectangle()
+            .fill(color.color)
+            .frame(maxWidth: .infinity, maxHeight: geometry.size.height / CGFloat(combination.colors.count))
+            .overlay {
+                VStack(alignment: .leading, spacing: 8) {
+                    Text(color.name)
+                        .font(.headline)
+                    
+                    Text(color.hex)
+                        .font(.subheadline)
+                    
+                    Text(color.rgb)
+                        .font(.caption)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .foregroundStyle(color.color.contrastingTextColor())
+                .padding(.leading)
+            }
     }
     
     private func navigateToPreviousCombination() {
