@@ -12,6 +12,7 @@ struct Color: Identifiable, Hashable {
     let name: String
     let color: SwiftUI.Color
     let hex: String
+    let rgb: String
     let combinations: [Int]
     let swatchCollection: Int
 }

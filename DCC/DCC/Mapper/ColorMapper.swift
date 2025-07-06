@@ -23,6 +23,7 @@ struct ColorMapper: ColorMapperProtocol {
                 blue: Double(color.rgbArray[2]) / 255.0
             ),
             hex: color.hex,
+            rgb: "RGB: \(color.rgbArray[0]) \(color.rgbArray[1]) \(color.rgbArray[2])",
             combinations: color.combinations,
             swatchCollection: color.swatchCollection
         )
