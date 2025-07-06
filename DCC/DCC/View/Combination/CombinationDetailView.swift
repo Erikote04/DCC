@@ -52,7 +52,7 @@ struct CombinationDetailView: View {
         }
         .toolbarBackground(backGroundColor)
         .toolbar {
-            ToolbarItemGroup(placement: .navigationBarTrailing) {
+            ToolbarItemGroup(placement: .navigation) {
                 HStack {
                     Button { navigateToPreviousCombination() }
                     label: { Image(systemName: "chevron.left") }

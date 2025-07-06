@@ -8,14 +8,9 @@
 import SwiftUI
 
 struct ColorList: View {
-    @Environment(\.colorScheme) private var colorScheme
     @EnvironmentObject private var viewModel: ColorCombinationViewModel
     
     let swatch: Swatch
-    
-    var backgroundColor: SwiftUI.Color {
-        colorScheme == .dark ? .black : .white
-    }
     
     var body: some View {
         LazyVStack(pinnedViews: .sectionHeaders) {
@@ -28,11 +23,7 @@ struct ColorList: View {
                     }
                 }
             } header: {
-                Text("Swatch Collection \(swatch.id)")
-                    .font(.title2)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding()
-                    .background(backgroundColor)
+                SectionHeader(swatch: swatch)
             }
         }
     }
