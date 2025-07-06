@@ -50,9 +50,12 @@
       ],
       "hex": "#e6adcf",
       "combinations": [
-        18,
-        125,
-        308
+        101,
+        105,
+        116,
+        120,
+        165,
+        231
       ],
       "id": 3,
       "swatch_collection": 1
@@ -215,7 +218,7 @@
       "swatch_collection": 1
     },
     {
-      "name": "Eugenia Red | A",
+      "name": "Eugenia Red",
       "rgb_array": [
         237,
         61,
@@ -229,7 +232,7 @@
       "swatch_collection": 1
     },
     {
-      "name": "Eugenia Red | B",
+      "name": "Eugenia Red",
       "rgb_array": [
         230,
         46,
@@ -392,7 +395,7 @@
       "swatch_collection": 1
     },
     {
-      "name": "Ochre Red",
+      "name": "Ocher Red",
       "rgb_array": [
         167,
         55,
@@ -471,13 +474,14 @@
         144,
         170,
         204,
-        277
+        277,
+        346
       ],
       "id": 25,
       "swatch_collection": 1
     },
     {
-      "name": "Pomegranite Purple",
+      "name": "Pomegranate Purple",
       "rgb_array": [
         185,
         0,
@@ -542,7 +546,8 @@
         228,
         233,
         237,
-        245
+        245,
+        338
       ],
       "id": 29,
       "swatch_collection": 1
@@ -710,7 +715,7 @@
       "swatch_collection": 1
     },
     {
-      "name": "Sulpher Yellow",
+      "name": "Sulphur Yellow",
       "rgb_array": [
         245,
         245,
@@ -866,6 +871,7 @@
       "hex": "#f2ad78",
       "combinations": [
         78,
+        161,
         175,
         232,
         258,
@@ -940,7 +946,11 @@
         132,
         138,
         140,
-        179
+        179,
+        206,
+        229,
+        309,
+        315
       ],
       "id": 48,
       "swatch_collection": 2
@@ -1218,7 +1228,7 @@
       ],
       "hex": "#ff8c00",
       "combinations": [
-        22,
+        2,
         53,
         89,
         151,
@@ -1393,13 +1403,34 @@
       ],
       "hex": "#a6d40d",
       "combinations": [
+        40,
+        87,
+        145,
+        150,
+        153,
+        196,
+        305,
+        323
+      ],
+      "id": 71,
+      "swatch_collection": 2
+    },
+    {
+      "name": "Citrine",
+      "rgb_array": [
+        152,
+        161,
+        0
+      ],
+      "hex": "#98a100",
+      "combinations": [
         59,
         93,
         132,
         133,
         262
       ],
-      "id": 71,
+      "id": 72,
       "swatch_collection": 2
     },
     {
@@ -1415,7 +1446,7 @@
         177,
         233
       ],
-      "id": 72,
+      "id": 73,
       "swatch_collection": 2
     },
     {
@@ -1432,7 +1463,7 @@
         274,
         304
       ],
-      "id": 73,
+      "id": 74,
       "swatch_collection": 2
     },
     {
@@ -1447,7 +1478,7 @@
         107,
         184
       ],
-      "id": 74,
+      "id": 75,
       "swatch_collection": 2
     },
     {
@@ -1461,7 +1492,7 @@
       "combinations": [
         29
       ],
-      "id": 75,
+      "id": 76,
       "swatch_collection": 2
     },
     {
@@ -1481,7 +1512,7 @@
         310,
         334
       ],
-      "id": 76,
+      "id": 77,
       "swatch_collection": 2
     },
     {
@@ -1496,7 +1527,7 @@
         212,
         342
       ],
-      "id": 77,
+      "id": 78,
       "swatch_collection": 2
     },
     {
@@ -1512,7 +1543,7 @@
         214,
         273
       ],
-      "id": 78,
+      "id": 79,
       "swatch_collection": 2
     },
     {
@@ -1529,7 +1560,7 @@
         270,
         297
       ],
-      "id": 79,
+      "id": 80,
       "swatch_collection": 2
     },
     {
@@ -1544,7 +1575,7 @@
         199,
         318
       ],
-      "id": 80,
+      "id": 81,
       "swatch_collection": 2
     },
     {
@@ -1559,7 +1590,7 @@
         146,
         343
       ],
-      "id": 81,
+      "id": 82,
       "swatch_collection": 2
     },
     {
@@ -1577,7 +1608,7 @@
         234,
         296
       ],
-      "id": 82,
+      "id": 83,
       "swatch_collection": 2
     },
     {
@@ -1592,7 +1623,7 @@
         24,
         288
       ],
-      "id": 83,
+      "id": 84,
       "swatch_collection": 2
     },
     {
@@ -1612,7 +1643,7 @@
         275,
         323
       ],
-      "id": 84,
+      "id": 85,
       "swatch_collection": 2
     },
     {
@@ -1626,7 +1657,7 @@
       "combinations": [
         19
       ],
-      "id": 85,
+      "id": 86,
       "swatch_collection": 2
     },
     {
@@ -1642,9 +1673,10 @@
         113,
         118,
         182,
-        192
+        192,
+        328
       ],
-      "id": 86,
+      "id": 87,
       "swatch_collection": 2
     },
     {
@@ -1673,7 +1705,7 @@
         317,
         346
       ],
-      "id": 87,
+      "id": 88,
       "swatch_collection": 3
     },
     {
@@ -1692,7 +1724,7 @@
         239,
         260
       ],
-      "id": 88,
+      "id": 89,
       "swatch_collection": 3
     },
     {
@@ -1707,7 +1739,7 @@
         264,
         311
       ],
-      "id": 89,
+      "id": 90,
       "swatch_collection": 3
     },
     {
@@ -1725,7 +1757,7 @@
         326,
         334
       ],
-      "id": 90,
+      "id": 91,
       "swatch_collection": 3
     },
     {
@@ -1743,7 +1775,7 @@
         311,
         346
       ],
-      "id": 91,
+      "id": 92,
       "swatch_collection": 3
     },
     {
@@ -1760,7 +1792,7 @@
         158,
         326
       ],
-      "id": 92,
+      "id": 93,
       "swatch_collection": 3
     },
     {
@@ -1777,7 +1809,7 @@
         265,
         347
       ],
-      "id": 93,
+      "id": 94,
       "swatch_collection": 3
     },
     {
@@ -1792,7 +1824,7 @@
         293,
         312
       ],
-      "id": 94,
+      "id": 95,
       "swatch_collection": 3
     },
     {
@@ -1807,7 +1839,7 @@
         244,
         346
       ],
-      "id": 95,
+      "id": 96,
       "swatch_collection": 3
     },
     {
@@ -1819,12 +1851,30 @@
       ],
       "hex": "#85b857",
       "combinations": [
+        73,
+        162,
+        188,
+        266,
+        301
+      ],
+      "id": 97,
+      "swatch_collection": 3
+    },
+    {
+      "name": "Chromium Green",
+      "rgb_array": [
+        92,
+        154,
+        77
+      ],
+      "hex": "#5c9a4d",
+      "combinations": [
         105,
         200,
         219,
         283
       ],
-      "id": 96,
+      "id": 98,
       "swatch_collection": 3
     },
     {
@@ -1837,9 +1887,9 @@
       "hex": "#56aa69",
       "combinations": [
         127,
-        237
+        137
       ],
-      "id": 97,
+      "id": 99,
       "swatch_collection": 3
     },
     {
@@ -1863,7 +1913,7 @@
         340,
         347
       ],
-      "id": 98,
+      "id": 100,
       "swatch_collection": 3
     },
     {
@@ -1887,7 +1937,7 @@
         304,
         306
       ],
-      "id": 99,
+      "id": 101,
       "swatch_collection": 3
     },
     {
@@ -1903,7 +1953,7 @@
         193,
         328
       ],
-      "id": 100,
+      "id": 102,
       "swatch_collection": 3
     },
     {
@@ -1919,7 +1969,7 @@
         216,
         293
       ],
-      "id": 101,
+      "id": 103,
       "swatch_collection": 3
     },
     {
@@ -1936,7 +1986,7 @@
         306,
         316
       ],
-      "id": 102,
+      "id": 104,
       "swatch_collection": 3
     },
     {
@@ -1952,7 +2002,7 @@
         299,
         320
       ],
-      "id": 103,
+      "id": 105,
       "swatch_collection": 3
     },
     {
@@ -1971,7 +2021,7 @@
         251,
         313
       ],
-      "id": 104,
+      "id": 106,
       "swatch_collection": 3
     },
     {
@@ -1993,7 +2043,7 @@
         341,
         348
       ],
-      "id": 105,
+      "id": 107,
       "swatch_collection": 3
     },
     {
@@ -2012,7 +2062,7 @@
         280,
         290
       ],
-      "id": 106,
+      "id": 108,
       "swatch_collection": 3
     },
     {
@@ -2028,7 +2078,7 @@
         318,
         336
       ],
-      "id": 107,
+      "id": 109,
       "swatch_collection": 3
     },
     {
@@ -2051,7 +2101,7 @@
         342,
         348
       ],
-      "id": 108,
+      "id": 110,
       "swatch_collection": 3
     },
     {
@@ -2071,7 +2121,7 @@
         330,
         345
       ],
-      "id": 109,
+      "id": 111,
       "swatch_collection": 4
     },
     {
@@ -2093,7 +2143,7 @@
         234,
         287
       ],
-      "id": 110,
+      "id": 112,
       "swatch_collection": 4
     },
     {
@@ -2116,7 +2166,7 @@
         339,
         341
       ],
-      "id": 111,
+      "id": 113,
       "swatch_collection": 4
     },
     {
@@ -2142,7 +2192,7 @@
         321,
         330
       ],
-      "id": 112,
+      "id": 114,
       "swatch_collection": 4
     },
     {
@@ -2167,7 +2217,7 @@
         308,
         333
       ],
-      "id": 113,
+      "id": 115,
       "swatch_collection": 4
     },
     {
@@ -2190,7 +2240,7 @@
         291,
         300
       ],
-      "id": 114,
+      "id": 116,
       "swatch_collection": 4
     },
     {
@@ -2209,7 +2259,7 @@
         283,
         345
       ],
-      "id": 115,
+      "id": 117,
       "swatch_collection": 4
     },
     {
@@ -2230,7 +2280,7 @@
         240,
         264
       ],
-      "id": 116,
+      "id": 118,
       "swatch_collection": 4
     },
     {
@@ -2245,7 +2295,7 @@
         131,
         286
       ],
-      "id": 117,
+      "id": 119,
       "swatch_collection": 4
     },
     {
@@ -2267,7 +2317,7 @@
         271,
         330
       ],
-      "id": 118,
+      "id": 120,
       "swatch_collection": 4
     },
     {
@@ -2287,7 +2337,7 @@
         274,
         324
       ],
-      "id": 119,
+      "id": 121,
       "swatch_collection": 4
     },
     {
@@ -2312,7 +2362,7 @@
         295,
         333
       ],
-      "id": 120,
+      "id": 122,
       "swatch_collection": 4
     },
     {
@@ -2338,7 +2388,7 @@
         302,
         334
       ],
-      "id": 121,
+      "id": 123,
       "swatch_collection": 4
     },
     {
@@ -2359,7 +2409,7 @@
         312,
         347
       ],
-      "id": 122,
+      "id": 124,
       "swatch_collection": 4
     },
     {
@@ -2376,7 +2426,7 @@
         241,
         249
       ],
-      "id": 123,
+      "id": 125,
       "swatch_collection": 4
     },
     {
@@ -2397,7 +2447,7 @@
         332,
         338
       ],
-      "id": 124,
+      "id": 126,
       "swatch_collection": 4
     },
     {
@@ -2420,7 +2470,7 @@
         314,
         344
       ],
-      "id": 125,
+      "id": 127,
       "swatch_collection": 4
     },
     {
@@ -2444,7 +2494,7 @@
         309,
         339
       ],
-      "id": 126,
+      "id": 128,
       "swatch_collection": 4
     },
     {
@@ -2455,8 +2505,16 @@
         131
       ],
       "hex": "#003e83",
-      "combinations": [],
-      "id": 127,
+      "combinations": [
+          5,
+          77,
+          151,
+          167,
+          168,
+          309,
+          343
+      ],
+      "id": 129,
       "swatch_collection": 4
     },
     {
@@ -2476,7 +2534,7 @@
         245,
         279
       ],
-      "id": 128,
+      "id": 130,
       "swatch_collection": 4
     },
     {
@@ -2497,7 +2555,7 @@
         295,
         331
       ],
-      "id": 129,
+      "id": 131,
       "swatch_collection": 4
     },
     {
@@ -2517,7 +2575,7 @@
         211,
         232
       ],
-      "id": 130,
+      "id": 132,
       "swatch_collection": 4
     },
     {
@@ -2536,11 +2594,11 @@
         318,
         325
       ],
-      "id": 131,
+      "id": 133,
       "swatch_collection": 4
     },
     {
-      "name": "Grayish Lavender - A",
+      "name": "Grayish Lavender",
       "rgb_array": [
         184,
         184,
@@ -2556,11 +2614,11 @@
         248,
         307
       ],
-      "id": 132,
+      "id": 134,
       "swatch_collection": 5
     },
     {
-      "name": "Grayish Lavender - B",
+      "name": "Grayish Lavender",
       "rgb_array": [
         191,
         171,
@@ -2577,7 +2635,7 @@
         329,
         338
       ],
-      "id": 133,
+      "id": 135,
       "swatch_collection": 5
     },
     {
@@ -2594,7 +2652,7 @@
         280,
         337
       ],
-      "id": 134,
+      "id": 136,
       "swatch_collection": 5
     },
     {
@@ -2611,7 +2669,7 @@
         282,
         347
       ],
-      "id": 135,
+      "id": 137,
       "swatch_collection": 5
     },
     {
@@ -2623,15 +2681,11 @@
       ],
       "hex": "#bf36e0",
       "combinations": [
-        23,
-        80,
-        128,
-        134,
-        180,
-        274,
-        331
+        215,
+        315,
+        322
       ],
-      "id": 136,
+      "id": 138,
       "swatch_collection": 5
     },
     {
@@ -2651,7 +2705,7 @@
         274,
         331
       ],
-      "id": 137,
+      "id": 139,
       "swatch_collection": 5
     },
     {
@@ -2675,7 +2729,7 @@
         324,
         344
       ],
-      "id": 138,
+      "id": 140,
       "swatch_collection": 5
     },
     {
@@ -2690,7 +2744,7 @@
         9,
         100
       ],
-      "id": 139,
+      "id": 141,
       "swatch_collection": 5
     },
     {
@@ -2706,7 +2760,7 @@
         127,
         197
       ],
-      "id": 140,
+      "id": 142,
       "swatch_collection": 5
     },
     {
@@ -2724,7 +2778,7 @@
         322,
         345
       ],
-      "id": 141,
+      "id": 143,
       "swatch_collection": 5
     },
     {
@@ -2738,7 +2792,7 @@
       "combinations": [
         236
       ],
-      "id": 142,
+      "id": 144,
       "swatch_collection": 5
     },
     {
@@ -2754,7 +2808,7 @@
         192,
         218
       ],
-      "id": 143,
+      "id": 145,
       "swatch_collection": 5
     },
     {
@@ -2771,7 +2825,7 @@
         168,
         183
       ],
-      "id": 144,
+      "id": 146,
       "swatch_collection": 5
     },
     {
@@ -2786,7 +2840,7 @@
         225,
         248
       ],
-      "id": 145,
+      "id": 147,
       "swatch_collection": 5
     },
     {
@@ -2806,7 +2860,7 @@
         280,
         288
       ],
-      "id": 146,
+      "id": 148,
       "swatch_collection": 5
     },
     {
@@ -2820,7 +2874,7 @@
       "combinations": [
         337
       ],
-      "id": 147,
+      "id": 149,
       "swatch_collection": 5
     },
     {
@@ -2845,7 +2899,7 @@
         331,
         335
       ],
-      "id": 148,
+      "id": 150,
       "swatch_collection": 5
     },
     {
@@ -2866,7 +2920,7 @@
         183,
         316
       ],
-      "id": 149,
+      "id": 151,
       "swatch_collection": 5
     },
     {
@@ -2886,7 +2940,7 @@
         329,
         348
       ],
-      "id": 150,
+      "id": 152,
       "swatch_collection": 5
     },
     {
@@ -2905,7 +2959,7 @@
         103,
         314
       ],
-      "id": 151,
+      "id": 153,
       "swatch_collection": 5
     },
     {
@@ -2919,7 +2973,7 @@
       "combinations": [
         55
       ],
-      "id": 152,
+      "id": 154,
       "swatch_collection": 6
     },
     {
@@ -2944,7 +2998,7 @@
         324,
         340
       ],
-      "id": 153,
+      "id": 155,
       "swatch_collection": 6
     },
     {
@@ -2959,7 +3013,7 @@
         11,
         30
       ],
-      "id": 154,
+      "id": 156,
       "swatch_collection": 6
     },
     {
@@ -2980,7 +3034,7 @@
         259,
         261
       ],
-      "id": 155,
+      "id": 157,
       "swatch_collection": 6
     },
     {
@@ -3006,7 +3060,7 @@
         329,
         335
       ],
-      "id": 156,
+      "id": 158,
       "swatch_collection": 6
     },
     {
@@ -3035,14 +3089,14 @@
         269,
         276,
         288,
-        198,
+        298,
         313,
         323,
         337,
         340,
         344
       ],
-      "id": 157,
+      "id": 159,
       "swatch_collection": 6
     }
   ]

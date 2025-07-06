@@ -9,10 +9,5 @@ import SwiftUI
 
 struct Swatch: Codable, Identifiable {
     let id: Int
-    let colorCount: Int
-
-    enum CodingKeys: String, CodingKey {
-        case id
-        case colorCount = "color_count"
-    }
+    let description: String
 }

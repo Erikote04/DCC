@@ -1,26 +1,26 @@
 [
   {
     "id": 1,
-    "color_count": 38
+    "description": "Red and red-purple colors"
   },
   {
     "id": 2,
-    "color_count": 49
+    "description": "Yellow and yellow-red colors"
   },
   {
     "id": 3,
-    "color_count": 23
+    "description": "Green and yellow-green colors"
   },
   {
     "id": 4,
-    "color_count": 23
+    "description": "Blue and blue-green colors"
   },
   {
     "id": 5,
-    "color_count": 20
+    "description": "Purple and blue-purple colors"
   },
   {
     "id": 6,
-    "color_count": 6
+    "description": "White, gray, and black colors"
   }
 ]
