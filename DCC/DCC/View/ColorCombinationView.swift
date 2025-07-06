@@ -9,44 +9,39 @@ import SwiftUI
 
 struct ColorCombinationView: View {
     @Environment(\.colorScheme) var colorScheme
+    @EnvironmentObject private var viewModel: ColorCombinationViewModel
     
     private var backgroundColor: SwiftUI.Color {
         colorScheme == .dark ? .black : .white
     }
     
     var body: some View {
-        TabView {
-            Tab {
-                NavigationStack {
-                    ColorsView()
-                        .navigationDestination(for: Combination.self) { combination in
-                            CombinationDetailView(combination: combination)
-                        }
-                        .navigationDestination(for: Color.self) { color in
-                            ColorDetailView(color: color)
-                        }
+        TabView(selection: $viewModel.selectedTab) {
+            ForEach(TabItem.allCases) { tab in
+                Tab(tab.title, systemImage: tab.image, value: tab) {
+                    navigationView(for: tab)
                 }
-            } label: {
-                Label("Colors", systemImage: "paintpalette.fill")
-            }
-            
-            Tab {
-                NavigationStack {
-                    CombinationsView()
-                        .navigationDestination(for: Combination.self) { combination in
-                            CombinationDetailView(combination: combination)
-                        }
-                        .navigationDestination(for: Color.self) { color in
-                            ColorDetailView(color: color)
-                        }
-                }
-            } label: {
-                Label("Combinations", systemImage: "swatchpalette.fill")
             }
         }
         .tint(.primary)
         .toolbarBackground(backgroundColor, for: .tabBar)
         .toolbarBackground(.visible, for: .tabBar)
+    }
+}
+
+fileprivate extension ColorCombinationView {
+    
+    @ViewBuilder
+    private func navigationView(for tab: TabItem) -> some View {
+        NavigationStack {
+            tab.body
+                .navigationDestination(for: Combination.self) { combination in
+                    CombinationDetailView(combination: combination)
+                }
+                .navigationDestination(for: Color.self) { color in
+                    ColorDetailView(color: color)
+                }
+        }
     }
 }
 

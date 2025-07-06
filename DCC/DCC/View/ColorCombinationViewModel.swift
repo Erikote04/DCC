@@ -8,6 +8,7 @@
 import SwiftUI
 
 final class ColorCombinationViewModel: ObservableObject {
+    @Published var selectedTab: TabItem = .colors
     @Published var swatches: [Swatch] = []
     @Published var colorsBySwatch: [Int: [Color]] = [:]
     @Published var combinations: [Combination] = []
