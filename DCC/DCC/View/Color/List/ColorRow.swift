@@ -17,33 +17,19 @@ struct ColorRow: View {
     }
     
     var body: some View {
-        ZStack(alignment: .bottom) {
-            SwiftUI.Color(color.color)
+        VStack(alignment: .leading, spacing: 8) {
+            Text(color.name)
+                .font(.headline)
             
-            HStack {
-                VStack(alignment: .leading) {
-                    Text(color.name)
-                        .font(.headline)
-                        .foregroundStyle(.primary)
-                    
-                    Text(color.hex)
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
-                }
-                
-                Spacer()
-                
-                Image(systemName: "chevron.right")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 24, height: 24)
-                    .foregroundStyle(.secondary)
-                    .accessibilityHidden(true)
-            }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding()
-            .background(backgroundColor)
+            Text(color.hex)
+                .font(.subheadline)
+            
+            Text(color.rgb)
+                .font(.caption)
         }
-        .frame(height: 200)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding()
+        .foregroundStyle(color.color.contrastingTextColor())
+        .background(color.color)
     }
 }

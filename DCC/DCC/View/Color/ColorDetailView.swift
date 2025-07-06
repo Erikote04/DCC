@@ -90,6 +90,7 @@ struct ColorDetailView: View {
             name: "Black",
             color: .black,
             hex: "#000000",
+            rgb: "RGB: 0 0 0",
             combinations: [46, 52, 62],
             swatchCollection: 1
         ))
