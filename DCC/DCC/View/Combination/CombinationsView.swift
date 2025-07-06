@@ -51,9 +51,6 @@ struct CombinationsView: View {
         }
         .navigationTitle("Combinations")
         .navigationBarTitleDisplayMode(.inline)
-        .navigationDestination(for: Combination.self) { combination in
-            CombinationDetailView(combination: combination)
-        }
         .toolbarBackground(backgroundColor)
         .searchable(text: $searchText, prompt: "Search combinations by ID or color names")
     }

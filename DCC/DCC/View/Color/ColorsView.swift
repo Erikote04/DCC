@@ -52,9 +52,6 @@ struct ColorsView: View {
         }
         .navigationTitle("Colors")
         .navigationBarTitleDisplayMode(.inline)
-        .navigationDestination(for: Color.self) { color in
-            ColorDetailView(color: color)
-        }
         .searchable(text: $searchText, prompt: "Search colors")
         .toolbarBackground(backgroundColor)
         .toolbar {

@@ -76,9 +76,6 @@ struct ColorDetailView: View {
         }
         .navigationTitle(color.name)
         .navigationBarTitleDisplayMode(.inline)
-        .navigationDestination(for: Combination.self) { combination in
-            CombinationDetailView(combination: combination)
-        }
         .toolbarBackground(backgroundColor)
     }
 }

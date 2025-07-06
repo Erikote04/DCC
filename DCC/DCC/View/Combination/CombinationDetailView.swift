@@ -50,9 +50,6 @@ struct CombinationDetailView: View {
         }
         .navigationTitle("#\(combination.id)")
         .navigationBarTitleDisplayMode(.inline)
-        .navigationDestination(for: Color.self) { color in
-            ColorDetailView(color: color)
-        }
         .toolbarBackground(backGroundColor)
         .toolbar {
             ToolbarItemGroup(placement: .navigation) {

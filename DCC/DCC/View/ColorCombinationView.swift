@@ -16,11 +16,33 @@ struct ColorCombinationView: View {
     
     var body: some View {
         TabView {
-            Tab { NavigationStack { ColorsView() }}
-            label: { Label("Colors", systemImage: "paintpalette.fill") }
+            Tab {
+                NavigationStack {
+                    ColorsView()
+                        .navigationDestination(for: Combination.self) { combination in
+                            CombinationDetailView(combination: combination)
+                        }
+                        .navigationDestination(for: Color.self) { color in
+                            ColorDetailView(color: color)
+                        }
+                }
+            } label: {
+                Label("Colors", systemImage: "paintpalette.fill")
+            }
             
-            Tab { NavigationStack { CombinationsView() }}
-            label: { Label("Combinations", systemImage: "swatchpalette.fill") }
+            Tab {
+                NavigationStack {
+                    CombinationsView()
+                        .navigationDestination(for: Combination.self) { combination in
+                            CombinationDetailView(combination: combination)
+                        }
+                        .navigationDestination(for: Color.self) { color in
+                            ColorDetailView(color: color)
+                        }
+                }
+            } label: {
+                Label("Combinations", systemImage: "swatchpalette.fill")
+            }
         }
         .tint(.primary)
         .toolbarBackground(backgroundColor, for: .tabBar)
