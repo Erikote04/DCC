@@ -32,6 +32,7 @@ struct ColorDetailView: View {
                             .padding()
                     }
                 }
+                .copyFormats(of: color)
             
             ScrollView(showsIndicators: false) {
                 LazyVStack(alignment: .leading, pinnedViews: .sectionHeaders) {

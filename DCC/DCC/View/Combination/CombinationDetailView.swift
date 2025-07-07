@@ -91,6 +91,7 @@ struct CombinationDetailView: View {
                 .foregroundStyle(color.color.contrastingTextColor())
                 .padding(.leading)
             }
+            .copyFormats(of: color)
     }
     
     private func navigateToPreviousCombination() {

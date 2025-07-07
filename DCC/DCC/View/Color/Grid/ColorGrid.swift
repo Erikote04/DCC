@@ -29,6 +29,7 @@ struct ColorGrid: View {
                                     color: color,
                                     size: geometry.size.width
                                 )
+                                .copyFormats(of: color)
                             }
                             .aspectRatio(1, contentMode: .fit)
                         }

@@ -19,6 +19,7 @@ struct ColorList: View {
                     ForEach(colors) { color in
                         NavigationLink(value: color) {
                             ColorRow(color: color)
+                                .copyFormats(of: color)
                         }
                     }
                 }
