@@ -26,10 +26,10 @@ struct ColorCombinationView: View {
         .tint(.primary)
         .toolbarBackground(backgroundColor, for: .tabBar)
         .toolbarBackground(.visible, for: .tabBar)
+        .sheet(isPresented: $viewModel.isShowingInfo) {
+            InfoView()
+        }
     }
-}
-
-fileprivate extension ColorCombinationView {
     
     @ViewBuilder
     private func navigationView(for tab: TabItem) -> some View {
@@ -41,7 +41,86 @@ fileprivate extension ColorCombinationView {
                 .navigationDestination(for: Color.self) { color in
                     ColorDetailView(color: color)
                 }
+                .toolbar {
+                    ToolbarItem(placement: .automatic) {
+                        Button {
+                            viewModel.isShowingInfo.toggle()
+                        } label: {
+                            Image(systemName: "info.circle")
+                                .accessibilityLabel("Info")
+                        }
+                        .frame(width: 44, height: 44)
+                    }
+                }
         }
+    }
+}
+
+fileprivate struct InfoView: View {
+    @Environment(\.dismiss) private var dismiss
+    @Environment(\.openURL) private var openURL
+    @EnvironmentObject private var viewModel: ColorCombinationViewModel
+    
+    var body: some View {
+        NavigationStack {
+            VStack {
+                ScrollView(showsIndicators: false) {
+                    VStack(spacing: 16) {
+                        ForEach(InfoSection.allCases) { section in
+                            cellForSection(section)
+                        }
+                    }
+                    .padding()
+                }
+            }
+            .navigationTitle("Info")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button {
+                        dismiss()
+                    } label: {
+                        Image(systemName: "xmark.circle")
+                            .accessibilityLabel("Close")
+                    }
+                    .frame(width: 44, height: 44)
+                }
+            }
+            .tint(.primary)
+        }
+    }
+    
+    @ViewBuilder
+    private func cellForSection(_ section: InfoSection) -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Label(section.title, systemImage: section.image)
+                .labelStyle(.info(color: section.color))
+            
+            Text(section.description)
+                .font(.subheadline)
+            
+            if section == .about {
+                Button {
+                    openURL(InfoSection.learnMoreURL)
+                } label: {
+                    Text("Learn more")
+                        .font(.subheadline.bold())
+                        .underline()
+                }
+                .buttonStyle(.plain)
+                
+                Button {
+                    openURL(InfoSection.buyTheBookURL)
+                } label: {
+                    Text("Buy the book")
+                        .font(.subheadline.bold())
+                        .underline()
+                }
+                .buttonStyle(.plain)
+            }
+        }
+        .padding()
+        .background(section.color.opacity(0.2), in: .rect(cornerRadius: 8))
     }
 }
 
