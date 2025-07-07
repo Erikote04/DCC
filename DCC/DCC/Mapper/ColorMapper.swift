@@ -14,18 +14,27 @@ protocol ColorMapperProtocol {
 
 struct ColorMapper: ColorMapperProtocol {
     func map(_ color: ColorDTO) -> Color {
+        let R = color.rgbArray[0]
+        let G = color.rgbArray[1]
+        let B = color.rgbArray[2]
+        
+        let C = color.cmykArray[0]
+        let M = color.cmykArray[1]
+        let Y = color.cmykArray[2]
+        let K = color.cmykArray[3]
+        
         return Color(
             id: color.id,
+            collectionId: color.collectionId,
             name: color.name,
             color: SwiftUI.Color(
-                red: Double(color.rgbArray[0]) / 255.0,
-                green: Double(color.rgbArray[1]) / 255.0,
-                blue: Double(color.rgbArray[2]) / 255.0
-            ),
+                red: Double(R)/255,
+                green: Double(G)/255,
+                blue: Double(B)/255),
             hex: color.hex,
-            rgb: "RGB: \(color.rgbArray[0]) \(color.rgbArray[1]) \(color.rgbArray[2])",
-            combinations: color.combinations,
-            swatchCollection: color.swatchCollection
+            cmyk: "CMYK: \(C) \(M) \(Y) \(K)",
+            rgb: "RGB: \(R) \(G) \(B)",
+            combinations: color.combinations
         )
     }
 

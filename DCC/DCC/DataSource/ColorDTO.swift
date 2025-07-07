@@ -9,18 +9,20 @@ import SwiftUI
 
 struct ColorDTO: Codable, Identifiable {
     let id: Int
+    let collectionId: Int
     let name: String
-    let rgbArray: [Int]
     let hex: String
+    let cmykArray: [Int]
+    let rgbArray: [Int]
     let combinations: [Int]
-    let swatchCollection: Int
 
     enum CodingKeys: String, CodingKey {
         case id
+        case collectionId = "collection_id"
         case name
-        case rgbArray = "rgb_array"
         case hex
+        case rgbArray = "rgb_array"
+        case cmykArray = "cmyk_array"
         case combinations
-        case swatchCollection = "swatch_collection"
     }
 }

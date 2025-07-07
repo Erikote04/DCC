@@ -9,10 +9,11 @@ import SwiftUI
 
 struct Color: Identifiable, Hashable {
     let id: Int
+    let collectionId: Int
     let name: String
     let color: SwiftUI.Color
     let hex: String
+    let cmyk: String
     let rgb: String
     let combinations: [Int]
-    let swatchCollection: Int
 }
