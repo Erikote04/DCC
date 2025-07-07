@@ -18,7 +18,7 @@ struct SectionHeader: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Swatch Collection \(swatch.id)")
+            Text("Collection \(swatch.id)")
                 .font(.title2)
                 
             Text(swatch.description)
