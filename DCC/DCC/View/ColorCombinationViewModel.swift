@@ -105,20 +105,4 @@ final class ColorCombinationViewModel: ObservableObject {
     func getCombination(by id: Int) -> Combination? {
         return combinations.first { $0.id == id }
     }
-    
-    func getDetailedColorsForCombination(id: Int) -> [Color] {
-        guard let combination = getCombination(by: id) else { return [] }
-        return combination.colors
-    }
-    
-    func filterCombinations(containing colorName: String) -> [Combination] {
-        return combinations.filter { combination in
-            combination.colors.contains { $0.name.localizedCaseInsensitiveContains(colorName) }
-        }
-    }
-}
-
-struct Combination: Identifiable, Hashable {
-    let id: Int
-    let colors: [Color]
 }
