@@ -20,12 +20,15 @@ struct ColorRow: View {
         VStack(alignment: .leading, spacing: 8) {
             Text(color.name)
                 .font(.headline)
+                .multilineTextAlignment(.leading)
             
             Text(color.hex)
                 .font(.subheadline)
+                .multilineTextAlignment(.leading)
             
             Text(color.rgb)
                 .font(.caption)
+                .multilineTextAlignment(.leading)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding()

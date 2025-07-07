@@ -24,6 +24,7 @@ struct ColorCell: View {
                 Text(color.hex)
                     .font(.subheadline)
                     .foregroundStyle(.gray)
+                    .multilineTextAlignment(.leading)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(8)
