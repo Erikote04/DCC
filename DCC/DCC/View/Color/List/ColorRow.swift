@@ -17,17 +17,21 @@ struct ColorRow: View {
     }
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading) {
             Text(color.name)
-                .font(.headline)
+                .font(.largeTitle)
                 .multilineTextAlignment(.leading)
             
             Text(color.hex)
-                .font(.subheadline)
+                .font(.headline)
                 .multilineTextAlignment(.leading)
             
             Text(color.rgb)
-                .font(.caption)
+                .font(.subheadline)
+                .multilineTextAlignment(.leading)
+            
+            Text(color.cmyk)
+                .font(.subheadline)
                 .multilineTextAlignment(.leading)
         }
         .frame(maxWidth: .infinity, alignment: .leading)

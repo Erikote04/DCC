@@ -12,12 +12,20 @@ extension View {
     func copyFormats(of color: ColorModel) -> some View {
         self
             .contextMenu {
-                Button("Copy RGB") {
-                    copyToClipboard(color.rgb)
+                Button("Copy Name") {
+                    copyToClipboard(color.name)
                 }
                 
                 Button("Copy HEX") {
                     copyToClipboard(color.hex)
+                }
+                
+                Button("Copy RGB") {
+                    copyToClipboard(color.rgb)
+                }
+                
+                Button("Copy CMYK") {
+                    copyToClipboard(color.cmyk)
                 }
             }
     }

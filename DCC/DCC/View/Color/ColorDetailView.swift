@@ -32,7 +32,6 @@ struct ColorDetailView: View {
                             .padding()
                     }
                 }
-                .copyFormats(of: color)
             
             ScrollView(showsIndicators: false) {
                 LazyVStack(alignment: .leading, pinnedViews: .sectionHeaders) {
@@ -65,12 +64,26 @@ struct ColorDetailView: View {
                         VStack(alignment: .leading) {
                             Text(color.name)
                                 .font(.largeTitle)
+                                .multilineTextAlignment(.leading)
+                            
                             Text(color.hex)
                                 .font(.headline)
+                                .multilineTextAlignment(.leading)
+                            
+                            Text(color.rgb)
+                                .font(.subheadline)
+                                .foregroundStyle(.secondary)
+                                .multilineTextAlignment(.leading)
+                            
+                            Text(color.cmyk)
+                                .font(.subheadline)
+                                .foregroundStyle(.secondary)
+                                .multilineTextAlignment(.leading)
                         }
                         .padding()
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .background(backgroundColor)
+                        .copyFormats(of: color)
                     }
                 }
             }
