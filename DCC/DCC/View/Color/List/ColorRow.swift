@@ -10,9 +10,9 @@ import SwiftUI
 struct ColorRow: View {
     @Environment(\.colorScheme) private var colorScheme
     
-    let color: Color
+    let color: ColorModel
     
-    var backgroundColor: SwiftUI.Color {
+    var backgroundColor: Color {
         colorScheme == .dark ? .black : .white
     }
     

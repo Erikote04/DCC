@@ -12,7 +12,7 @@ struct SectionHeader: View {
     
     let swatch: Swatch
     
-    var backgroundColor: SwiftUI.Color {
+    var backgroundColor: Color {
         colorScheme == .dark ? .black : .white
     }
     

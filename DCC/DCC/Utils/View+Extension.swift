@@ -9,7 +9,7 @@ import SwiftUI
 import UIKit
 
 extension View {
-    func copyFormats(of color: Color) -> some View {
+    func copyFormats(of color: ColorModel) -> some View {
         self
             .contextMenu {
                 Button("Copy RGB") {

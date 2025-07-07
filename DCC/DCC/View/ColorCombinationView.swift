@@ -11,7 +11,7 @@ struct ColorCombinationView: View {
     @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject private var viewModel: ColorCombinationViewModel
     
-    private var backgroundColor: SwiftUI.Color {
+    private var backgroundColor: Color {
         colorScheme == .dark ? .black : .white
     }
     
@@ -38,7 +38,7 @@ struct ColorCombinationView: View {
                 .navigationDestination(for: Combination.self) { combination in
                     CombinationDetailView(combination: combination)
                 }
-                .navigationDestination(for: Color.self) { color in
+                .navigationDestination(for: ColorModel.self) { color in
                     ColorDetailView(color: color)
                 }
                 .toolbar {

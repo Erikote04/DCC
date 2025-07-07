@@ -13,7 +13,7 @@ struct CombinationsView: View {
     
     @State private var searchText = ""
     
-    var backgroundColor: SwiftUI.Color {
+    var backgroundColor: Color {
         colorScheme == .dark ? .black : .white
     }
     

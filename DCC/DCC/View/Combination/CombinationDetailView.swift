@@ -32,7 +32,7 @@ struct CombinationDetailView: View {
         hasNextCombination ? viewModel.combinations[currentIndex + 1] : nil
     }
     
-    private var backGroundColor: SwiftUI.Color {
+    private var backGroundColor: Color {
         colorScheme == .dark ? .black : .white
     }
     
@@ -69,7 +69,7 @@ struct CombinationDetailView: View {
     }
     
     @ViewBuilder
-    private func colorCombinationFrame(for color: Color, using geometry: GeometryProxy) -> some View {
+    private func colorCombinationFrame(for color: ColorModel, using geometry: GeometryProxy) -> some View {
         Rectangle()
             .fill(color.color)
             .frame(maxWidth: .infinity, maxHeight: geometry.size.height / CGFloat(combination.colors.count))

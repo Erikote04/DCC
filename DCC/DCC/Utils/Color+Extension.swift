@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-extension SwiftUI.Color {
-    func contrastingTextColor() -> SwiftUI.Color {
+extension Color {
+    func contrastingTextColor() -> Color {
         let uiColor = UIColor(self)
         var red: CGFloat = 0
         var green: CGFloat = 0

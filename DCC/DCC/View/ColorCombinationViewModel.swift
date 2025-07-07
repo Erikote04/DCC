@@ -10,7 +10,7 @@ import SwiftUI
 final class ColorCombinationViewModel: ObservableObject {
     @Published var selectedTab: TabItem = .colors
     @Published var swatches: [Swatch] = []
-    @Published var colorsBySwatch: [Int: [Color]] = [:]
+    @Published var colorsBySwatch: [Int: [ColorModel]] = [:]
     @Published var combinations: [Combination] = []
     @Published var isShowingGrid: Bool = true
     @Published var isShowingInfo: Bool = false
@@ -63,7 +63,7 @@ final class ColorCombinationViewModel: ObservableObject {
         self.combinations = generateCombinations(from: allColors)
     }
     
-    private func generateCombinations(from colors: [Color]) -> [Combination] {
+    private func generateCombinations(from colors: [ColorModel]) -> [Combination] {
         var combinations: [Combination] = []
         var processedCombinationIds: Set<Int> = []
         
@@ -92,13 +92,13 @@ final class ColorCombinationViewModel: ObservableObject {
         return combinations.sorted { $0.id < $1.id }
     }
     
-    private func findColorsInCombination(combinationId: Int, allColors: [Color]) -> [Color] {
+    private func findColorsInCombination(combinationId: Int, allColors: [ColorModel]) -> [ColorModel] {
         return allColors
             .filter { $0.combinations.contains(combinationId) }
             .sorted { $0.name < $1.name }
     }
     
-    private func getAllColors() -> [Color] {
+    private func getAllColors() -> [ColorModel] {
         return colorsBySwatch.values.flatMap { $0 }
     }
     

@@ -8,12 +8,12 @@
 import SwiftUI
 
 protocol ColorMapperProtocol {
-    func map(_ color: ColorDTO) -> Color
-    func map(_ colors: [ColorDTO]) -> [Color]
+    func map(_ color: ColorDTO) -> ColorModel
+    func map(_ colors: [ColorDTO]) -> [ColorModel]
 }
 
 struct ColorMapper: ColorMapperProtocol {
-    func map(_ color: ColorDTO) -> Color {
+    func map(_ color: ColorDTO) -> ColorModel {
         let R = color.rgbArray[0]
         let G = color.rgbArray[1]
         let B = color.rgbArray[2]
@@ -23,11 +23,11 @@ struct ColorMapper: ColorMapperProtocol {
         let Y = color.cmykArray[2]
         let K = color.cmykArray[3]
         
-        return Color(
+        return ColorModel(
             id: color.id,
             collectionId: color.collectionId,
             name: color.name,
-            color: SwiftUI.Color(
+            color: Color(
                 red: Double(R)/255,
                 green: Double(G)/255,
                 blue: Double(B)/255),
@@ -38,7 +38,7 @@ struct ColorMapper: ColorMapperProtocol {
         )
     }
 
-    func map(_ colors: [ColorDTO]) -> [Color] {
+    func map(_ colors: [ColorDTO]) -> [ColorModel] {
         colors.map(map)
     }
 }

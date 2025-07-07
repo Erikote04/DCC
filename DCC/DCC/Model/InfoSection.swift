@@ -38,7 +38,7 @@ enum InfoSection: String, CaseIterable, Identifiable {
         }
     }
     
-    var color: SwiftUI.Color {
+    var color: Color {
         switch self {
         case .colors: return .blue
         case .combinations: return .mint

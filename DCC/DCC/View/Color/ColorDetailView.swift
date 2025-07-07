@@ -11,9 +11,9 @@ struct ColorDetailView: View {
     @Environment(\.colorScheme) private var colorScheme
     @EnvironmentObject private var viewModel: ColorCombinationViewModel
     
-    let color: Color
+    let color: ColorModel
     
-    private var backgroundColor: SwiftUI.Color {
+    private var backgroundColor: Color {
         colorScheme == .dark ? .black : .white
     }
     
@@ -83,7 +83,7 @@ struct ColorDetailView: View {
 
 #Preview {
     NavigationStack {
-        ColorDetailView(color: Color(
+        ColorDetailView(color: ColorModel(
             id: 159,
             collectionId: 6,
             name: "Black",

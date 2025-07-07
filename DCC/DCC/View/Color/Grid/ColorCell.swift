@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ColorCell: View {
-    let color: Color
+    let color: ColorModel
     let size: CGFloat
     
     var body: some View {

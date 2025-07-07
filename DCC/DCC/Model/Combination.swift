@@ -9,5 +9,5 @@ import SwiftUI
 
 struct Combination: Identifiable, Hashable {
     let id: Int
-    let colors: [Color]
+    let colors: [ColorModel]
 }

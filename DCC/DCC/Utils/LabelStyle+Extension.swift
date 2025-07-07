@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Info: LabelStyle {
-    let color: SwiftUI.Color
+    let color: Color
     
     func makeBody(configuration: Configuration) -> some View {
         HStack(spacing: 8) {
@@ -21,7 +21,7 @@ struct Info: LabelStyle {
 }
 
 extension LabelStyle where Self == Info {
-    static func info(color: SwiftUI.Color) -> Self {
+    static func info(color: Color) -> Self {
         Self(color: color)
     }
 }

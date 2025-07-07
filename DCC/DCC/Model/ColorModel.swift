@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct Color: Identifiable, Hashable {
+struct ColorModel: Identifiable, Hashable {
     let id: Int
     let collectionId: Int
     let name: String
-    let color: SwiftUI.Color
+    let color: Color
     let hex: String
     let cmyk: String
     let rgb: String

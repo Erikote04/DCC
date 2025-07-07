@@ -13,7 +13,7 @@ struct ColorsView: View {
     
     @State private var searchText = ""
     
-    var backgroundColor: SwiftUI.Color {
+    var backgroundColor: Color {
         colorScheme == .dark ? .black : .white
     }
     
@@ -68,7 +68,7 @@ struct ColorsView: View {
 }
 
 fileprivate struct SearchResultRow: View {
-    let color: Color
+    let color: ColorModel
     
     var body: some View {
         HStack(spacing: 8) {
