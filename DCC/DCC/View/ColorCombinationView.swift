@@ -72,6 +72,11 @@ fileprivate struct InfoView: View {
                     }
                     .padding()
                 }
+                
+                Text(viewModel.appVersion)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .padding(.vertical)
             }
             .navigationTitle("Info")
             .navigationBarTitleDisplayMode(.inline)

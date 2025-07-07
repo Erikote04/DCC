@@ -13,6 +13,15 @@ final class ColorCombinationViewModel: ObservableObject {
     @Published var colorsBySwatch: [Int: [Color]] = [:]
     @Published var combinations: [Combination] = []
     @Published var isShowingGrid: Bool = true
+    @Published var isShowingInfo: Bool = false
+    
+    var appVersion: String {
+        guard let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String else {
+            return "Version unknown"
+        }
+        
+        return "Version \(version)"
+    }
     
     private let mapper: ColorMapperProtocol
     
