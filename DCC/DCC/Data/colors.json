@@ -1,4063 +1,1435 @@
 {
   "colors": [
     {
-      "name": "Hermosa Pink",
-      "rgb_array": [
-        255,
-        179,
-        240
-      ],
-      "cmyk_array": [
-        0,
-        30,
-        6,
-        0
-      ],
-      "hex": "#ffb3f0",
-      "combinations": [
-        176,
-        227,
-        273
-      ],
       "id": 1,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Hermosa Pink",
+      "hex": "#ffb3f0",
+      "cmyk_array": [0, 30, 6, 0],
+      "rgb_array": [255, 179, 240],
+      "combinations": [176, 227, 273]
     },
     {
-      "name": "Corinthian Pink",
-      "rgb_array": [
-        255,
-        166,
-        217
-      ],
-      "cmyk_array": [
-        0,
-        35,
-        15,
-        0
-      ],
-      "hex": "#ffa6d9",
-      "combinations": [
-        27,
-        43,
-        87,
-        97,
-        128,
-        169,
-        174,
-        206,
-        246,
-        254,
-        264,
-        342
-      ],
       "id": 2,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Corinthian Pink",
+      "hex": "#ffa6d9",
+      "cmyk_array": [0, 35, 15, 0],
+      "rgb_array": [255, 166, 217],
+      "combinations": [27, 43, 87, 97, 128, 169, 174, 206, 246, 254, 264, 342]
     },
     {
-      "name": "Cameo Pink",
-      "rgb_array": [
-        230,
-        173,
-        207
-      ],
-      "cmyk_array": [
-        10,
-        32,
-        19,
-        0
-      ],
-      "hex": "#e6adcf",
-      "combinations": [
-        101,
-        105,
-        116,
-        120,
-        165,
-        231
-      ],
       "id": 3,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Cameo Pink",
+      "hex": "#e6adcf",
+      "cmyk_array": [10, 32, 19, 0],
+      "rgb_array": [230, 173, 207],
+      "combinations": [101, 105, 116, 120, 165, 231]
     },
     {
-      "name": "Fawn",
-      "rgb_array": [
-        209,
-        176,
-        179
-      ],
-      "cmyk_array": [
-        18,
-        31,
-        30,
-        0
-      ],
-      "hex": "#d1b0b3",
-      "combinations": [
-        18,
-        125,
-        308
-      ],
       "id": 4,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Fawn",
+      "hex": "#d1b0b3",
+      "cmyk_array": [18, 31, 30, 0],
+      "rgb_array": [209, 176, 179],
+      "combinations": [18, 125, 308]
     },
     {
-      "name": "Light Brown Drab",
-      "rgb_array": [
-        176,
-        134,
-        153
-      ],
-      "cmyk_array": [
-        8,
-        30,
-        20,
-        25
-      ],
-      "hex": "#b08699",
-      "combinations": [
-        35,
-        68,
-        185,
-        191,
-        223,
-        239,
-        244,
-        268,
-        285,
-        321
-      ],
       "id": 5,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Light Brown Drab",
+      "hex": "#b08699",
+      "cmyk_array": [8, 30, 20, 25],
+      "rgb_array": [176, 134, 153],
+      "combinations": [35, 68, 185, 191, 223, 239, 244, 268, 285, 321]
     },
     {
-      "name": "Coral Red",
-      "rgb_array": [
-        255,
-        115,
-        153
-      ],
-      "cmyk_array": [
-        0,
-        55,
-        40,
-        0
-      ],
-      "hex": "#ff7399",
-      "combinations": [
-        92,
-        123,
-        320,
-        332
-      ],
       "id": 6,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Coral Red",
+      "hex": "#ff7399",
+      "cmyk_array": [0, 55, 40, 0],
+      "rgb_array": [255, 115, 153],
+      "combinations": [92, 123, 320, 332]
     },
     {
-      "name": "Fresh Color",
-      "rgb_array": [
-        255,
-        120,
-        140
-      ],
-      "cmyk_array": [
-        0,
-        53,
-        45,
-        0
-      ],
-      "hex": "#ff788c",
-      "combinations": [
-        240
-      ],
       "id": 7,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Fresh Color",
+      "hex": "#ff788c",
+      "cmyk_array": [0, 53, 45, 0],
+      "rgb_array": [255, 120, 140],
+      "combinations": [240]
     },
     {
-      "name": "Grenadine Pink",
-      "rgb_array": [
-        255,
-        97,
-        107
-      ],
-      "cmyk_array": [
-        0,
-        62,
-        58,
-        0
-      ],
-      "hex": "#ff616b",
-      "combinations": [
-        6,
-        21,
-        112,
-        166,
-        193,
-        201,
-        230,
-        300,
-        315,
-        341
-      ],
       "id": 8,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Grenadine Pink",
+      "hex": "#ff616b",
+      "cmyk_array": [0, 62, 58, 0],
+      "rgb_array": [255, 97, 107],
+      "combinations": [6, 21, 112, 166, 193, 201, 230, 300, 315, 341]
     },
     {
-      "name": "Eosine Pink",
-      "rgb_array": [
-        255,
-        94,
-        196
-      ],
-      "cmyk_array": [
-        0,
-        63,
-        23,
-        0
-      ],
-      "hex": "#ff5ec4",
-      "combinations": [
-        34,
-        59,
-        90,
-        108,
-        134,
-        153,
-        197,
-        242,
-        248,
-        276,
-        287,
-        314,
-        327,
-        336
-      ],
       "id": 9,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Eosine Pink",
+      "hex": "#ff5ec4",
+      "cmyk_array": [0, 63, 23, 0],
+      "rgb_array": [255, 94, 196],
+      "combinations": [34, 59, 90, 108, 134, 153, 197, 242, 248, 276, 287, 314, 327, 336]
     },
     {
-      "name": "Spinel Red",
-      "rgb_array": [
-        255,
-        77,
-        201
-      ],
-      "cmyk_array": [
-        0,
-        70,
-        21,
-        0
-      ],
-      "hex": "#ff4dc9",
-      "combinations": [
-        14,
-        147,
-        165,
-        184,
-        195,
-        224,
-        277
-      ],
       "id": 10,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Spinel Red",
+      "hex": "#ff4dc9",
+      "cmyk_array": [0, 70, 21, 0],
+      "rgb_array": [255, 77, 201],
+      "combinations": [14, 147, 165, 184, 195, 224, 277]
     },
     {
-      "name": "Old Rose",
-      "rgb_array": [
-        217,
-        77,
-        153
-      ],
-      "cmyk_array": [
-        15,
-        70,
-        40,
-        0
-      ],
-      "hex": "#d94d99",
-      "combinations": [
-        55,
-        162,
-        260,
-        265
-      ],
       "id": 11,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Old Rose",
+      "hex": "#d94d99",
+      "cmyk_array": [15, 70, 40, 0],
+      "rgb_array": [217, 77, 153],
+      "combinations": [55, 162, 260, 265]
     },
     {
-      "name": "Eugenia Red",
-      "rgb_array": [
-        237,
-        61,
-        102
-      ],
-      "cmyk_array": [
-        7,
-        76,
-        60,
-        0
-      ],
-      "hex": "#ed3d66",
-      "combinations": [
-        284
-      ],
       "id": 12,
-      "swatch_collection": 1
-    },
-    {
+      "collection_id": 1,
       "name": "Eugenia Red",
-      "rgb_array": [
-        230,
-        46,
-        115
-      ],
-      "cmyk_array": [
-        0,
-        80,
-        50,
-        10
-      ],
-      "hex": "#e62e73",
-      "combinations": [
-        17,
-        77,
-        252,
-        262,
-        270,
-        280,
-        282,
-        325
-      ],
+      "hex": "#ed3d66",
+      "cmyk_array": [7, 76, 60, 0],
+      "rgb_array": [237, 61, 102],
+      "combinations": [284]
+    },
+    {
       "id": 13,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Eugenia Red",
+      "hex": "#e62e73",
+      "cmyk_array": [0, 80, 50, 10],
+      "rgb_array": [230, 46, 115],
+      "combinations": [17, 77, 252, 262, 270, 280, 282, 325]
     },
     {
-      "name": "Raw Sienna",
-      "rgb_array": [
-        184,
-        94,
-        0
-      ],
-      "cmyk_array": [
-        18,
-        58,
-        100,
-        12
-      ],
-      "hex": "#b85e00",
-      "combinations": [
-        3,
-        13,
-        33,
-        70,
-        86,
-        130,
-        131,
-        182,
-        243,
-        247,
-        252,
-        255,
-        268,
-        269,
-        279,
-        293,
-        298,
-        319,
-        327
-      ],
-      "cmyk_array": [
-        255,
-        179,
-        240,
-        240
-      ],
       "id": 14,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Raw Sienna",
+      "hex": "#b85e00",
+      "cmyk_array": [255, 179, 240, 240],
+      "rgb_array": [184, 94, 0],
+      "combinations": [3, 13, 33, 70, 86, 130, 131, 182, 243, 247, 252, 255, 268, 269, 279, 293, 298, 319, 327]
     },
     {
-      "name": "Vinaceous Tawny",
-      "rgb_array": [
-        199,
-        67,
-        0
-      ],
-      "cmyk_array": [
-        17,
-        72,
-        100,
-        6
-      ],
-      "hex": "#c74300",
-      "combinations": [
-        40,
-        85,
-        244
-      ],
       "id": 15,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Vinaceous Tawny",
+      "hex": "#c74300",
+      "cmyk_array": [17, 72, 100, 6],
+      "rgb_array": [199, 67, 0],
+      "combinations": [40, 85, 244]
     },
     {
-      "name": "Jasper Red",
-      "rgb_array": [
-        250,
-        43,
-        0
-      ],
-      "cmyk_array": [
-        2,
-        83,
-        100,
-        0
-      ],
-      "hex": "#fa2b00",
-      "combinations": [
-        155,
-        194,
-        216,
-        219
-      ],
       "id": 16,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Jasper Red",
+      "hex": "#fa2b00",
+      "cmyk_array": [2, 83, 100, 0],
+      "rgb_array": [250, 43, 0],
+      "combinations": [155, 194, 216, 219]
     },
     {
-      "name": "Spectrum Red",
-      "rgb_array": [
-        242,
-        0,
-        0
-      ],
-      "cmyk_array": [
-        5,
-        100,
-        100,
-        0
-      ],
-      "hex": "#f20000",
-      "combinations": [
-        257,
-        266,
-        301,
-        322
-      ],
       "id": 17,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Spectrum Red",
+      "hex": "#f20000",
+      "cmyk_array": [5, 100, 100, 0],
+      "rgb_array": [242, 0, 0],
+      "combinations": [257, 266, 301, 322]
     },
     {
-      "name": "Red Orange",
-      "rgb_array": [
-        232,
-        25,
-        0
-      ],
-      "cmyk_array": [
-        9,
-        90,
-        100,
-        0
-      ],
-      "hex": "#e81900",
-      "combinations": [
-        31,
-        164,
-        179,
-        241,
-        264
-      ],
       "id": 18,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Red Orange",
+      "hex": "#e81900",
+      "cmyk_array": [9, 90, 100, 0],
+      "rgb_array": [232, 25, 0],
+      "combinations": [31, 164, 179, 241, 264]
     },
     {
-      "name": "Etruscan Red",
-      "rgb_array": [
-        201,
-        48,
-        62
-      ],
-      "cmyk_array": [
-        16,
-        80,
-        74,
-        6
-      ],
-      "hex": "#c9303e",
-      "combinations": [
-        25,
-        47,
-        97,
-        137,
-        152,
-        185,
-        275
-      ],
       "id": 19,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Etruscan Red",
+      "hex": "#c9303e",
+      "cmyk_array": [16, 80, 74, 6],
+      "rgb_array": [201, 48, 62],
+      "combinations": [25, 47, 97, 137, 152, 185, 275]
     },
     {
-      "name": "Burnt Sienna",
-      "rgb_array": [
-        169,
-        52,
-        0
-      ],
-      "cmyk_array": [
-        22,
-        76,
-        100,
-        15
-      ],
-      "hex": "#a93400",
-      "combinations": [
-        198,
-        242,
-        263,
-        285,
-        286,
-        297,
-        312,
-        333,
-        343
-      ],
       "id": 20,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Burnt Sienna",
+      "hex": "#a93400",
+      "cmyk_array": [22, 76, 100, 15],
+      "rgb_array": [169, 52, 0],
+      "combinations": [198, 242, 263, 285, 286, 297, 312, 333, 343]
     },
     {
-      "name": "Ocher Red",
-      "rgb_array": [
-        167,
-        55,
-        75
-      ],
-      "cmyk_array": [
-        18,
-        73,
-        63,
-        20
-      ],
-      "hex": "#a7374b",
-      "combinations": [
-        199,
-        283
-      ],
       "id": 21,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Ocher Red",
+      "hex": "#a7374b",
+      "cmyk_array": [18, 73, 63, 20],
+      "rgb_array": [167, 55, 75],
+      "combinations": [199, 283]
     },
     {
-      "name": "Scarlet",
-      "rgb_array": [
-        213,
-        12,
-        66
-      ],
-      "cmyk_array": [
-        10,
-        95,
-        72,
-        7
-      ],
-      "hex": "#d50c42",
-      "combinations": [
-        136,
-        308,
-        332
-      ],
       "id": 22,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Scarlet",
+      "hex": "#d50c42",
+      "cmyk_array": [10, 95, 72, 7],
+      "rgb_array": [213, 12, 66],
+      "combinations": [136, 308, 332]
     },
     {
-      "name": "Carmine",
-      "rgb_array": [
-        214,
-        0,
-        54
-      ],
-      "cmyk_array": [
-        0,
-        100,
-        75,
-        16
-      ],
-      "hex": "#d60036",
-      "combinations": [
-        39,
-        117,
-        122,
-        154,
-        225,
-        232,
-        307,
-        313
-      ],
       "id": 23,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Carmine",
+      "hex": "#d60036",
+      "cmyk_array": [0, 100, 75, 16],
+      "rgb_array": [214, 0, 54],
+      "combinations": [39, 117, 122, 154, 225, 232, 307, 313]
     },
     {
-      "name": "Indian Lake",
-      "rgb_array": [
-        204,
-        26,
-        151
-      ],
-      "cmyk_array": [
-        12,
-        89,
-        35,
-        9
-      ],
-      "hex": "#cc1a97",
-      "combinations": [
-        299,
-        331
-      ],
       "id": 24,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Indian Lake",
+      "hex": "#cc1a97",
+      "cmyk_array": [12, 89, 35, 9],
+      "rgb_array": [204, 26, 151],
+      "combinations": [299, 331]
     },
     {
-      "name": "Rosolanc Purple",
-      "rgb_array": [
-        179,
-        25,
-        171
-      ],
-      "cmyk_array": [
-        30,
-        90,
-        33,
-        0
-      ],
-      "hex": "#b319ab",
-      "combinations": [
-        48,
-        144,
-        170,
-        204,
-        277,
-        346
-      ],
       "id": 25,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Rosolanc Purple",
+      "hex": "#b319ab",
+      "cmyk_array": [30, 90, 33, 0],
+      "rgb_array": [179, 25, 171],
+      "combinations": [48, 144, 170, 204, 277, 346]
     },
     {
-      "name": "Pomegranate Purple",
-      "rgb_array": [
-        185,
-        0,
-        120
-      ],
-      "cmyk_array": [
-        23,
-        100,
-        50,
-        6
-      ],
-      "hex": "#b90078",
-      "combinations": [
-        220,
-        271
-      ],
       "id": 26,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Pomegranate Purple",
+      "hex": "#b90078",
+      "cmyk_array": [23, 100, 50, 6],
+      "rgb_array": [185, 0, 120],
+      "combinations": [220, 271]
     },
     {
-      "name": "Hydrangea Red",
-      "rgb_array": [
-        158,
-        25,
-        77
-      ],
-      "cmyk_array": [
-        38,
-        90,
-        70,
-        0
-      ],
-      "hex": "#9e194d",
-      "combinations": [
-        142
-      ],
       "id": 27,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Hydrangea Red",
+      "hex": "#9e194d",
+      "cmyk_array": [38, 90, 70, 0],
+      "rgb_array": [158, 25, 77],
+      "combinations": [142]
     },
     {
-      "name": "Brick Red",
-      "rgb_array": [
-        163,
-        33,
-        0
-      ],
-      "cmyk_array": [
-        22,
-        84,
-        100,
-        18
-      ],
-      "hex": "#a32100",
-      "combinations": [
-        37,
-        108,
-        246,
-        322,
-        328
-      ],
       "id": 28,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Brick Red",
+      "hex": "#a32100",
+      "cmyk_array": [22, 84, 100, 18],
+      "rgb_array": [163, 33, 0],
+      "combinations": [37, 108, 246, 322, 328]
     },
     {
-      "name": "Carmine Red",
-      "rgb_array": [
-        161,
-        11,
-        43
-      ],
-      "cmyk_array": [
-        25,
-        95,
-        80,
-        16
-      ],
-      "hex": "#a10b2b",
-      "combinations": [
-        35,
-        51,
-        104,
-        130,
-        181,
-        200,
-        221,
-        228,
-        233,
-        237,
-        245,
-        338
-      ],
       "id": 29,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Carmine Red",
+      "hex": "#a10b2b",
+      "cmyk_array": [25, 95, 80, 16],
+      "rgb_array": [161, 11, 43],
+      "combinations": [35, 51, 104, 130, 181, 200, 221, 228, 233, 237, 245, 338]
     },
     {
-      "name": "Pompeian Red",
-      "rgb_array": [
-        169,
-        6,
-        54
-      ],
-      "cmyk_array": [
-        18,
-        97,
-        74,
-        19
-      ],
-      "hex": "#a90636",
-      "combinations": [
-        30,
-        71,
-        120,
-        212,
-        311,
-        324
-      ],
       "id": 30,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Pompeian Red",
+      "hex": "#a90636",
+      "cmyk_array": [18, 97, 74, 19],
+      "rgb_array": [169, 6, 54],
+      "combinations": [30, 71, 120, 212, 311, 324]
     },
     {
-      "name": "Red",
-      "rgb_array": [
-        161,
-        0,
-        69
-      ],
-      "cmyk_array": [
-        30,
-        100,
-        70,
-        10
-      ],
-      "hex": "#a10045",
-      "combinations": [
-        251,
-        261
-      ],
       "id": 31,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Red",
+      "hex": "#a10045",
+      "cmyk_array": [30, 100, 70, 10],
+      "rgb_array": [161, 0, 69],
+      "combinations": [251, 261]
     },
     {
-      "name": "Brown",
-      "rgb_array": [
-        108,
-        43,
-        17
-      ],
-      "cmyk_array": [
-        35,
-        74,
-        90,
-        35
-      ],
-      "hex": "#6c2b11",
-      "combinations": [
-        110,
-        121,
-        145,
-        161
-      ],
       "id": 32,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Brown",
+      "hex": "#6c2b11",
+      "cmyk_array": [35, 74, 90, 35],
+      "rgb_array": [108, 43, 17],
+      "combinations": [110, 121, 145, 161]
     },
     {
-      "name": "Hay's Russet",
-      "rgb_array": [
-        104,
-        25,
-        22
-      ],
-      "cmyk_array": [
-        37,
-        85,
-        87,
-        35
-      ],
-      "hex": "#681916",
-      "combinations": [
-        58,
-        82,
-        95,
-        152,
-        186,
-        231,
-        249,
-        304,
-        314,
-        336,
-        345
-      ],
       "id": 33,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Hay's Russet",
+      "hex": "#681916",
+      "cmyk_array": [37, 85, 87, 35],
+      "rgb_array": [104, 25, 22],
+      "combinations": [58, 82, 95, 152, 186, 231, 249, 304, 314, 336, 345]
     },
     {
-      "name": "Vandyke Red",
-      "rgb_array": [
-        116,
-        9,
-        9
-      ],
-      "cmyk_array": [
-        32,
-        95,
-        95,
-        33
-      ],
-      "hex": "#740909",
-      "combinations": [
-        16,
-        133,
-        147,
-        316,
-        335
-      ],
       "id": 34,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Vandyke Red",
+      "hex": "#740909",
+      "cmyk_array": [32, 95, 95, 33],
+      "rgb_array": [116, 9, 9],
+      "combinations": [16, 133, 147, 316, 335]
     },
     {
-      "name": "Pansy Purple",
-      "rgb_array": [
-        111,
-        0,
-        67
-      ],
-      "cmyk_array": [
-        34,
-        100,
-        60,
-        34
-      ],
-      "hex": "#6f0043",
-      "combinations": [
-        157,
-        273
-      ],
       "id": 35,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Pansy Purple",
+      "hex": "#6f0043",
+      "cmyk_array": [34, 100, 60, 34],
+      "rgb_array": [111, 0, 67],
+      "combinations": [157, 273]
     },
     {
-      "name": "Pale Burnt Lake",
-      "rgb_array": [
-        115,
-        15,
-        31
-      ],
-      "cmyk_array": [
-        25,
-        90,
-        80,
-        40
-      ],
-      "hex": "#730f1f",
-      "combinations": [
-        124,
-        171,
-        177,
-        205,
-        217,
-        258,
-        269,
-        283
-      ],
       "id": 36,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Pale Burnt Lake",
+      "hex": "#730f1f",
+      "cmyk_array": [25, 90, 80, 40],
+      "rgb_array": [115, 15, 31],
+      "combinations": [124, 171, 177, 205, 217, 258, 269, 283]
     },
     {
-      "name": "Violet Red",
-      "rgb_array": [
-        61,
-        0,
-        121
-      ],
-      "cmyk_array": [
-        75,
-        100,
-        50,
-        5
-      ],
-      "hex": "#3d0079",
-      "combinations": [
-        9
-      ],
       "id": 37,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Violet Red",
+      "hex": "#3d0079",
+      "cmyk_array": [75, 100, 50, 5],
+      "rgb_array": [61, 0, 121],
+      "combinations": [9]
     },
     {
-      "name": "Vistoris Lake",
-      "rgb_array": [
-        92,
-        44,
-        69
-      ],
-      "cmyk_array": [
-        40,
-        71,
-        55,
-        40
-      ],
-      "hex": "#5c2c45",
-      "combinations": [
-        63,
-        91,
-        165,
-        226,
-        290,
-        337
-      ],
       "id": 38,
-      "swatch_collection": 1
+      "collection_id": 1,
+      "name": "Vistoris Lake",
+      "hex": "#5c2c45",
+      "cmyk_array": [40, 71, 55, 40],
+      "rgb_array": [92, 44, 69],
+      "combinations": [63, 91, 165, 226, 290, 337]
     },
     {
-      "name": "Sulphur Yellow",
-      "rgb_array": [
-        245,
-        245,
-        184
-      ],
-      "cmyk_array": [
-        4,
-        4,
-        28,
-        0
-      ],
-      "hex": "#f5f5b8",
-      "combinations": [
-        52,
-        72,
-        80,
-        104,
-        132,
-        135,
-        151,
-        208,
-        246,
-        254,
-        270,
-        294,
-        296,
-        310,
-        315,
-        320,
-        321,
-        326
-      ],
       "id": 39,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Sulphur Yellow",
+      "hex": "#f5f5b8",
+      "cmyk_array": [4, 4, 28, 0],
+      "rgb_array": [245, 245, 184],
+      "combinations": [52, 72, 80, 104, 132, 135, 151, 208, 246, 254, 270, 294, 296, 310, 315, 320, 321, 326]
     },
     {
-      "name": "Pale Lemon Yellow",
-      "rgb_array": [
-        255,
-        245,
-        158
-      ],
-      "cmyk_array": [
-        0,
-        4,
-        38,
-        0
-      ],
-      "hex": "#fff59e",
-      "combinations": [
-        3,
-        31,
-        60,
-        76,
-        99,
-        109,
-        111,
-        169,
-        185,
-        195,
-        203,
-        228,
-        241,
-        261,
-        272,
-        281,
-        290,
-        292,
-        336
-      ],
       "id": 40,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Pale Lemon Yellow",
+      "hex": "#fff59e",
+      "cmyk_array": [0, 4, 38, 0],
+      "rgb_array": [255, 245, 158],
+      "combinations": [3, 31, 60, 76, 99, 109, 111, 169, 185, 195, 203, 228, 241, 261, 272, 281, 290, 292, 336]
     },
     {
-      "name": "Naples Yellow",
-      "rgb_array": [
-        250,
-        237,
-        143
-      ],
-      "cmyk_array": [
-        2,
-        7,
-        44,
-        0
-      ],
-      "hex": "#faed8f",
-      "combinations": [
-        14,
-        115,
-        166,
-        193,
-        303,
-        325
-      ],
       "id": 41,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Naples Yellow",
+      "hex": "#faed8f",
+      "cmyk_array": [2, 7, 44, 0],
+      "rgb_array": [250, 237, 143],
+      "combinations": [14, 115, 166, 193, 303, 325]
     },
     {
-      "name": "Ivory Buff",
-      "rgb_array": [
-        235,
-        217,
-        153
-      ],
-      "cmyk_array": [
-        8,
-        15,
-        40,
-        0
-      ],
-      "hex": "#ebd999",
-      "combinations": [
-        11,
-        50,
-        94,
-        102,
-        126,
-        178,
-        184,
-        190,
-        209,
-        214,
-        235,
-        243,
-        262,
-        266,
-        301,
-        343
-      ],
       "id": 42,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Ivory Buff",
+      "hex": "#ebd999",
+      "cmyk_array": [8, 15, 40, 0],
+      "rgb_array": [235, 217, 153],
+      "combinations": [11, 50, 94, 102, 126, 178, 184, 190, 209, 214, 235, 243, 262, 266, 301, 343]
     },
     {
-      "name": "Seashell Pink",
-      "rgb_array": [
-        255,
-        207,
-        196
-      ],
-      "cmyk_array": [
-        0,
-        19,
-        23,
-        0
-      ],
-      "hex": "#ffcfc4",
-      "combinations": [
-        45,
-        84,
-        88,
-        113,
-        150,
-        176,
-        194,
-        276,
-        334
-      ],
       "id": 43,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Seashell Pink",
+      "hex": "#ffcfc4",
+      "cmyk_array": [0, 19, 23, 0],
+      "rgb_array": [255, 207, 196],
+      "combinations": [45, 84, 88, 113, 150, 176, 194, 276, 334]
     },
     {
-      "name": "Light Pinkish Cinnamon",
-      "rgb_array": [
-        255,
-        191,
-        153
-      ],
-      "cmyk_array": [
-        0,
-        25,
-        40,
-        0
-      ],
-      "hex": "#ffbf99",
-      "combinations": [
-        317
-      ],
       "id": 44,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Light Pinkish Cinnamon",
+      "hex": "#ffbf99",
+      "cmyk_array": [0, 25, 40, 0],
+      "rgb_array": [255, 191, 153],
+      "combinations": [317]
     },
     {
-      "name": "Pinkish Cinnamon",
-      "rgb_array": [
-        242,
-        173,
-        120
-      ],
-      "cmyk_array": [
-        5,
-        32,
-        53,
-        0
-      ],
-      "hex": "#f2ad78",
-      "combinations": [
-        78,
-        161,
-        175,
-        232,
-        258,
-        263,
-        292,
-        305,
-        310
-      ],
       "id": 45,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Pinkish Cinnamon",
+      "hex": "#f2ad78",
+      "cmyk_array": [5, 32, 53, 0],
+      "rgb_array": [242, 173, 120],
+      "combinations": [78, 161, 175, 232, 258, 263, 292, 305, 310]
     },
     {
-      "name": "Cinnamon Buff",
-      "rgb_array": [
-        255,
-        191,
-        110
-      ],
-      "cmyk_array": [
-        0,
-        25,
-        57,
-        0
-      ],
-      "hex": "#ffbf6e",
-      "combinations": [
-        23,
-        127,
-        137,
-        180,
-        210,
-        234,
-        246,
-        323,
-        344
-      ],
       "id": 46,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Cinnamon Buff",
+      "hex": "#ffbf6e",
+      "cmyk_array": [0, 25, 57, 0],
+      "rgb_array": [255, 191, 110],
+      "combinations": [23, 127, 137, 180, 210, 234, 246, 323, 344]
     },
     {
-      "name": "Cream Yellow",
-      "rgb_array": [
-        255,
-        184,
-        82
-      ],
-      "cmyk_array": [
-        0,
-        28,
-        68,
-        0
-      ],
-      "hex": "#ffb852",
-      "combinations": [
-        122,
-        192,
-        215,
-        226,
-        267,
-        278,
-        294,
-        295,
-        300,
-        302,
-        304,
-        311,
-        329,
-        342
-      ],
       "id": 47,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Cream Yellow",
+      "hex": "#ffb852",
+      "cmyk_array": [0, 28, 68, 0],
+      "rgb_array": [255, 184, 82],
+      "combinations": [122, 192, 215, 226, 267, 278, 294, 295, 300, 302, 304, 311, 329, 342]
     },
     {
-      "name": "Golden Yellow",
-      "rgb_array": [
-        250,
-        148,
-        66
-      ],
-      "cmyk_array": [
-        2,
-        42,
-        74,
-        0
-      ],
-      "hex": "#fa9442",
-      "combinations": [
-        26,
-        81,
-        132,
-        138,
-        140,
-        179,
-        206,
-        229,
-        309,
-        315
-      ],
       "id": 48,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Golden Yellow",
+      "hex": "#fa9442",
+      "cmyk_array": [2, 42, 74, 0],
+      "rgb_array": [250, 148, 66],
+      "combinations": [26, 81, 132, 138, 140, 179, 206, 229, 309, 315]
     },
     {
-      "name": "Vinaceous Cinnamon",
-      "rgb_array": [
-        245,
-        153,
-        148
-      ],
-      "cmyk_array": [
-        4,
-        40,
-        42,
-        0
-      ],
-      "hex": "#f59994",
-      "combinations": [
-        203,
-        205,
-        213,
-        256,
-        260,
-        279,
-        299
-      ],
       "id": 49,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Vinaceous Cinnamon",
+      "hex": "#f59994",
+      "cmyk_array": [4, 40, 42, 0],
+      "rgb_array": [245, 153, 148],
+      "combinations": [203, 205, 213, 256, 260, 279, 299]
     },
     {
-      "name": "Ochraceous Salmon",
-      "rgb_array": [
-        217,
-        158,
-        115
-      ],
-      "cmyk_array": [
-        15,
-        38,
-        55,
-        0
-      ],
-      "hex": "#d99e73",
-      "combinations": [
-        32,
-        71,
-        121,
-        186,
-        217,
-        220,
-        223,
-        238,
-        296,
-        339
-      ],
       "id": 50,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Ochraceous Salmon",
+      "hex": "#d99e73",
+      "cmyk_array": [15, 38, 55, 0],
+      "rgb_array": [217, 158, 115],
+      "combinations": [32, 71, 121, 186, 217, 220, 223, 238, 296, 339]
     },
     {
-      "name": "Isabella Color",
-      "rgb_array": [
-        195,
-        165,
-        92
-      ],
-      "cmyk_array": [
-        15,
-        28,
-        60,
-        10
-      ],
-      "hex": "#c3a55c",
-      "combinations": [
-        4,
-        12,
-        241,
-        292
-      ],
       "id": 51,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Isabella Color",
+      "hex": "#c3a55c",
+      "cmyk_array": [15, 28, 60, 10],
+      "rgb_array": [195, 165, 92],
+      "combinations": [4, 12, 241, 292]
     },
     {
-      "name": "Maple",
-      "rgb_array": [
-        194,
-        151,
-        90
-      ],
-      "cmyk_array": [
-        5,
-        26,
-        56,
-        20
-      ],
-      "hex": "#c2975a",
-      "combinations": [
-        282
-      ],
       "id": 52,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Maple",
+      "hex": "#c2975a",
+      "cmyk_array": [5, 26, 56, 20],
+      "rgb_array": [194, 151, 90],
+      "combinations": [282]
     },
     {
-      "name": "Olive Buff",
-      "rgb_array": [
-        188,
-        211,
-        130
-      ],
-      "cmyk_array": [
-        16,
-        6,
-        42,
-        12
-      ],
-      "hex": "#bcd382",
-      "combinations": [
-        83,
-        175,
-        200,
-        330,
-        348
-      ],
       "id": 53,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Olive Buff",
+      "hex": "#bcd382",
+      "cmyk_array": [16, 6, 42, 12],
+      "rgb_array": [188, 211, 130],
+      "combinations": [83, 175, 200, 330, 348]
     },
     {
-      "name": "Ecru",
-      "rgb_array": [
-        192,
-        180,
-        144
-      ],
-      "cmyk_array": [
-        20,
-        25,
-        40,
-        6
-      ],
-      "hex": "#c0b490",
-      "combinations": [
-        167,
-        249,
-        275,
-        279,
-        292,
-        302,
-        317,
-        327
-      ],
       "id": 54,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Ecru",
+      "hex": "#c0b490",
+      "cmyk_array": [20, 25, 40, 6],
+      "rgb_array": [192, 180, 144],
+      "combinations": [167, 249, 275, 279, 292, 302, 317, 327]
     },
     {
-      "name": "Yellow",
-      "rgb_array": [
-        255,
-        255,
-        0
-      ],
-      "cmyk_array": [
-        0,
-        0,
-        100,
-        0
-      ],
-      "hex": "#ffff00",
-      "combinations": [
-        22,
-        62,
-        68,
-        154,
-        240,
-        251,
-        295,
-        313
-      ],
       "id": 55,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Yellow",
+      "hex": "#ffff00",
+      "cmyk_array": [0, 0, 100, 0],
+      "rgb_array": [255, 255, 0],
+      "combinations": [22, 62, 68, 154, 240, 251, 295, 313]
     },
     {
-      "name": "Lemon Yellow",
-      "rgb_array": [
-        242,
-        255,
-        38
-      ],
-      "cmyk_array": [
-        5,
-        0,
-        85,
-        0
-      ],
-      "hex": "#f2ff26",
-      "combinations": [
-        45,
-        123,
-        138,
-        158,
-        168,
-        173,
-        189,
-        210,
-        253,
-        259,
-        289,
-        298,
-        306,
-        317,
-        333
-      ],
       "id": 56,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Lemon Yellow",
+      "hex": "#f2ff26",
+      "cmyk_array": [5, 0, 85, 0],
+      "rgb_array": [242, 255, 38],
+      "combinations": [45, 123, 138, 158, 168, 173, 189, 210, 253, 259, 289, 298, 306, 317, 333]
     },
     {
-      "name": "Apricot Yellow",
-      "rgb_array": [
-        255,
-        230,
-        0
-      ],
-      "cmyk_array": [
-        0,
-        10,
-        100,
-        0
-      ],
-      "hex": "#ffe600",
-      "combinations": [
-        107,
-        129,
-        163,
-        198,
-        213,
-        247,
-        265,
-        284,
-        305,
-        319
-      ],
       "id": 57,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Apricot Yellow",
+      "hex": "#ffe600",
+      "cmyk_array": [0, 10, 100, 0],
+      "rgb_array": [255, 230, 0],
+      "combinations": [107, 129, 163, 198, 213, 247, 265, 284, 305, 319]
     },
     {
-      "name": "Pyrite Yellow",
-      "rgb_array": [
-        196,
-        191,
-        51
-      ],
-      "cmyk_array": [
-        23,
-        25,
-        80,
-        0
-      ],
-      "hex": "#c4bf33",
-      "combinations": [
-        239,
-        250,
-        255,
-        287
-      ],
       "id": 58,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Pyrite Yellow",
+      "hex": "#c4bf33",
+      "cmyk_array": [23, 25, 80, 0],
+      "rgb_array": [196, 191, 51],
+      "combinations": [239, 250, 255, 287]
     },
     {
-      "name": "Olive Ocher",
-      "rgb_array": [
-        209,
-        189,
-        25
-      ],
-      "cmyk_array": [
-        18,
-        26,
-        90,
-        0
-      ],
-      "hex": "#d1bd19",
-      "combinations": [
-        66,
-        148,
-        149,
-        156,
-        157,
-        249,
-        278
-      ],
       "id": 59,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Olive Ocher",
+      "hex": "#d1bd19",
+      "cmyk_array": [18, 26, 90, 0],
+      "rgb_array": [209, 189, 25],
+      "combinations": [66, 148, 149, 156, 157, 249, 278]
     },
     {
-      "name": "Yellow Ocher",
-      "rgb_array": [
-        224,
-        184,
-        31
-      ],
-      "cmyk_array": [
-        12,
-        28,
-        88,
-        0
-      ],
-      "hex": "#e0b81f",
-      "combinations": [
-        42,
-        96,
-        118,
-        124,
-        126,
-        191,
-        222,
-        325
-      ],
       "id": 60,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Yellow Ocher",
+      "hex": "#e0b81f",
+      "cmyk_array": [12, 28, 88, 0],
+      "rgb_array": [224, 184, 31],
+      "combinations": [42, 96, 118, 124, 126, 191, 222, 325]
     },
     {
-      "name": "Orange Yellow",
-      "rgb_array": [
-        255,
-        171,
-        0
-      ],
-      "cmyk_array": [
-        0,
-        33,
-        100,
-        0
-      ],
-      "hex": "#ffab00",
-      "combinations": [
-        114,
-        148,
-        153,
-        164,
-        170,
-        257,
-        286,
-        338
-      ],
       "id": 61,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Orange Yellow",
+      "hex": "#ffab00",
+      "cmyk_array": [0, 33, 100, 0],
+      "rgb_array": [255, 171, 0],
+      "combinations": [114, 148, 153, 164, 170, 257, 286, 338]
     },
     {
-      "name": "Yellow Orange",
-      "rgb_array": [
-        255,
-        140,
-        0
-      ],
-      "cmyk_array": [
-        0,
-        45,
-        100,
-        0
-      ],
-      "hex": "#ff8c00",
-      "combinations": [
-        2,
-        53,
-        89,
-        151,
-        171,
-        209,
-        222,
-        235,
-        267,
-        288,
-        297,
-        312,
-        319,
-        335
-      ],
       "id": 62,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Yellow Orange",
+      "hex": "#ff8c00",
+      "cmyk_array": [0, 45, 100, 0],
+      "rgb_array": [255, 140, 0],
+      "combinations": [2, 53, 89, 151, 171, 209, 222, 235, 267, 288, 297, 312, 319, 335]
     },
     {
-      "name": "Apricot Orange",
-      "rgb_array": [
-        255,
-        115,
-        64
-      ],
-      "cmyk_array": [
-        0,
-        55,
-        75,
-        0
-      ],
-      "hex": "#ff7340",
-      "combinations": [
-        211,
-        253,
-        309,
-        328
-      ],
       "id": 63,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Apricot Orange",
+      "hex": "#ff7340",
+      "cmyk_array": [0, 55, 75, 0],
+      "rgb_array": [255, 115, 64],
+      "combinations": [211, 253, 309, 328]
     },
     {
-      "name": "Orange",
-      "rgb_array": [
-        255,
-        82,
-        0
-      ],
-      "cmyk_array": [
-        0,
-        68,
-        100,
-        0
-      ],
-      "hex": "#ff5200",
-      "combinations": [
-        7,
-        46,
-        141,
-        144,
-        149,
-        256,
-        272
-      ],
       "id": 64,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Orange",
+      "hex": "#ff5200",
+      "cmyk_array": [0, 68, 100, 0],
+      "rgb_array": [255, 82, 0],
+      "combinations": [7, 46, 141, 144, 149, 256, 272]
     },
     {
-      "name": "Peach Red",
-      "rgb_array": [
-        255,
-        51,
-        25
-      ],
-      "cmyk_array": [
-        0,
-        80,
-        90,
-        0
-      ],
-      "hex": "#ff3319",
-      "combinations": [
-        115,
-        250,
-        274,
-        285,
-        298,
-        303,
-        326,
-        340
-      ],
       "id": 65,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Peach Red",
+      "hex": "#ff3319",
+      "cmyk_array": [0, 80, 90, 0],
+      "rgb_array": [255, 51, 25],
+      "combinations": [115, 250, 274, 285, 298, 303, 326, 340]
     },
     {
-      "name": "English Red",
-      "rgb_array": [
-        222,
-        69,
-        0
-      ],
-      "cmyk_array": [
-        13,
-        73,
-        100,
-        0
-      ],
-      "hex": "#de4500",
-      "combinations": [
-        1,
-        131,
-        190,
-        308,
-        339
-      ],
       "id": 66,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "English Red",
+      "hex": "#de4500",
+      "cmyk_array": [13, 73, 100, 0],
+      "rgb_array": [222, 69, 0],
+      "combinations": [1, 131, 190, 308, 339]
     },
     {
-      "name": "Cinnamon Rufous",
-      "rgb_array": [
-        194,
-        97,
-        44
-      ],
-      "cmyk_array": [
-        20,
-        60,
-        82,
-        5
-      ],
-      "hex": "#c2612c",
-      "combinations": [
-        8,
-        10,
-        103,
-        158,
-        172,
-        204,
-        206
-      ],
       "id": 67,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Cinnamon Rufous",
+      "hex": "#c2612c",
+      "cmyk_array": [20, 60, 82, 5],
+      "rgb_array": [194, 97, 44],
+      "combinations": [8, 10, 103, 158, 172, 204, 206]
     },
     {
-      "name": "Orange Rufous",
-      "rgb_array": [
-        192,
-        82,
-        0
-      ],
-      "cmyk_array": [
-        18,
-        65,
-        100,
-        8
-      ],
-      "hex": "#c05200",
-      "combinations": [
-        91,
-        102,
-        222
-      ],
       "id": 68,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Orange Rufous",
+      "hex": "#c05200",
+      "cmyk_array": [18, 65, 100, 8],
+      "rgb_array": [192, 82, 0],
+      "combinations": [91, 102, 222]
     },
     {
-      "name": "Sulphine Yellow",
-      "rgb_array": [
-        186,
-        166,
-        0
-      ],
-      "cmyk_array": [
-        24,
-        32,
-        100,
-        4
-      ],
-      "hex": "#baa600",
-      "combinations": [
-        36,
-        65,
-        142,
-        160,
-        252
-      ],
       "id": 69,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Sulphine Yellow",
+      "hex": "#baa600",
+      "cmyk_array": [24, 32, 100, 4],
+      "rgb_array": [186, 166, 0],
+      "combinations": [36, 65, 142, 160, 252]
     },
     {
-      "name": "Khaki",
-      "rgb_array": [
-        182,
-        132,
-        0
-      ],
-      "cmyk_array": [
-        24,
-        45,
-        100,
-        6
-      ],
-      "hex": "#b68400",
-      "combinations": [
-        129,
-        146,
-        159,
-        236,
-        248
-      ],
       "id": 70,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Khaki",
+      "hex": "#b68400",
+      "cmyk_array": [24, 45, 100, 6],
+      "rgb_array": [182, 132, 0],
+      "combinations": [129, 146, 159, 236, 248]
     },
     {
-      "name": "Citron Yellow",
-      "rgb_array": [
-        166,
-        212,
-        13
-      ],
-      "cmyk_array": [
-        35,
-        17,
-        95,
-        0
-      ],
-      "hex": "#a6d40d",
-      "combinations": [
-        40,
-        87,
-        145,
-        150,
-        153,
-        196,
-        305,
-        323
-      ],
       "id": 71,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Citron Yellow",
+      "hex": "#a6d40d",
+      "cmyk_array": [35, 17, 95, 0],
+      "rgb_array": [166, 212, 13],
+      "combinations": [40, 87, 145, 150, 153, 196, 305, 323]
     },
     {
-      "name": "Citrine",
-      "rgb_array": [
-        152,
-        161,
-        0
-      ],
-      "cmyk_array": [
-        36,
-        32,
-        100,
-        7
-      ],
-      "hex": "#98a100",
-      "combinations": [
-        59,
-        93,
-        132,
-        133,
-        262
-      ],
       "id": 72,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Citrine",
+      "hex": "#98a100",
+      "cmyk_array": [36, 32, 100, 7],
+      "rgb_array": [152, 161, 0],
+      "combinations": [59, 93, 132, 133, 262]
     },
     {
-      "name": "Buffy Citrine",
-      "rgb_array": [
-        136,
-        141,
-        42
-      ],
-      "cmyk_array": [
-        42,
-        40,
-        82,
-        8
-      ],
-      "hex": "#888d2a",
-      "combinations": [
-        100,
-        177,
-        233
-      ],
       "id": 73,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Buffy Citrine",
+      "hex": "#888d2a",
+      "cmyk_array": [42, 40, 82, 8],
+      "rgb_array": [136, 141, 42],
+      "combinations": [100, 177, 233]
     },
     {
-      "name": "Dark Citrine",
-      "rgb_array": [
-        126,
-        135,
-        67
-      ],
-      "cmyk_array": [
-        28,
-        24,
-        67,
-        20
-      ],
-      "hex": "#7e8743",
-      "combinations": [
-        10,
-        41,
-        274,
-        304
-      ],
       "id": 74,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Dark Citrine",
+      "hex": "#7e8743",
+      "cmyk_array": [28, 24, 67, 20],
+      "rgb_array": [126, 135, 67],
+      "combinations": [10, 41, 274, 304]
     },
     {
-      "name": "Light Grayish Olive",
-      "rgb_array": [
-        118,
-        132,
-        78
-      ],
-      "cmyk_array": [
-        43,
-        36,
-        62,
-        19
-      ],
-      "hex": "#76844e",
-      "combinations": [
-        107,
-        184
-      ],
       "id": 75,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Light Grayish Olive",
+      "hex": "#76844e",
+      "cmyk_array": [43, 36, 62, 19],
+      "rgb_array": [118, 132, 78],
+      "combinations": [107, 184]
     },
     {
-      "name": "Krongbergs Green",
-      "rgb_array": [
-        117,
-        146,
-        67
-      ],
-      "cmyk_array": [
-        48,
-        35,
-        70,
-        12
-      ],
-      "hex": "#759243",
-      "combinations": [
-        29
-      ],
       "id": 76,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Krongbergs Green",
+      "hex": "#759243",
+      "cmyk_array": [48, 35, 70, 12],
+      "rgb_array": [117, 146, 67],
+      "combinations": [29]
     },
     {
-      "name": "Olive",
-      "rgb_array": [
-        113,
-        134,
-        0
-      ],
-      "cmyk_array": [
-        48,
-        38,
-        100,
-        15
-      ],
-      "hex": "#718600",
-      "combinations": [
-        96,
-        201,
-        254,
-        258,
-        277,
-        310,
-        334
-      ],
       "id": 77,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Olive",
+      "hex": "#718600",
+      "cmyk_array": [48, 38, 100, 15],
+      "rgb_array": [113, 134, 0],
+      "combinations": [96, 201, 254, 258, 277, 310, 334]
     },
     {
-      "name": "Orange Citrine",
-      "rgb_array": [
-        140,
-        101,
-        16
-      ],
-      "cmyk_array": [
-        28,
-        48,
-        92,
-        24
-      ],
-      "hex": "#8c6510",
-      "combinations": [
-        212,
-        342
-      ],
       "id": 78,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Orange Citrine",
+      "hex": "#8c6510",
+      "cmyk_array": [28, 48, 92, 24],
+      "rgb_array": [140, 101, 16],
+      "combinations": [212, 342]
     },
     {
-      "name": "Sudan Brown",
-      "rgb_array": [
-        155,
-        83,
-        72
-      ],
-      "cmyk_array": [
-        25,
-        60,
-        65,
-        19
-      ],
-      "hex": "#9b5348",
-      "combinations": [
-        207,
-        214,
-        273
-      ],
       "id": 79,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Sudan Brown",
+      "hex": "#9b5348",
+      "cmyk_array": [25, 60, 65, 19],
+      "rgb_array": [155, 83, 72],
+      "combinations": [207, 214, 273]
     },
     {
-      "name": "Olive Green",
-      "rgb_array": [
-        88,
-        119,
-        30
-      ],
-      "cmyk_array": [
-        56,
-        40,
-        85,
-        22
-      ],
-      "hex": "#58771e",
-      "combinations": [
-        66,
-        243,
-        270,
-        297
-      ],
       "id": 80,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Olive Green",
+      "hex": "#58771e",
+      "cmyk_array": [56, 40, 85, 22],
+      "rgb_array": [88, 119, 30],
+      "combinations": [66, 243, 270, 297]
     },
     {
-      "name": "Light Brownish Olive",
-      "rgb_array": [
-        112,
-        105,
-        52
-      ],
-      "cmyk_array": [
-        42,
-        46,
-        73,
-        24
-      ],
-      "hex": "#706934",
-      "combinations": [
-        199,
-        318
-      ],
       "id": 81,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Light Brownish Olive",
+      "hex": "#706934",
+      "cmyk_array": [42, 46, 73, 24],
+      "rgb_array": [112, 105, 52],
+      "combinations": [199, 318]
     },
     {
-      "name": "Deep Grayish Olive",
-      "rgb_array": [
-        80,
-        84,
-        35
-      ],
-      "cmyk_array": [
-        50,
-        48,
-        78,
-        37
-      ],
-      "hex": "#505423",
-      "combinations": [
-        146,
-        343
-      ],
       "id": 82,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Deep Grayish Olive",
+      "hex": "#505423",
+      "cmyk_array": [50, 48, 78, 37],
+      "rgb_array": [80, 84, 35],
+      "combinations": [146, 343]
     },
     {
-      "name": "Pale Raw Umber",
-      "rgb_array": [
-        94,
-        64,
-        23
-      ],
-      "cmyk_array": [
-        46,
-        63,
-        87,
-        32
-      ],
-      "hex": "#5e4017",
-      "combinations": [
-        26,
-        73,
-        160,
-        234,
-        296
-      ],
       "id": 83,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Pale Raw Umber",
+      "hex": "#5e4017",
+      "cmyk_array": [46, 63, 87, 32],
+      "rgb_array": [94, 64, 23],
+      "combinations": [26, 73, 160, 234, 296]
     },
     {
-      "name": "Sepia",
-      "rgb_array": [
-        80,
-        61,
-        0
-      ],
-      "cmyk_array": [
-        48,
-        60,
-        100,
-        40
-      ],
-      "hex": "#503d00",
-      "combinations": [
-        24,
-        288
-      ],
       "id": 84,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Sepia",
+      "hex": "#503d00",
+      "cmyk_array": [48, 60, 100, 40],
+      "rgb_array": [80, 61, 0],
+      "combinations": [24, 288]
     },
     {
-      "name": "Madder Brown",
-      "rgb_array": [
-        101,
-        19,
-        0
-      ],
-      "cmyk_array": [
-        36,
-        88,
-        100,
-        38
-      ],
-      "hex": "#651300",
-      "combinations": [
-        28,
-        79,
-        98,
-        173,
-        237,
-        275,
-        323
-      ],
       "id": 85,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Madder Brown",
+      "hex": "#651300",
+      "cmyk_array": [36, 88, 100, 38],
+      "rgb_array": [101, 19, 0],
+      "combinations": [28, 79, 98, 173, 237, 275, 323]
     },
     {
-      "name": "Mars Brown / Tobacco",
-      "rgb_array": [
-        82,
-        32,
-        0
-      ],
-      "cmyk_array": [
-        39,
-        76,
-        100,
-        47
-      ],
-      "hex": "#522000",
-      "combinations": [
-        19
-      ],
       "id": 86,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Mars Brown / Tobacco",
+      "hex": "#522000",
+      "cmyk_array": [39, 76, 100, 47],
+      "rgb_array": [82, 32, 0],
+      "combinations": [19]
     },
     {
-      "name": "Vandyke Brown",
-      "rgb_array": [
-        54,
-        35,
-        4
-      ],
-      "cmyk_array": [
-        56,
-        71,
-        97,
-        52
-      ],
-      "hex": "#362304",
-      "combinations": [
-        110,
-        113,
-        118,
-        182,
-        192,
-        328
-      ],
       "id": 87,
-      "swatch_collection": 2
+      "collection_id": 2,
+      "name": "Vandyke Brown",
+      "hex": "#362304",
+      "cmyk_array": [56, 71, 97, 52],
+      "rgb_array": [54, 35, 4],
+      "combinations": [110, 113, 118, 182, 192, 328]
     },
     {
-      "name": "Turquoise Green",
-      "rgb_array": [
-        181,
-        255,
-        194
-      ],
-      "cmyk_array": [
-        29,
-        0,
-        24,
-        0
-      ],
-      "hex": "#b5ffc2",
-      "combinations": [
-        36,
-        74,
-        147,
-        163,
-        173,
-        202,
-        223,
-        230,
-        263,
-        272,
-        285,
-        293,
-        300,
-        305,
-        317,
-        346
-      ],
       "id": 88,
-      "swatch_collection": 3
+      "collection_id": 3,
+      "name": "Turquoise Green",
+      "hex": "#b5ffc2",
+      "cmyk_array": [29, 0, 24, 0],
+      "rgb_array": [181, 255, 194],
+      "combinations": [36, 74, 147, 163, 173, 202, 223, 230, 263, 272, 285, 293, 300, 305, 317, 346]
     },
     {
-      "name": "Glaucous Green",
-      "rgb_array": [
-        179,
-        232,
-        194
-      ],
-      "cmyk_array": [
-        30,
-        9,
-        24,
-        0
-      ],
-      "hex": "#b3e8c2",
-      "combinations": [
-        7,
-        150,
-        171,
-        207,
-        239,
-        260
-      ],
       "id": 89,
-      "swatch_collection": 3
+      "collection_id": 3,
+      "name": "Glaucous Green",
+      "hex": "#b3e8c2",
+      "cmyk_array": [30, 9, 24, 0],
+      "rgb_array": [179, 232, 194],
+      "combinations": [7, 150, 171, 207, 239, 260]
     },
     {
-      "name": "Dark Greenish Glaucous",
-      "rgb_array": [
-        179,
-        217,
-        163
-      ],
-      "cmyk_array": [
-        30,
-        15,
-        36,
-        0
-      ],
-      "hex": "#b3d9a3",
-      "combinations": [
-        264,
-        311
-      ],
       "id": 90,
-      "swatch_collection": 3
+      "collection_id": 3,
+      "name": "Dark Greenish Glaucous",
+      "hex": "#b3d9a3",
+      "cmyk_array": [30, 15, 36, 0],
+      "rgb_array": [179, 217, 163],
+      "combinations": [264, 311]
     },
     {
-      "name": "Yellow Green",
-      "rgb_array": [
-        166,
-        255,
-        71
-      ],
-      "cmyk_array": [
-        35,
-        0,
-        72,
-        0
-      ],
-      "hex": "#a6ff47",
-      "combinations": [
-        111,
-        141,
-        276,
-        326,
-        334
-      ],
       "id": 91,
-      "swatch_collection": 3
+      "collection_id": 3,
+      "name": "Yellow Green",
+      "hex": "#a6ff47",
+      "cmyk_array": [35, 0, 72, 0],
+      "rgb_array": [166, 255, 71],
+      "combinations": [111, 141, 276, 326, 334]
     },
     {
-      "name": "Light Green Yellow",
-      "rgb_array": [
-        189,
-        242,
-        38
-      ],
-      "cmyk_array": [
-        26,
-        5,
-        85,
-        0
-      ],
-      "hex": "#bdf226",
-      "combinations": [
-        61,
-        289,
-        291,
-        311,
-        346
-      ],
       "id": 92,
-      "swatch_collection": 3
+      "collection_id": 3,
+      "name": "Light Green Yellow",
+      "hex": "#bdf226",
+      "cmyk_array": [26, 5, 85, 0],
+      "rgb_array": [189, 242, 38],
+      "combinations": [61, 289, 291, 311, 346]
     },
     {
-      "name": "Night Green",
-      "rgb_array": [
-        122,
-        255,
-        0
-      ],
-      "cmyk_array": [
-        52,
-        0,
-        100,
-        0
-      ],
-      "hex": "#7aff00",
-      "combinations": [
-        19,
-        32,
-        158,
-        326
-      ],
       "id": 93,
-      "swatch_collection": 3
+      "collection_id": 3,
+      "name": "Night Green",
+      "hex": "#7aff00",
+      "cmyk_array": [52, 0, 100, 0],
+      "rgb_array": [122, 255, 0],
+      "combinations": [19, 32, 158, 326]
     },
     {
-      "name": "Olive Yellow",
-      "rgb_array": [
-        153,
-        179,
-        51
-      ],
-      "cmyk_array": [
-        40,
-        30,
-        80,
-        0
-      ],
-      "hex": "#99b333",
-      "combinations": [
-        124,
-        211,
-        265,
-        347
-      ],
       "id": 94,
-      "swatch_collection": 3
+      "collection_id": 3,
+      "name": "Olive Yellow",
+      "hex": "#99b333",
+      "cmyk_array": [40, 30, 80, 0],
+      "rgb_array": [153, 179, 51],
+      "combinations": [124, 211, 265, 347]
     },
     {
-      "name": "Artemesia Green",
-      "rgb_array": [
-        101,
-        169,
-        143
-      ],
-      "cmyk_array": [
-        57,
-        28,
-        39,
-        8
-      ],
-      "hex": "#65a98f",
-      "combinations": [
-        293,
-        312
-      ],
       "id": 95,
-      "swatch_collection": 3
+      "collection_id": 3,
+      "name": "Artemesia Green",
+      "hex": "#65a98f",
+      "cmyk_array": [57, 28, 39, 8],
+      "rgb_array": [101, 169, 143],
+      "combinations": [293, 312]
     },
     {
-      "name": "Andover Green",
-      "rgb_array": [
-        92,
-        138,
-        115
-      ],
-      "cmyk_array": [
-        60,
-        40,
-        50,
-        10
-      ],
-      "hex": "#5c8a73",
-      "combinations": [
-        244,
-        346
-      ],
       "id": 96,
-      "swatch_collection": 3
+      "collection_id": 3,
+      "name": "Andover Green",
+      "hex": "#5c8a73",
+      "cmyk_array": [60, 40, 50, 10],
+      "rgb_array": [92, 138, 115],
+      "combinations": [244, 346]
     },
     {
-      "name": "Rainette Green",
-      "rgb_array": [
-        133,
-        184,
-        87
-      ],
-      "cmyk_array": [
-        42,
-        20,
-        62,
-        28
-      ],
-      "hex": "#85b857",
-      "combinations": [
-        73,
-        162,
-        188,
-        266,
-        301
-      ],
       "id": 97,
-      "swatch_collection": 3
+      "collection_id": 3,
+      "name": "Rainette Green",
+      "hex": "#85b857",
+      "cmyk_array": [42, 20, 62, 28],
+      "rgb_array": [133, 184, 87],
+      "combinations": [73, 162, 188, 266, 301]
     },
     {
-      "name": "Chromium Green",
-      "rgb_array": [
-        92,
-        154,
-        77
-      ],
-      "cmyk_array": [
-        50,
-        16,
-        58,
-        20
-      ],
-      "hex": "#5c9a4d",
-      "combinations": [
-        105,
-        200,
-        219,
-        283
-      ],
       "id": 98,
-      "swatch_collection": 3
+      "collection_id": 3,
+      "name": "Chromium Green",
+      "hex": "#5c9a4d",
+      "cmyk_array": [50, 16, 58, 20],
+      "rgb_array": [92, 154, 77],
+      "combinations": [105, 200, 219, 283]
     },
     {
-      "name": "Pistachio Green",
-      "rgb_array": [
-        86,
-        170,
-        105
-      ],
-      "cmyk_array": [
-        64,
-        29,
-        56,
-        6
-      ],
-      "hex": "#56aa69",
-      "combinations": [
-        127,
-        137
-      ],
       "id": 99,
-      "swatch_collection": 3
+      "collection_id": 3,
+      "name": "Pistachio Green",
+      "hex": "#56aa69",
+      "cmyk_array": [64, 29, 56, 6],
+      "rgb_array": [86, 170, 105],
+      "combinations": [127, 137]
     },
     {
-      "name": "Sea Green",
-      "rgb_array": [
-        51,
-        255,
-        125
-      ],
-      "cmyk_array": [
-        80,
-        0,
-        51,
-        0
-      ],
-      "hex": "#33ff7d",
-      "combinations": [
-        17,
-        21,
-        58,
-        86,
-        133,
-        250,
-        260,
-        284,
-        291,
-        340,
-        347
-      ],
       "id": 100,
-      "swatch_collection": 3
+      "collection_id": 3,
+      "name": "Sea Green",
+      "hex": "#33ff7d",
+      "cmyk_array": [80, 0, 51, 0],
+      "rgb_array": [51, 255, 125],
+      "combinations": [17, 21, 58, 86, 133, 250, 260, 284, 291, 340, 347]
     },
     {
-      "name": "Benzol Green",
-      "rgb_array": [
-        0,
-        217,
-        115
-      ],
-      "cmyk_array": [
-        100,
-        15,
-        55,
-        0
-      ],
-      "hex": "#00d973",
-      "combinations": [
-        15,
-        54,
-        92,
-        122,
-        155,
-        247,
-        266,
-        267,
-        281,
-        304,
-        306
-      ],
       "id": 101,
-      "swatch_collection": 3
+      "collection_id": 3,
+      "name": "Benzol Green",
+      "hex": "#00d973",
+      "cmyk_array": [100, 15, 55, 0],
+      "rgb_array": [0, 217, 115],
+      "combinations": [15, 54, 92, 122, 155, 247, 266, 267, 281, 304, 306]
     },
     {
-      "name": "Light Porcelain Green",
-      "rgb_array": [
-        35,
-        193,
-        124
-      ],
-      "cmyk_array": [
-        86,
-        22,
-        50,
-        3
-      ],
-      "hex": "#23c17c",
-      "combinations": [
-        44,
-        193,
-        328
-      ],
       "id": 102,
-      "swatch_collection": 3
+      "collection_id": 3,
+      "name": "Light Porcelain Green",
+      "hex": "#23c17c",
+      "cmyk_array": [86, 22, 50, 3],
+      "rgb_array": [35, 193, 124],
+      "combinations": [44, 193, 328]
     },
     {
-      "name": "Green",
-      "rgb_array": [
-        64,
-        201,
-        69
-      ],
-      "cmyk_array": [
-        75,
-        21,
-        73,
-        0
-      ],
-      "hex": "#40c945",
-      "combinations": [
-        198,
-        216,
-        293
-      ],
       "id": 103,
-      "swatch_collection": 3
+      "collection_id": 3,
+      "name": "Green",
+      "hex": "#40c945",
+      "cmyk_array": [75, 21, 73, 0],
+      "rgb_array": [64, 201, 69],
+      "combinations": [198, 216, 293]
     },
     {
-      "name": "Dull Viridian Green",
-      "rgb_array": [
-        25,
-        204,
-        51
-      ],
-      "cmyk_array": [
-        90,
-        20,
-        80,
-        0
-      ],
-      "hex": "#19cc33",
-      "combinations": [
-        136,
-        256,
-        306,
-        316
-      ],
       "id": 104,
-      "swatch_collection": 3
+      "collection_id": 3,
+      "name": "Dull Viridian Green",
+      "hex": "#19cc33",
+      "cmyk_array": [90, 20, 80, 0],
+      "rgb_array": [25, 204, 51],
+      "combinations": [136, 256, 306, 316]
     },
     {
-      "name": "Oil Green",
-      "rgb_array": [
-        110,
-        169,
-        0
-      ],
-      "cmyk_array": [
-        53,
-        28,
-        100,
-        8
-      ],
-      "hex": "#6ea900",
-      "combinations": [
-        245,
-        299,
-        320
-      ],
       "id": 105,
-      "swatch_collection": 3
+      "collection_id": 3,
+      "name": "Oil Green",
+      "hex": "#6ea900",
+      "cmyk_array": [53, 28, 100, 8],
+      "rgb_array": [110, 169, 0],
+      "combinations": [245, 299, 320]
     },
     {
-      "name": "Diamine Green",
-      "rgb_array": [
-        27,
-        142,
-        19
-      ],
-      "cmyk_array": [
-        87,
-        20,
-        100,
-        10
-      ],
-      "hex": "#1b8e13",
-      "combinations": [
-        38,
-        146,
-        217,
-        242,
-        251,
-        313
-      ],
       "id": 106,
-      "swatch_collection": 3
+      "collection_id": 3,
+      "name": "Diamine Green",
+      "hex": "#1b8e13",
+      "cmyk_array": [87, 20, 100, 10],
+      "rgb_array": [27, 142, 19],
+      "combinations": [38, 146, 217, 242, 251, 313]
     },
     {
-      "name": "Cossack Green",
-      "rgb_array": [
-        50,
-        142,
-        19
-      ],
-      "cmyk_array": [
-        76,
-        32,
-        91,
-        18
-      ],
-      "hex": "#328e13",
-      "combinations": [
-        5,
-        135,
-        262,
-        270,
-        278,
-        294,
-        319,
-        341,
-        348
-      ],
       "id": 107,
-      "swatch_collection": 3
+      "collection_id": 3,
+      "name": "Cossack Green",
+      "hex": "#328e13",
+      "cmyk_array": [76, 32, 91, 18],
+      "rgb_array": [50, 142, 19],
+      "combinations": [5, 135, 262, 270, 278, 294, 319, 341, 348]
     },
     {
-      "name": "Lincoln Green",
-      "rgb_array": [
-        64,
-        84,
-        22
-      ],
-      "cmyk_array": [
-        60,
-        48,
-        86,
-        37
-      ],
-      "hex": "#405416",
-      "combinations": [
-        70,
-        121,
-        203,
-        210,
-        280,
-        290
-      ],
       "id": 108,
-      "swatch_collection": 3
+      "collection_id": 3,
+      "name": "Lincoln Green",
+      "hex": "#405416",
+      "cmyk_array": [60, 48, 86, 37],
+      "rgb_array": [64, 84, 22],
+      "combinations": [70, 121, 203, 210, 280, 290]
     },
     {
-      "name": "Blackish Olive",
-      "rgb_array": [
-        50,
-        78,
-        42
-      ],
-      "cmyk_array": [
-        56,
-        32,
-        63,
-        55
-      ],
-      "hex": "#324e2a",
-      "combinations": [
-        109,
-        318,
-        336
-      ],
       "id": 109,
-      "swatch_collection": 3
+      "collection_id": 3,
+      "name": "Blackish Olive",
+      "hex": "#324e2a",
+      "cmyk_array": [56, 32, 63, 55],
+      "rgb_array": [50, 78, 42],
+      "combinations": [109, 318, 336]
     },
     {
-      "name": "Deep Slate Olive",
-      "rgb_array": [
-        23,
-        39,
-        19
-      ],
-      "cmyk_array": [
-        76,
-        60,
-        80,
-        62
-      ],
-      "hex": "#172713",
-      "combinations": [
-        189,
-        229,
-        268,
-        303,
-        310,
-        321,
-        332,
-        341,
-        342,
-        348
-      ],
       "id": 110,
-      "swatch_collection": 3
+      "collection_id": 3,
+      "name": "Deep Slate Olive",
+      "hex": "#172713",
+      "cmyk_array": [76, 60, 80, 62],
+      "rgb_array": [23, 39, 19],
+      "combinations": [189, 229, 268, 303, 310, 321, 332, 341, 342, 348]
     },
     {
-      "name": "Nile Blue",
-      "rgb_array": [
-        191,
-        255,
-        230
-      ],
-      "cmyk_array": [
-        25,
-        0,
-        10,
-        0
-      ],
-      "hex": "#bfffe6",
-      "combinations": [
-        25,
-        250,
-        268,
-        302,
-        306,
-        330,
-        345
-      ],
       "id": 111,
-      "swatch_collection": 4
+      "collection_id": 4,
+      "name": "Nile Blue",
+      "hex": "#bfffe6",
+      "cmyk_array": [25, 0, 10, 0],
+      "rgb_array": [191, 255, 230],
+      "combinations": [25, 250, 268, 302, 306, 330, 345]
     },
     {
-      "name": "Pale King's Blue",
-      "rgb_array": [
-        171,
-        245,
-        237
-      ],
-      "cmyk_array": [
-        33,
-        7,
-        4,
-        0
-      ],
-      "hex": "#abf5ed",
-      "combinations": [
-        16,
-        49,
-        72,
-        75,
-        167,
-        196,
-        213,
-        234,
-        287
-      ],
       "id": 112,
-      "swatch_collection": 4
+      "collection_id": 4,
+      "name": "Pale King's Blue",
+      "hex": "#abf5ed",
+      "cmyk_array": [33, 7, 4, 0],
+      "rgb_array": [171, 245, 237],
+      "combinations": [16, 49, 72, 75, 167, 196, 213, 234, 287]
     },
     {
-      "name": "Light Glaucous Blue",
-      "rgb_array": [
-        166,
-        230,
-        219
-      ],
-      "cmyk_array": [
-        35,
-        10,
-        14,
-        0
-      ],
-      "hex": "#a6e6db",
-      "combinations": [
-        54,
-        93,
-        119,
-        152,
-        178,
-        204,
-        227,
-        320,
-        339,
-        341
-      ],
       "id": 113,
-      "swatch_collection": 4
+      "collection_id": 4,
+      "name": "Light Glaucous Blue",
+      "hex": "#a6e6db",
+      "cmyk_array": [35, 10, 14, 0],
+      "rgb_array": [166, 230, 219],
+      "combinations": [54, 93, 119, 152, 178, 204, 227, 320, 339, 341]
     },
     {
-      "name": "Salvia Blue",
-      "rgb_array": [
-        150,
-        191,
-        230
-      ],
-      "cmyk_array": [
-        41,
-        25,
-        10,
-        0
-      ],
-      "hex": "#96bfe6",
-      "combinations": [
-        29,
-        129,
-        135,
-        139,
-        142,
-        188,
-        209,
-        212,
-        237,
-        272,
-        294,
-        321,
-        330
-      ],
       "id": 114,
-      "swatch_collection": 4
+      "collection_id": 4,
+      "name": "Salvia Blue",
+      "hex": "#96bfe6",
+      "cmyk_array": [41, 25, 10, 0],
+      "rgb_array": [150, 191, 230],
+      "combinations": [29, 129, 135, 139, 142, 188, 209, 212, 237, 272, 294, 321, 330]
     },
     {
-      "name": "Cobalt Green",
-      "rgb_array": [
-        148,
-        255,
-        148
-      ],
-      "cmyk_array": [
-        42,
-        0,
-        42,
-        0
-      ],
-      "hex": "#94ff94",
-      "combinations": [
-        156,
-        188,
-        201,
-        202,
-        230,
-        271,
-        281,
-        282,
-        290,
-        291,
-        308,
-        333
-      ],
       "id": 115,
-      "swatch_collection": 4
+      "collection_id": 4,
+      "name": "Cobalt Green",
+      "hex": "#94ff94",
+      "cmyk_array": [42, 0, 42, 0],
+      "rgb_array": [148, 255, 148],
+      "combinations": [156, 188, 201, 202, 230, 271, 281, 282, 290, 291, 308, 333]
     },
     {
-      "name": "Calamine Blue",
-      "rgb_array": [
-        128,
-        255,
-        204
-      ],
-      "cmyk_array": [
-        50,
-        0,
-        20,
-        0
-      ],
-      "hex": "#80ffcc",
-      "combinations": [
-        20,
-        41,
-        65,
-        159,
-        176,
-        255,
-        261,
-        287,
-        291,
-        300
-      ],
       "id": 116,
-      "swatch_collection": 4
+      "collection_id": 4,
+      "name": "Calamine Blue",
+      "hex": "#80ffcc",
+      "cmyk_array": [50, 0, 20, 0],
+      "rgb_array": [128, 255, 204],
+      "combinations": [20, 41, 65, 159, 176, 255, 261, 287, 291, 300]
     },
     {
-      "name": "Venice Green",
-      "rgb_array": [
-        107,
-        255,
-        179
-      ],
-      "cmyk_array": [
-        58,
-        0,
-        30,
-        0
-      ],
-      "hex": "#6bffb3",
-      "combinations": [
-        78,
-        128,
-        138,
-        189,
-        283,
-        345
-      ],
       "id": 117,
-      "swatch_collection": 4
+      "collection_id": 4,
+      "name": "Venice Green",
+      "hex": "#6bffb3",
+      "cmyk_array": [58, 0, 30, 0],
+      "rgb_array": [107, 255, 179],
+      "combinations": [78, 128, 138, 189, 283, 345]
     },
     {
-      "name": "Cerulian Blue",
-      "rgb_array": [
-        41,
-        189,
-        173
-      ],
-      "cmyk_array": [
-        84,
-        26,
-        32,
-        0
-      ],
-      "hex": "#29bdad",
-      "combinations": [
-        1,
-        63,
-        99,
-        125,
-        148,
-        227,
-        240,
-        264
-      ],
       "id": 118,
-      "swatch_collection": 4
+      "collection_id": 4,
+      "name": "Cerulian Blue",
+      "hex": "#29bdad",
+      "cmyk_array": [84, 26, 32, 0],
+      "rgb_array": [41, 189, 173],
+      "combinations": [1, 63, 99, 125, 148, 227, 240, 264]
     },
     {
-      "name": "Peacock Blue",
-      "rgb_array": [
-        0,
-        207,
-        145
-      ],
-      "cmyk_array": [
-        100,
-        19,
-        43,
-        0
-      ],
-      "hex": "#00cf91",
-      "combinations": [
-        131,
-        286
-      ],
       "id": 119,
-      "swatch_collection": 4
+      "collection_id": 4,
+      "name": "Peacock Blue",
+      "hex": "#00cf91",
+      "cmyk_array": [100, 19, 43, 0],
+      "rgb_array": [0, 207, 145],
+      "combinations": [131, 286]
     },
     {
-      "name": "Green Blue",
-      "rgb_array": [
-        45,
-        188,
-        148
-      ],
-      "cmyk_array": [
-        82,
-        24,
-        40,
-        3
-      ],
-      "hex": "#2dbc94",
-      "combinations": [
-        12,
-        74,
-        79,
-        178,
-        208,
-        252,
-        259,
-        271,
-        330
-      ],
       "id": 120,
-      "swatch_collection": 4
+      "collection_id": 4,
+      "name": "Green Blue",
+      "hex": "#2dbc94",
+      "cmyk_array": [82, 24, 40, 3],
+      "rgb_array": [45, 188, 148],
+      "combinations": [12, 74, 79, 178, 208, 252, 259, 271, 330]
     },
     {
-      "name": "Olympic Blue",
-      "rgb_array": [
-        79,
-        143,
-        230
-      ],
-      "cmyk_array": [
-        69,
-        44,
-        10,
-        0
-      ],
-      "hex": "#4f8fe6",
-      "combinations": [
-        44,
-        67,
-        157,
-        194,
-        231,
-        274,
-        324
-      ],
       "id": 121,
-      "swatch_collection": 4
+      "collection_id": 4,
+      "name": "Olympic Blue",
+      "hex": "#4f8fe6",
+      "cmyk_array": [69, 44, 10, 0],
+      "rgb_array": [79, 143, 230],
+      "combinations": [44, 67, 157, 194, 231, 274, 324]
     },
     {
-      "name": "Blue",
-      "rgb_array": [
-        13,
-        117,
-        255
-      ],
-      "cmyk_array": [
-        95,
-        54,
-        0,
-        0
-      ],
-      "hex": "#0d75ff",
-      "combinations": [
-        49,
-        51,
-        88,
-        143,
-        154,
-        186,
-        191,
-        215,
-        257,
-        267,
-        295,
-        333
-      ],
       "id": 122,
-      "swatch_collection": 4
+      "collection_id": 4,
+      "name": "Blue",
+      "hex": "#0d75ff",
+      "cmyk_array": [95, 54, 0, 0],
+      "rgb_array": [13, 117, 255],
+      "combinations": [49, 51, 88, 143, 154, 186, 191, 215, 257, 267, 295, 333]
     },
     {
-      "name": "Antwarp Blue",
-      "rgb_array": [
-        0,
-        138,
-        161
-      ],
-      "cmyk_array": [
-        100,
-        40,
-        30,
-        10
-      ],
-      "hex": "#008aa1",
-      "combinations": [
-        85,
-        106,
-        114,
-        140,
-        163,
-        172,
-        208,
-        244,
-        258,
-        281,
-        299,
-        302,
-        334
-      ],
       "id": 123,
-      "swatch_collection": 4
+      "collection_id": 4,
+      "name": "Antwarp Blue",
+      "hex": "#008aa1",
+      "cmyk_array": [100, 40, 30, 10],
+      "rgb_array": [0, 138, 161],
+      "combinations": [85, 106, 114, 140, 163, 172, 208, 244, 258, 281, 299, 302, 334]
     },
     {
-      "name": "Helvetia Blue",
-      "rgb_array": [
-        0,
-        87,
-        186
-      ],
-      "cmyk_array": [
-        100,
-        62,
-        19,
-        10
-      ],
-      "hex": "#0057ba",
-      "combinations": [
-        39,
-        48,
-        161,
-        187,
-        218,
-        259,
-        312,
-        347
-      ],
       "id": 124,
-      "swatch_collection": 4
+      "collection_id": 4,
+      "name": "Helvetia Blue",
+      "hex": "#0057ba",
+      "cmyk_array": [100, 62, 19, 10],
+      "rgb_array": [0, 87, 186],
+      "combinations": [39, 48, 161, 187, 218, 259, 312, 347]
     },
     {
-      "name": "Dark Medici Blue",
-      "rgb_array": [
-        65,
-        119,
-        119
-      ],
-      "cmyk_array": [
-        70,
-        45,
-        45,
-        15
-      ],
-      "hex": "#417777",
-      "combinations": [
-        160,
-        224,
-        241,
-        249
-      ],
       "id": 125,
-      "swatch_collection": 4
+      "collection_id": 4,
+      "name": "Dark Medici Blue",
+      "hex": "#417777",
+      "cmyk_array": [70, 45, 45, 15],
+      "rgb_array": [65, 119, 119],
+      "combinations": [160, 224, 241, 249]
     },
     {
-      "name": "Dusky Green",
-      "rgb_array": [
-        0,
-        89,
-        46
-      ],
-      "cmyk_array": [
-        100,
-        30,
-        64,
-        50
-      ],
-      "hex": "#00592e",
-      "combinations": [
-        94,
-        219,
-        225,
-        278,
-        284,
-        318,
-        332,
-        338
-      ],
       "id": 126,
-      "swatch_collection": 4
+      "collection_id": 4,
+      "name": "Dusky Green",
+      "hex": "#00592e",
+      "cmyk_array": [100, 30, 64, 50],
+      "rgb_array": [0, 89, 46],
+      "combinations": [94, 219, 225, 278, 284, 318, 332, 338]
     },
     {
-      "name": "Deep Lyons Blue",
-      "rgb_array": [
-        0,
-        36,
-        204
-      ],
-      "cmyk_array": [
-        100,
-        85,
-        15,
-        6
-      ],
-      "hex": "#0024cc",
-      "combinations": [
-        22,
-        38,
-        101,
-        126,
-        179,
-        199,
-        236,
-        247,
-        314,
-        344
-      ],
       "id": 127,
-      "swatch_collection": 4
+      "collection_id": 4,
+      "name": "Deep Lyons Blue",
+      "hex": "#0024cc",
+      "cmyk_array": [100, 85, 15, 6],
+      "rgb_array": [0, 36, 204],
+      "combinations": [22, 38, 101, 126, 179, 199, 236, 247, 314, 344]
     },
     {
-      "name": "Violet Blue",
-      "rgb_array": [
-        32,
-        45,
-        133
-      ],
-      "cmyk_array": [
-        85,
-        79,
-        38,
-        16
-      ],
-      "hex": "#202d85",
-      "combinations": [
-        75,
-        83,
-        89,
-        98,
-        125,
-        233,
-        286,
-        289,
-        297,
-        309,
-        339
-      ],
       "id": 128,
-      "swatch_collection": 4
+      "collection_id": 4,
+      "name": "Violet Blue",
+      "hex": "#202d85",
+      "cmyk_array": [85, 79, 38, 16],
+      "rgb_array": [32, 45, 133],
+      "combinations": [75, 83, 89, 98, 125, 233, 286, 289, 297, 309, 339]
     },
     {
-      "name": "Vandar Poel's Blue",
-      "rgb_array": [
-        0,
-        62,
-        131
-      ],
-      "cmyk_array": [
-        100,
-        73,
-        43,
-        10
-      ],
-      "hex": "#003e83",
-      "combinations": [
-          5,
-          77,
-          151,
-          167,
-          168,
-          309,
-          343
-      ],
       "id": 129,
-      "swatch_collection": 4
+      "collection_id": 4,
+      "name": "Vandar Poel's Blue",
+      "hex": "#003e83",
+      "cmyk_array": [100, 73, 43, 10],
+      "rgb_array": [0, 62, 131],
+      "combinations": [5, 77, 151, 167, 168, 309, 343]
     },
     {
-      "name": "Dark Tyrian Blue",
-      "rgb_array": [
-        13,
-        43,
-        82
-      ],
-      "cmyk_array": [
-        90,
-        66,
-        36,
-        50
-      ],
-      "hex": "#0d2b52",
-      "combinations": [
-        2,
-        60,
-        67,
-        119,
-        141,
-        245,
-        279
-      ],
       "id": 130,
-      "swatch_collection": 4
+      "collection_id": 4,
+      "name": "Dark Tyrian Blue",
+      "hex": "#0d2b52",
+      "cmyk_array": [90, 66, 36, 50],
+      "rgb_array": [13, 43, 82],
+      "combinations": [2, 60, 67, 119, 141, 245, 279]
     },
     {
-      "name": "Dull Violet Black",
-      "rgb_array": [
-        6,
-        0,
-        79
-      ],
-      "cmyk_array": [
-        100,
-        90,
-        38,
-        50
-      ],
-      "hex": "#06004f",
-      "combinations": [
-        95,
-        106,
-        145,
-        265,
-        277,
-        289,
-        295,
-        331
-      ],
       "id": 131,
-      "swatch_collection": 4
+      "collection_id": 4,
+      "name": "Dull Violet Black",
+      "hex": "#06004f",
+      "cmyk_array": [100, 90, 38, 50],
+      "rgb_array": [6, 0, 79],
+      "combinations": [95, 106, 145, 265, 277, 289, 295, 331]
     },
     {
-      "name": "Deep Indigo",
-      "rgb_array": [
-        0,
-        8,
-        49
-      ],
-      "cmyk_array": [
-        100,
-        92,
-        52,
-        60
-      ],
-      "hex": "#000831",
-      "combinations": [
-        6,
-        28,
-        139,
-        155,
-        182,
-        211,
-        232
-      ],
       "id": 132,
-      "swatch_collection": 4
+      "collection_id": 4,
+      "name": "Deep Indigo",
+      "hex": "#000831",
+      "cmyk_array": [100, 92, 52, 60],
+      "rgb_array": [0, 8, 49],
+      "combinations": [6, 28, 139, 155, 182, 211, 232]
     },
     {
-      "name": "Deep Slate Green",
-      "rgb_array": [
-        15,
-        38,
-        31
-      ],
-      "cmyk_array": [
-        80,
-        50,
-        60,
-        70
-      ],
-      "hex": "#0f261f",
-      "combinations": [
-        84,
-        149,
-        166,
-        271,
-        318,
-        325
-      ],
       "id": 133,
-      "swatch_collection": 4
+      "collection_id": 4,
+      "name": "Deep Slate Green",
+      "hex": "#0f261f",
+      "cmyk_array": [80, 50, 60, 70],
+      "rgb_array": [15, 38, 31],
+      "combinations": [84, 149, 166, 271, 318, 325]
     },
     {
-      "name": "Grayish Lavender",
-      "rgb_array": [
-        184,
-        184,
-        255
-      ],
-      "cmyk_array": [
-        28,
-        28,
-        0,
-        0
-      ],
-      "hex": "#b8b8ff",
-      "combinations": [
-        8,
-        15,
-        159,
-        177,
-        218,
-        248,
-        307
-      ],
       "id": 134,
-      "swatch_collection": 5
-    },
-    {
+      "collection_id": 5,
       "name": "Grayish Lavender",
-      "rgb_array": [
-        191,
-        171,
-        204
-      ],
-      "cmyk_array": [
-        25,
-        33,
-        20,
-        0
-      ],
-      "hex": "#bfabcc",
-      "combinations": [
-        47,
-        56,
-        174,
-        187,
-        235,
-        327,
-        329,
-        338
-      ],
+      "hex": "#b8b8ff",
+      "cmyk_array": [28, 28, 0, 0],
+      "rgb_array": [184, 184, 255],
+      "combinations": [8, 15, 159, 177, 218, 248, 307]
+    },
+    {
       "id": 135,
-      "swatch_collection": 5
+      "collection_id": 5,
+      "name": "Grayish Lavender",
+      "hex": "#bfabcc",
+      "cmyk_array": [25, 33, 20, 0],
+      "rgb_array": [191, 171, 204],
+      "combinations": [47, 56, 174, 187, 235, 327, 329, 338]
     },
     {
-      "name": "Laelia Pink",
-      "rgb_array": [
-        204,
-        133,
-        209
-      ],
-      "cmyk_array": [
-        20,
-        48,
-        18,
-        0
-      ],
-      "hex": "#cc85d1",
-      "combinations": [
-        20,
-        254,
-        280,
-        337
-      ],
       "id": 136,
-      "swatch_collection": 5
+      "collection_id": 5,
+      "name": "Laelia Pink",
+      "hex": "#cc85d1",
+      "cmyk_array": [20, 48, 18, 0],
+      "rgb_array": [204, 133, 209],
+      "combinations": [20, 254, 280, 337]
     },
     {
-      "name": "Lilac",
-      "rgb_array": [
-        184,
-        117,
-        235
-      ],
-      "cmyk_array": [
-        28,
-        54,
-        8,
-        0
-      ],
-      "hex": "#b875eb",
-      "combinations": [
-        143,
-        162,
-        282,
-        347
-      ],
       "id": 137,
-      "swatch_collection": 5
+      "collection_id": 5,
+      "name": "Lilac",
+      "hex": "#b875eb",
+      "cmyk_array": [28, 54, 8, 0],
+      "rgb_array": [184, 117, 235],
+      "combinations": [143, 162, 282, 347]
     },
     {
-      "name": "Eupatorium Purple",
-      "rgb_array": [
-        191,
-        54,
-        224
-      ],
-      "cmyk_array": [
-        25,
-        79,
-        12,
-        0
-      ],
-      "hex": "#bf36e0",
-      "combinations": [
-        215,
-        315,
-        322
-      ],
       "id": 138,
-      "swatch_collection": 5
+      "collection_id": 5,
+      "name": "Eupatorium Purple",
+      "hex": "#bf36e0",
+      "cmyk_array": [25, 79, 12, 0],
+      "rgb_array": [191, 54, 224],
+      "combinations": [215, 315, 322]
     },
     {
-      "name": "Light Mauve",
-      "rgb_array": [
-        145,
-        97,
-        242
-      ],
-      "cmyk_array": [
-        43,
-        62,
-        5,
-        0
-      ],
-      "hex": "#9161f2",
-      "combinations": [
-        23,
-        80,
-        128,
-        134,
-        180,
-        274,
-        331
-      ],
       "id": 139,
-      "swatch_collection": 5
+      "collection_id": 5,
+      "name": "Light Mauve",
+      "hex": "#9161f2",
+      "cmyk_array": [43, 62, 5, 0],
+      "rgb_array": [145, 97, 242],
+      "combinations": [23, 80, 128, 134, 180, 274, 331]
     },
     {
-      "name": "Aconite Violet",
-      "rgb_array": [
-        156,
-        82,
-        242
-      ],
-      "cmyk_array": [
-        39,
-        68,
-        5,
-        0
-      ],
-      "hex": "#9c52f2",
-      "combinations": [
-        43,
-        64,
-        90,
-        187,
-        220,
-        257,
-        269,
-        301,
-        307,
-        324,
-        344
-      ],
       "id": 140,
-      "swatch_collection": 5
+      "collection_id": 5,
+      "name": "Aconite Violet",
+      "hex": "#9c52f2",
+      "cmyk_array": [39, 68, 5, 0],
+      "rgb_array": [156, 82, 242],
+      "combinations": [43, 64, 90, 187, 220, 257, 269, 301, 307, 324, 344]
     },
     {
-      "name": "Dull Blue Violet",
-      "rgb_array": [
-        110,
-        102,
-        212
-      ],
-      "cmyk_array": [
-        57,
-        60,
-        17,
-        0
-      ],
-      "hex": "#6e66d4",
-      "combinations": [
-        9,
-        100
-      ],
       "id": 141,
-      "swatch_collection": 5
+      "collection_id": 5,
+      "name": "Dull Blue Violet",
+      "hex": "#6e66d4",
+      "cmyk_array": [57, 60, 17, 0],
+      "rgb_array": [110, 102, 212],
+      "combinations": [9, 100]
     },
     {
-      "name": "Dark Soft Violet",
-      "rgb_array": [
-        77,
-        82,
-        222
-      ],
-      "cmyk_array": [
-        70,
-        68,
-        13,
-        0
-      ],
-      "hex": "#4d52de",
-      "combinations": [
-        64,
-        127,
-        197
-      ],
       "id": 142,
-      "swatch_collection": 5
+      "collection_id": 5,
+      "name": "Dark Soft Violet",
+      "hex": "#4d52de",
+      "cmyk_array": [70, 68, 13, 0],
+      "rgb_array": [77, 82, 222],
+      "combinations": [64, 127, 197]
     },
     {
-      "name": "Blue Violet",
-      "rgb_array": [
-        71,
-        51,
-        255
-      ],
-      "cmyk_array": [
-        72,
-        80,
-        0,
-        0
-      ],
-      "hex": "#4733ff",
-      "combinations": [
-        116,
-        175,
-        196,
-        322,
-        345
-      ],
       "id": 143,
-      "swatch_collection": 5
+      "collection_id": 5,
+      "name": "Blue Violet",
+      "hex": "#4733ff",
+      "cmyk_array": [72, 80, 0, 0],
+      "rgb_array": [71, 51, 255],
+      "combinations": [116, 175, 196, 322, 345]
     },
     {
-      "name": "Purple Drab",
-      "rgb_array": [
-        117,
-        66,
-        96
-      ],
-      "cmyk_array": [
-        38,
-        65,
-        49,
-        26
-      ],
-      "hex": "#754260",
-      "combinations": [
-        236
-      ],
       "id": 144,
-      "swatch_collection": 5
+      "collection_id": 5,
+      "name": "Purple Drab",
+      "hex": "#754260",
+      "cmyk_array": [38, 65, 49, 26],
+      "rgb_array": [117, 66, 96],
+      "combinations": [236]
     },
     {
-      "name": "Deep Violet / Plumbeous",
-      "rgb_array": [
-        92,
-        114,
-        135
-      ],
-      "cmyk_array": [
-        61,
-        52,
-        43,
-        7
-      ],
-      "hex": "#5c7287",
-      "combinations": [
-        183,
-        192,
-        218
-      ],
       "id": 145,
-      "swatch_collection": 5
+      "collection_id": 5,
+      "name": "Deep Violet / Plumbeous",
+      "hex": "#5c7287",
+      "cmyk_array": [61, 52, 43, 7],
+      "rgb_array": [92, 114, 135],
+      "combinations": [183, 192, 218]
     },
     {
-      "name": "Veronia Purple",
-      "rgb_array": [
-        126,
-        48,
-        117
-      ],
-      "cmyk_array": [
-        42,
-        78,
-        46,
-        15
-      ],
-      "hex": "#7e3075",
-      "combinations": [
-        13,
-        24,
-        168,
-        183
-      ],
       "id": 146,
-      "swatch_collection": 5
+      "collection_id": 5,
+      "name": "Veronia Purple",
+      "hex": "#7e3075",
+      "cmyk_array": [42, 78, 46, 15],
+      "rgb_array": [126, 48, 117],
+      "combinations": [13, 24, 168, 183]
     },
     {
-      "name": "Dark Slate Purple",
-      "rgb_array": [
-        83,
-        34,
-        92
-      ],
-      "cmyk_array": [
-        64,
-        85,
-        60,
-        10
-      ],
-      "hex": "#53225c",
-      "combinations": [
-        225,
-        248
-      ],
       "id": 147,
-      "swatch_collection": 5
+      "collection_id": 5,
+      "name": "Dark Slate Purple",
+      "hex": "#53225c",
+      "cmyk_array": [64, 85, 60, 10],
+      "rgb_array": [83, 34, 92],
+      "combinations": [225, 248]
     },
     {
-      "name": "Taupe Brown",
-      "rgb_array": [
-        107,
-        46,
-        99
-      ],
-      "cmyk_array": [
-        30,
-        70,
-        35,
-        40
-      ],
-      "hex": "#6b2e63",
-      "combinations": [
-        57,
-        123,
-        174,
-        224,
-        275,
-        280,
-        288
-      ],
       "id": 148,
-      "swatch_collection": 5
+      "collection_id": 5,
+      "name": "Taupe Brown",
+      "hex": "#6b2e63",
+      "cmyk_array": [30, 70, 35, 40],
+      "rgb_array": [107, 46, 99],
+      "combinations": [57, 123, 174, 224, 275, 280, 288]
     },
     {
-      "name": "Violet Carmine",
-      "rgb_array": [
-        83,
-        23,
-        69
-      ],
-      "cmyk_array": [
-        64,
-        90,
-        70,
-        10
-      ],
-      "hex": "#531745",
-      "combinations": [
-        337
-      ],
       "id": 149,
-      "swatch_collection": 5
+      "collection_id": 5,
+      "name": "Violet Carmine",
+      "hex": "#531745",
+      "cmyk_array": [64, 90, 70, 10],
+      "rgb_array": [83, 23, 69],
+      "combinations": [337]
     },
     {
-      "name": "Violet",
-      "rgb_array": [
-        38,
-        25,
-        209
-      ],
-      "cmyk_array": [
-        85,
-        90,
-        18,
-        0
-      ],
-      "hex": "#2619d1",
-      "combinations": [
-        42,
-        56,
-        130,
-        156,
-        164,
-        181,
-        205,
-        214,
-        226,
-        316,
-        331,
-        335
-      ],
       "id": 150,
-      "swatch_collection": 5
+      "collection_id": 5,
+      "name": "Violet",
+      "hex": "#2619d1",
+      "cmyk_array": [85, 90, 18, 0],
+      "rgb_array": [38, 25, 209],
+      "combinations": [42, 56, 130, 156, 164, 181, 205, 214, 226, 316, 331, 335]
     },
     {
-      "name": "Red Violet",
-      "rgb_array": [
-        52,
-        0,
-        163
-      ],
-      "cmyk_array": [
-        76,
-        100,
-        25,
-        15
-      ],
-      "hex": "#3400a3",
-      "combinations": [
-        4,
-        37,
-        134,
-        136,
-        170,
-        172,
-        183,
-        316
-      ],
       "id": 151,
-      "swatch_collection": 5
+      "collection_id": 5,
+      "name": "Red Violet",
+      "hex": "#3400a3",
+      "cmyk_array": [76, 100, 25, 15],
+      "rgb_array": [52, 0, 163],
+      "combinations": [4, 37, 134, 136, 170, 172, 183, 316]
     },
     {
-      "name": "Cotinga Purple",
-      "rgb_array": [
-        52,
-        0,
-        89
-      ],
-      "cmyk_array": [
-        66,
-        100,
-        42,
-        40
-      ],
-      "hex": "#340059",
-      "combinations": [
-        61,
-        181,
-        238,
-        253,
-        307,
-        329,
-        348
-      ],
       "id": 152,
-      "swatch_collection": 5
+      "collection_id": 5,
+      "name": "Cotinga Purple",
+      "hex": "#340059",
+      "cmyk_array": [66, 100, 42, 40],
+      "rgb_array": [52, 0, 89],
+      "combinations": [61, 181, 238, 253, 307, 329, 348]
     },
     {
-      "name": "Dusky Madder Violet",
-      "rgb_array": [
-        45,
-        0,
-        96
-      ],
-      "cmyk_array": [
-        75,
-        100,
-        46,
-        30
-      ],
-      "hex": "#2d0060",
-      "combinations": [
-        18,
-        50,
-        53,
-        82,
-        103,
-        314
-      ],
       "id": 153,
-      "swatch_collection": 5
+      "collection_id": 5,
+      "name": "Dusky Madder Violet",
+      "hex": "#2d0060",
+      "cmyk_array": [75, 100, 46, 30],
+      "rgb_array": [45, 0, 96],
+      "combinations": [18, 50, 53, 82, 103, 314]
     },
     {
-      "name": "White",
-      "rgb_array": [
-        255,
-        255,
-        255
-      ],
-      "cmyk_array": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "hex": "#ffffff",
-      "combinations": [
-        55
-      ],
       "id": 154,
-      "swatch_collection": 6
+      "collection_id": 6,
+      "name": "White",
+      "hex": "#ffffff",
+      "cmyk_array": [0, 0, 0, 0],
+      "rgb_array": [255, 255, 255],
+      "combinations": [55]
     },
     {
-      "name": "Neutral Gray",
-      "rgb_array": [
-        181,
-        209,
-        204
-      ],
-      "cmyk_array": [
-        29,
-        18,
-        20,
-        0
-      ],
-      "hex": "#b5d1cc",
-      "combinations": [
-        34,
-        139,
-        180,
-        195,
-        197,
-        221,
-        228,
-        229,
-        273,
-        303,
-        324,
-        340
-      ],
       "id": 155,
-      "swatch_collection": 6
+      "collection_id": 6,
+      "name": "Neutral Gray",
+      "hex": "#b5d1cc",
+      "cmyk_array": [29, 18, 20, 0],
+      "rgb_array": [181, 209, 204],
+      "combinations": [34, 139, 180, 195, 197, 221, 228, 229, 273, 303, 324, 340]
     },
     {
-      "name": "Mineral Gray",
-      "rgb_array": [
-        159,
-        194,
-        178
-      ],
-      "cmyk_array": [
-        33,
-        18,
-        25,
-        7
-      ],
-      "hex": "#9fc2b2",
-      "combinations": [
-        11,
-        30
-      ],
       "id": 156,
-      "swatch_collection": 6
+      "collection_id": 6,
+      "name": "Mineral Gray",
+      "hex": "#9fc2b2",
+      "cmyk_array": [33, 18, 25, 7],
+      "rgb_array": [159, 194, 178],
+      "combinations": [11, 30]
     },
     {
-      "name": "Warm Gray",
-      "rgb_array": [
-        156,
-        178,
-        158
-      ],
-      "cmyk_array": [
-        33,
-        28,
-        36,
-        3
-      ],
-      "hex": "#9cb29e",
-      "combinations": [
-        69,
-        76,
-        81,
-        143,
-        169,
-        238,
-        259,
-        261
-      ],
       "id": 157,
-      "swatch_collection": 6
+      "collection_id": 6,
+      "name": "Warm Gray",
+      "hex": "#9cb29e",
+      "cmyk_array": [33, 28, 36, 3],
+      "rgb_array": [156, 178, 158],
+      "combinations": [69, 76, 81, 143, 169, 238, 259, 261]
     },
     {
-      "name": "Slate Color",
-      "rgb_array": [
-        27,
-        54,
-        68
-      ],
-      "cmyk_array": [
-        85,
-        70,
-        62,
-        30
-      ],
-      "hex": "#1b3644",
-      "combinations": [
-        27,
-        33,
-        57,
-        140,
-        202,
-        243,
-        245,
-        251,
-        253,
-        263,
-        296,
-        329,
-        335
-      ],
       "id": 158,
-      "swatch_collection": 6
+      "collection_id": 6,
+      "name": "Slate Color",
+      "hex": "#1b3644",
+      "cmyk_array": [85, 70, 62, 30],
+      "rgb_array": [27, 54, 68],
+      "combinations": [27, 33, 57, 140, 202, 243, 245, 251, 253, 263, 296, 329, 335]
     },
     {
-      "name": "Black",
-      "rgb_array": [
-        0,
-        0,
-        0
-      ],
-      "cmyk_array": [
-        20,
-        10,
-        15,
-        100
-      ],
-      "hex": "#000000",
-      "combinations": [
-        46,
-        52,
-        62,
-        69,
-        112,
-        117,
-        144,
-        190,
-        207,
-        216,
-        221,
-        242,
-        255,
-        256,
-        269,
-        276,
-        288,
-        298,
-        313,
-        323,
-        337,
-        340,
-        344
-      ],
       "id": 159,
-      "swatch_collection": 6
+      "collection_id": 6,
+      "name": "Black",
+      "hex": "#000000",
+      "cmyk_array": [20, 10, 15, 100],
+      "rgb_array": [0, 0, 0],
+      "combinations": [46, 52, 62, 69, 112, 117, 144, 190, 207, 216, 221, 242, 255, 256, 269, 276, 288, 298, 313, 323, 337, 340, 344]
     }
   ]
 }
