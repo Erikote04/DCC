@@ -55,7 +55,7 @@ final class ColorCombinationViewModel: ObservableObject {
         }
         
         let colorsBySwatch = mapper.map(colorsDTO)
-        self.colorsBySwatch = Dictionary(grouping: colorsBySwatch, by: \.swatchCollection)
+        self.colorsBySwatch = Dictionary(grouping: colorsBySwatch, by: \.collectionId)
     }
     
     private func loadCombinations() {

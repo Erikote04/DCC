@@ -85,12 +85,13 @@ struct ColorDetailView: View {
     NavigationStack {
         ColorDetailView(color: Color(
             id: 159,
+            collectionId: 6,
             name: "Black",
             color: .black,
             hex: "#000000",
+            cmyk: "CMYK: 20 10 15 100",
             rgb: "RGB: 0 0 0",
-            combinations: [46, 52, 62],
-            swatchCollection: 1
+            combinations: [46, 52, 62]
         ))
     }
     .environmentObject(ColorCombinationViewModel())
