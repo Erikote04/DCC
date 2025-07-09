@@ -3,6 +3,6 @@
 <plist version="1.0">
 <dict>
     <key>NSPhotoLibraryAddUsageDescription</key>
-    <string>Colors needs access to save images in your library</string>
+    <string></string>
 </dict>
 </plist>
