@@ -5,11 +5,14 @@
 //  Created by Erik Sebastian de Erice Jerez on 28/6/25.
 //
 
+import Photos
 import SwiftUI
 
 struct CombinationDetailView: View {
     @State var combination: Combination
+    @State private var shareImage = Image(systemName: "photo")
     @Environment(\.colorScheme) private var colorScheme
+    @Environment(\.displayScale) var displayScale
     @EnvironmentObject private var viewModel: ColorCombinationViewModel
     
     private var currentIndex: Int {
@@ -52,20 +55,32 @@ struct CombinationDetailView: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(backGroundColor)
         .toolbar {
+            ToolbarItem(placement: .primaryAction) {
+                ShareLink(
+                    item: shareImage,
+                    preview: SharePreview(
+                        "Color Combination #\(combination.id)",
+                        image: shareImage
+                    )
+                ) {
+                    Image(systemName: "square.and.arrow.up")
+                }
+            }
+            
             ToolbarItemGroup(placement: .navigation) {
                 HStack {
                     Button { navigateToPreviousCombination() }
                     label: { Image(systemName: "chevron.left") }
-                        .frame(width: 44, height: 44)
                         .disabled(!hasPreviousCombination)
                     
                     Button { navigateToNextCombination() }
                     label: { Image(systemName: "chevron.right") }
-                        .frame(width: 44, height: 44)
                         .disabled(!hasNextCombination)
                 }
             }
         }
+        .onAppear { renderCombinationImage() }
+        .onChange(of: combination) { renderCombinationImage() }
     }
     
     @ViewBuilder
@@ -96,6 +111,21 @@ struct CombinationDetailView: View {
                 .padding(.leading)
             }
             .copyFormats(of: color)
+    }
+    
+    @MainActor
+    private func renderCombinationImage() {
+        let combinationPageForImage = CombinationPage(combination: combination)
+            .frame(width: 400, height: 700)
+            .background(Color(UIColor.systemBackground))
+        
+        let renderer = ImageRenderer(content: combinationPageForImage)
+        
+        renderer.scale = displayScale
+        
+        if let uiImage = renderer.uiImage {
+            shareImage = Image(uiImage: uiImage)
+        }
     }
     
     private func navigateToPreviousCombination() {
