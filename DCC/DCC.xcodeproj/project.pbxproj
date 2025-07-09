@@ -10,9 +10,22 @@
 		BB2278602E0C149800EF15F7 /* DCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DCC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		BBDA944A2E1E81C60049EE15 /* Exceptions for "DCC" folder in "DCC" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = BB22785F2E0C149800EF15F7 /* DCC */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		BB2278622E0C149800EF15F7 /* DCC */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				BBDA944A2E1E81C60049EE15 /* Exceptions for "DCC" folder in "DCC" target */,
+			);
 			path = DCC;
 			sourceTree = "<group>";
 		};
@@ -255,6 +268,7 @@
 				DEVELOPMENT_TEAM = 9PY53WPJ8K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DCC/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Colors;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.graphics-design";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -287,6 +301,7 @@
 				DEVELOPMENT_TEAM = 9PY53WPJ8K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DCC/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Colors;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.graphics-design";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
