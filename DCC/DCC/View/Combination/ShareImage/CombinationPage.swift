@@ -188,23 +188,20 @@ struct CombinationPage: View {
                 let halfWidth = proxy.size.width / 2
                 
                 ZStack {
-                    // Divisor fijo en el centro
                     Rectangle()
                         .frame(width: 1)
                         .position(x: halfWidth, y: proxy.size.height / 2)
                     
                     HStack(spacing: 0) {
-                        // Texto izquierdo
                         Text(secondColor.name)
                             .multilineTextAlignment(.center)
                             .frame(width: halfWidth)
-                            .padding(.trailing, 8) // Espacio para no tocar el divisor
+                            .padding(.trailing, 8)
                         
-                        // Texto derecho
                         Text(thirdColor.name)
                             .multilineTextAlignment(.center)
                             .frame(width: halfWidth)
-                            .padding(.leading, 8) // Espacio para no tocar el divisor
+                            .padding(.leading, 8)
                     }
                 }
             }

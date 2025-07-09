@@ -9,9 +9,12 @@ import SwiftUI
 
 struct ColorDetailView: View {
     @Environment(\.colorScheme) private var colorScheme
+    @Environment(\.displayScale) var displayScale
     @EnvironmentObject private var viewModel: ColorCombinationViewModel
     
     let color: ColorModel
+    @State private var shareImage = Image(systemName: "photo")
+    @State private var showingShareDialog = false
     
     private var backgroundColor: Color {
         colorScheme == .dark ? .black : .white
@@ -91,6 +94,74 @@ struct ColorDetailView: View {
         .navigationTitle(color.name)
         .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(backgroundColor)
+        .toolbar {
+            ToolbarItem(placement: .primaryAction) {
+                Button {
+                    showingShareDialog = true
+                } label: {
+                    Image(systemName: "square.and.arrow.up")
+                }
+            }
+        }
+        .onAppear { renderColorImage() }
+        .onChange(of: color) { renderColorImage() }
+        .confirmationDialog(
+            Text("How do you want to share this color?"),
+            isPresented: $showingShareDialog,
+            titleVisibility: .visible
+        ) {
+            ShareLink(
+                item: shareImage,
+                preview: SharePreview(
+                    "Color: \(color.name)",
+                    image: shareImage
+                )
+            ) {
+                Text("Plain Color")
+            }
+            
+            ShareLink(
+                item: renderColorDataImage(),
+                preview: SharePreview(
+                    "Color Data: \(color.name)",
+                    image: renderColorDataImage()
+                )
+            ) {
+                Text("Color Data")
+            }
+        }
+    }
+    
+    @MainActor
+    private func renderColorImage() {
+        let plainColorForImage = PlainColor(color: color.color)
+            .frame(width: 400, height: 700)
+            .background(Color(UIColor.systemBackground))
+        
+        let renderer = ImageRenderer(content: plainColorForImage)
+        
+        renderer.scale = displayScale
+        
+        if let uiImage = renderer.uiImage {
+            shareImage = Image(uiImage: uiImage)
+        }
+    }
+    
+    @MainActor
+    private func renderColorDataImage() -> Image {
+        let colorDataForImage = ColorData(color: color)
+            .frame(width: 400, height: 700)
+            .background(Color(UIColor.systemBackground))
+        
+        let renderer = ImageRenderer(content: colorDataForImage)
+        
+        renderer.scale = displayScale
+        
+        if let uiImage = renderer.uiImage {
+            return Image(uiImage: uiImage)
+        }
+        
+        return Image(systemName: "photo")
     }
 }
 
