@@ -29,46 +29,52 @@ struct CombinationPage: View {
     
     @ViewBuilder
     private func twoColorsLayout(_ colors: [ColorModel]) -> some View {
-        HStack {
+        HStack(alignment: .top, spacing: 0) {
             Rectangle()
                 .frame(width: 2)
+                .foregroundStyle(.black)
             
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 0) {
                 Text("\(combination.id)")
                     .font(.headline)
                     .foregroundStyle(.black)
                 
                 Spacer()
                 
-                HStack(spacing: .zero) {
-                    ForEach(Array(combination.colors.enumerated()), id: \.offset) { index, color in
-                        VStack {
-                            Rectangle()
-                                .fill(color.color)
-                                .frame(maxWidth: .infinity)
-                                .overlay {
-                                    if color.name == "White" && colorScheme == .light {
-                                        Rectangle()
-                                            .stroke(.tertiary, lineWidth: 1)
+                GeometryReader { proxy in
+                    let width = proxy.size.width / CGFloat(colors.count)
+                    
+                    HStack(alignment: .top, spacing: 0) {
+                        ForEach(Array(colors.enumerated()), id: \.offset) { index, color in
+                            VStack(spacing: 0) {
+                                Rectangle()
+                                    .fill(color.color)
+                                    .frame(width: width, height: 150)
+                                    .overlay {
+                                        if color.name == "White" && colorScheme == .light {
+                                            Rectangle().stroke(.tertiary, lineWidth: 1)
+                                        }
+                                        if color.name == "Black" && colorScheme == .dark {
+                                            Rectangle().stroke(.tertiary, lineWidth: 1)
+                                        }
                                     }
-                                    
-                                    if color.name == "Black" && colorScheme == .dark {
-                                        Rectangle()
-                                            .stroke(.tertiary, lineWidth: 1)
-                                    }
-                                }
-                            
-                            Text(color.name)
+                                
+                                Text(color.name)
+                                    .frame(width: width)
+                                    .multilineTextAlignment(.center)
+                                    .padding(.top, 4)
+                            }
                         }
                     }
                 }
-                .frame(height: 150)
+                .frame(height: 200)
                 
                 Spacer()
             }
-            .padding(.horizontal, 8)
+            .padding(.leading)
         }
     }
+    
     
     @ViewBuilder
     private func threeColorsLayout(_ colors: [ColorModel]) -> some View {
