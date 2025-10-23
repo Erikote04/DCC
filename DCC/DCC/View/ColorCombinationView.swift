@@ -5,10 +5,12 @@
 //  Created by Erik Sebastian de Erice Jerez on 28/6/25.
 //
 
+import StoreKit
 import SwiftUI
 
 struct ColorCombinationView: View {
-    @Environment(\.colorScheme) var colorScheme
+    @Environment(\.colorScheme) private var colorScheme
+    @Environment(\.requestReview) private var requestReview
     @EnvironmentObject private var viewModel: ColorCombinationViewModel
     
     private var backgroundColor: Color {
@@ -28,6 +30,9 @@ struct ColorCombinationView: View {
         .toolbarBackground(.visible, for: .tabBar)
         .sheet(isPresented: $viewModel.isShowingInfo) {
             InfoView()
+        }
+        .onAppear {
+            requestReview()
         }
     }
     
