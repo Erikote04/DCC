@@ -19,11 +19,10 @@ struct SectionHeader: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("Collection \(swatch.id)")
-                .font(.title2)
+                .font(.title2.bold())
                 
             Text(swatch.description)
                 .font(.caption)
-                .foregroundStyle(.secondary)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding()

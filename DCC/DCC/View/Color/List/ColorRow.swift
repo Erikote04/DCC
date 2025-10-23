@@ -19,7 +19,7 @@ struct ColorRow: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(color.name)
-                .font(.largeTitle)
+                .font(.title)
                 .multilineTextAlignment(.leading)
             
             Text(color.hex)
