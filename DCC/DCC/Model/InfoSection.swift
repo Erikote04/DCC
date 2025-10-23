@@ -47,5 +47,4 @@ enum InfoSection: String, CaseIterable, Identifiable {
     }
     
     static let learnMoreURL: URL = URL(string: "https://en.wikipedia.org/wiki/Sanzo_Wada")!
-    static let buyTheBookURL: URL = URL(string: "https://www.amazon.com/dp/4861522471")!
 }

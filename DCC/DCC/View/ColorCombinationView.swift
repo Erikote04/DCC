@@ -118,15 +118,6 @@ fileprivate struct InfoView: View {
                         .underline()
                 }
                 .buttonStyle(.plain)
-                
-                Button {
-                    openURL(InfoSection.buyTheBookURL)
-                } label: {
-                    Text("Buy the book")
-                        .font(.subheadline.bold())
-                        .underline()
-                }
-                .buttonStyle(.plain)
             }
         }
         .padding()
