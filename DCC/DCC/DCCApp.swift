@@ -9,12 +9,12 @@ import SwiftUI
 
 @main
 struct DCCApp: App {
-    @StateObject private var viewModel = ColorCombinationViewModel()
+    @State private var viewModel = ColorCombinationViewModel()
     
     var body: some Scene {
         WindowGroup {
-            ColorCombinationView()
-                .environmentObject(viewModel)
+            ColorCombinationView(viewModel: viewModel)
+                .environment(viewModel)
         }
     }
 }

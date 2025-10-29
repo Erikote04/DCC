@@ -7,13 +7,14 @@
 
 import SwiftUI
 
-final class ColorCombinationViewModel: ObservableObject {
-    @Published var selectedTab: TabItem = .colors
-    @Published var swatches: [Swatch] = []
-    @Published var colorsBySwatch: [Int: [ColorModel]] = [:]
-    @Published var combinations: [Combination] = []
-    @Published var isShowingGrid: Bool = true
-    @Published var isShowingInfo: Bool = false
+@Observable
+final class ColorCombinationViewModel {
+    var selectedTab: TabItem = .colors
+    var swatches: [Swatch] = []
+    var colorsBySwatch: [Int: [ColorModel]] = [:]
+    var combinations: [Combination] = []
+    var isShowingGrid: Bool = true
+    var isShowingInfo: Bool = false
     
     var appVersion: String {
         guard let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String else {
@@ -30,13 +31,19 @@ final class ColorCombinationViewModel: ObservableObject {
         loadData()
     }
     
-    private func loadData() {
+    func getCombination(by id: Int) -> Combination? {
+        return combinations.first { $0.id == id }
+    }
+}
+
+private extension ColorCombinationViewModel {
+    func loadData() {
         loadSwatches()
         loadColors()
         loadCombinations()
     }
     
-    private func loadSwatches() {
+    func loadSwatches() {
         guard let url = Bundle.main.url(forResource: "swatches", withExtension: "json"),
               let data = try? Data(contentsOf: url),
               let swatches = try? JSONDecoder().decode([Swatch].self, from: data) else {
@@ -46,7 +53,7 @@ final class ColorCombinationViewModel: ObservableObject {
         self.swatches = swatches
     }
     
-    private func loadColors() {
+    func loadColors() {
         guard let url = Bundle.main.url(forResource: "colors", withExtension: "json"),
               let data = try? Data(contentsOf: url),
               let colorsDecoded = try? JSONDecoder().decode([String: [ColorDTO]].self, from: data),
@@ -58,12 +65,12 @@ final class ColorCombinationViewModel: ObservableObject {
         self.colorsBySwatch = Dictionary(grouping: colorsBySwatch, by: \.collectionId)
     }
     
-    private func loadCombinations() {
+    func loadCombinations() {
         let allColors = getAllColors()
         self.combinations = generateCombinations(from: allColors)
     }
     
-    private func generateCombinations(from colors: [ColorModel]) -> [Combination] {
+    func generateCombinations(from colors: [ColorModel]) -> [Combination] {
         var combinations: [Combination] = []
         var processedCombinationIds: Set<Int> = []
         
@@ -92,17 +99,13 @@ final class ColorCombinationViewModel: ObservableObject {
         return combinations.sorted { $0.id < $1.id }
     }
     
-    private func findColorsInCombination(combinationId: Int, allColors: [ColorModel]) -> [ColorModel] {
+    func findColorsInCombination(combinationId: Int, allColors: [ColorModel]) -> [ColorModel] {
         return allColors
             .filter { $0.combinations.contains(combinationId) }
             .sorted { $0.name < $1.name }
     }
     
-    private func getAllColors() -> [ColorModel] {
+    func getAllColors() -> [ColorModel] {
         return colorsBySwatch.values.flatMap { $0 }
-    }
-    
-    func getCombination(by id: Int) -> Combination? {
-        return combinations.first { $0.id == id }
     }
 }

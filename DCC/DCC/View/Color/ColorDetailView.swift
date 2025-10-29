@@ -10,9 +10,10 @@ import SwiftUI
 struct ColorDetailView: View {
     @Environment(\.colorScheme) private var colorScheme
     @Environment(\.displayScale) var displayScale
-    @EnvironmentObject private var viewModel: ColorCombinationViewModel
+    @Environment(ColorCombinationViewModel.self) private var viewModel
     
     let color: ColorModel
+    
     @State private var shareImage = Image(systemName: "photo")
     @State private var showingShareDialog = false
     
@@ -178,6 +179,6 @@ struct ColorDetailView: View {
             combinations: [46, 52, 62]
         ))
     }
-    .environmentObject(ColorCombinationViewModel())
+    .environment(ColorCombinationViewModel())
     .tint(.primary)
 }

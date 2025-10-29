@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CombinationsView: View {
     @Environment(\.colorScheme) private var colorScheme
-    @EnvironmentObject private var viewModel: ColorCombinationViewModel
+    @Environment(ColorCombinationViewModel.self) private var viewModel
     
     @State private var searchText = ""
     
@@ -90,14 +90,14 @@ fileprivate struct CombinationRow: View {
 #Preview("Light") {
     NavigationStack {
         CombinationsView()
-            .environmentObject(ColorCombinationViewModel())
+            .environment(ColorCombinationViewModel())
     }
 }
 
 #Preview("Dark") {
     NavigationStack {
         CombinationsView()
-            .environmentObject(ColorCombinationViewModel())
+            .environment(ColorCombinationViewModel())
             .preferredColorScheme(.dark)
     }
 }

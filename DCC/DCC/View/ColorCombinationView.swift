@@ -11,7 +11,7 @@ import SwiftUI
 struct ColorCombinationView: View {
     @Environment(\.colorScheme) private var colorScheme
     @Environment(\.requestReview) private var requestReview
-    @EnvironmentObject private var viewModel: ColorCombinationViewModel
+    @Bindable var viewModel: ColorCombinationViewModel
     
     private var backgroundColor: Color {
         colorScheme == .dark ? .black : .white
@@ -64,7 +64,7 @@ struct ColorCombinationView: View {
 fileprivate struct InfoView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.openURL) private var openURL
-    @EnvironmentObject private var viewModel: ColorCombinationViewModel
+    @Environment(ColorCombinationViewModel.self) private var viewModel
     
     var body: some View {
         NavigationStack {
@@ -126,6 +126,6 @@ fileprivate struct InfoView: View {
 }
 
 #Preview {
-    ColorCombinationView()
-        .environmentObject(ColorCombinationViewModel())
+    ColorCombinationView(viewModel: ColorCombinationViewModel())
+        .environment(ColorCombinationViewModel())
 }

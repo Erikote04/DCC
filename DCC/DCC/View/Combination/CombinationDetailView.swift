@@ -9,11 +9,13 @@ import Photos
 import SwiftUI
 
 struct CombinationDetailView: View {
-    @State var combination: Combination
-    @State private var shareImage = Image(systemName: "photo")
     @Environment(\.colorScheme) private var colorScheme
     @Environment(\.displayScale) var displayScale
-    @EnvironmentObject private var viewModel: ColorCombinationViewModel
+    @Environment(ColorCombinationViewModel.self) private var viewModel
+    
+    @State private var shareImage = Image(systemName: "photo")
+    
+    @State var combination: Combination
     
     private var currentIndex: Int {
         viewModel.combinations.firstIndex(where: { $0.id == combination.id }) ?? 0

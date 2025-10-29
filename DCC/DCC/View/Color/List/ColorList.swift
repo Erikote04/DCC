@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ColorList: View {
-    @EnvironmentObject private var viewModel: ColorCombinationViewModel
+    @Environment(ColorCombinationViewModel.self) private var viewModel
     
     let swatch: Swatch
     
