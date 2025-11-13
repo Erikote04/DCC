@@ -11,29 +11,17 @@ struct PhotoColorRow: View {
     @Environment(\.colorScheme) private var colorScheme
     
     let photoColor: PhotoColor
-    let showPercentage: Bool
     
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
-            HStack {
-                if showPercentage {
-                    Text(String(format: "%.1f%%", photoColor.percentage))
-                        .font(.headline)
-                } else {
-                    Text("Selected")
-                        .font(.headline)
-                }
-                Spacer()
-            }
-            
             Text(photoColor.hex)
-                .font(.subheadline.bold())
+                .font(.headline)
             
             Text(photoColor.rgb)
-                .font(.caption)
+                .font(.subheadline)
             
             Text(photoColor.cmyk)
-                .font(.caption)
+                .font(.subheadline)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding()

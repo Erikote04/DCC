@@ -101,7 +101,7 @@ struct PhotoColorPickerView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
             
             ForEach(viewModel.extractedColors) { color in
-                PhotoColorRow(photoColor: color, showPercentage: true)
+                PhotoColorRow(photoColor: color)
             }
         }
     }
