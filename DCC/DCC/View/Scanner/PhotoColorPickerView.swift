@@ -10,13 +10,7 @@ import PhotosUI
 
 struct PhotoColorPickerView: View {
     @Environment(\.colorScheme) private var colorScheme
-    
-    @State private var selectedImage: UIImage?
-    @State private var extractedColors: [PhotoColor] = []
-    @State private var isLoading = false
-    @State private var showImagePicker = false
-    @State private var showCamera = false
-    @State private var selectedItem: PhotosPickerItem?
+    @State private var viewModel = PhotoColorPickerViewModel()
     
     private var backgroundColor: Color {
         colorScheme == .dark ? .black : .white
@@ -25,7 +19,7 @@ struct PhotoColorPickerView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 20) {
-                if let image = selectedImage {
+                if let image = viewModel.selectedImage {
                     imageAnalysisSection(image: image)
                 } else {
                     emptyStateSection
@@ -34,21 +28,29 @@ struct PhotoColorPickerView: View {
             .padding()
         }
         .navigationTitle("Color Scanner")
-        .photosPicker(isPresented: $showImagePicker, selection: $selectedItem, matching: .images)
-        .fullScreenCover(isPresented: $showCamera) {
+        .navigationBarTitleDisplayMode(.inline)
+        .photosPicker(
+            isPresented: $viewModel.showImagePicker,
+            selection: $viewModel.selectedItem,
+            matching: .images
+        )
+        .fullScreenCover(isPresented: $viewModel.showCamera) {
             CameraView { image in
-                processImage(image)
-            }.ignoresSafeArea()
+                viewModel.processImage(image)
+            }
+            .ignoresSafeArea()
         }
-        .onChange(of: selectedItem) { _, newItem in
+        .onChange(of: viewModel.selectedItem) { _, newItem in
             Task {
                 if let data = try? await newItem?.loadTransferable(type: Data.self),
                    let image = UIImage(data: data) {
-                    processImage(image)
+                    viewModel.processImage(image)
                 }
             }
         }
     }
+    
+    // MARK: - Sections
     
     @ViewBuilder
     private var emptyStateSection: some View {
@@ -82,10 +84,10 @@ struct PhotoColorPickerView: View {
             
             actionButtons
             
-            if isLoading {
+            if viewModel.isLoading {
                 ProgressView("Analyzing colors...")
                     .padding()
-            } else if !extractedColors.isEmpty {
+            } else if !viewModel.extractedColors.isEmpty {
                 colorsListSection
             }
         }
@@ -98,7 +100,7 @@ struct PhotoColorPickerView: View {
                 .font(.title2.bold())
                 .frame(maxWidth: .infinity, alignment: .leading)
             
-            ForEach(extractedColors) { color in
+            ForEach(viewModel.extractedColors) { color in
                 PhotoColorRow(photoColor: color, showPercentage: true)
             }
         }
@@ -107,9 +109,9 @@ struct PhotoColorPickerView: View {
     @ViewBuilder
     private var actionButtons: some View {
         VStack(spacing: 12) {
-            if selectedImage != nil {
+            if viewModel.selectedImage != nil {
                 Button {
-                    resetView()
+                    viewModel.resetView()
                 } label: {
                     Label("Try Another", systemImage: "arrow.counterclockwise")
                         .frame(maxWidth: .infinity)
@@ -118,7 +120,7 @@ struct PhotoColorPickerView: View {
             } else {
                 HStack(spacing: 12) {
                     Button {
-                        showCamera = true
+                        viewModel.showCamera = true
                     } label: {
                         Label("Take Photo", systemImage: "camera.fill")
                             .frame(maxWidth: .infinity)
@@ -128,7 +130,7 @@ struct PhotoColorPickerView: View {
                     .tint(colorScheme == .dark ? .white : .black)
                     
                     Button {
-                        showImagePicker = true
+                        viewModel.showImagePicker = true
                     } label: {
                         Label("From Library", systemImage: "photo.fill")
                             .frame(maxWidth: .infinity)
@@ -139,26 +141,6 @@ struct PhotoColorPickerView: View {
                 }
             }
         }
-    }
-    
-    private func processImage(_ image: UIImage) {
-        selectedImage = image
-        isLoading = true
-        
-        DispatchQueue.global(qos: .userInitiated).async {
-            let colors = ColorExtractor.extractDominantColors(from: image, count: 8)
-            
-            DispatchQueue.main.async {
-                extractedColors = colors
-                isLoading = false
-            }
-        }
-    }
-    
-    private func resetView() {
-        selectedImage = nil
-        extractedColors = []
-        selectedItem = nil
     }
 }
 
