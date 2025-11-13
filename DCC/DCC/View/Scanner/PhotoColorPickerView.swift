@@ -16,9 +16,6 @@ struct PhotoColorPickerView: View {
     @State private var isLoading = false
     @State private var showImagePicker = false
     @State private var showCamera = false
-    @State private var isPickingColor = false
-    @State private var selectedPhotoColor: PhotoColor?
-    @State private var pickerPosition: CGPoint = .zero
     @State private var selectedItem: PhotosPickerItem?
     
     private var backgroundColor: Color {
@@ -77,22 +74,11 @@ struct PhotoColorPickerView: View {
     @ViewBuilder
     private func imageAnalysisSection(image: UIImage) -> some View {
         VStack(spacing: 20) {
-            ZStack {
-                Image(uiImage: image)
-                    .resizable()
-                    .scaledToFit()
-                    .cornerRadius(12)
-                    .shadow(radius: 5)
-                
-                if isPickingColor {
-                    ColorPickerOverlay(
-                        image: image,
-                        isActive: $isPickingColor,
-                        selectedColor: $selectedPhotoColor,
-                        position: $pickerPosition
-                    )
-                }
-            }
+            Image(uiImage: image)
+                .resizable()
+                .scaledToFit()
+                .cornerRadius(12)
+                .shadow(radius: 5)
             
             actionButtons
             
@@ -112,15 +98,6 @@ struct PhotoColorPickerView: View {
                 .font(.title2.bold())
                 .frame(maxWidth: .infinity, alignment: .leading)
             
-            if let selectedColor = selectedPhotoColor {
-                PhotoColorRow(photoColor: selectedColor, showPercentage: false)
-                
-                Text("Manually selected color")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-                    .padding(.bottom, 8)
-            }
-            
             ForEach(extractedColors) { color in
                 PhotoColorRow(photoColor: color, showPercentage: true)
             }
@@ -131,24 +108,13 @@ struct PhotoColorPickerView: View {
     private var actionButtons: some View {
         VStack(spacing: 12) {
             if selectedImage != nil {
-                HStack(spacing: 12) {
-                    Button {
-                        isPickingColor = true
-                    } label: {
-                        Label("Pick Color", systemImage: "eyedropper")
-                            .frame(maxWidth: .infinity)
-                    }
-                    .buttonStyle(.bordered)
-                    .disabled(isPickingColor)
-                    
-                    Button {
-                        resetView()
-                    } label: {
-                        Label("Try Another", systemImage: "arrow.counterclockwise")
-                            .frame(maxWidth: .infinity)
-                    }
-                    .buttonStyle(.bordered)
+                Button {
+                    resetView()
+                } label: {
+                    Label("Try Another", systemImage: "arrow.counterclockwise")
+                        .frame(maxWidth: .infinity)
                 }
+                .buttonStyle(.bordered)
             } else {
                 HStack(spacing: 12) {
                     Button {
@@ -178,7 +144,6 @@ struct PhotoColorPickerView: View {
     private func processImage(_ image: UIImage) {
         selectedImage = image
         isLoading = true
-        selectedPhotoColor = nil
         
         DispatchQueue.global(qos: .userInitiated).async {
             let colors = ColorExtractor.extractDominantColors(from: image, count: 8)
@@ -193,8 +158,6 @@ struct PhotoColorPickerView: View {
     private func resetView() {
         selectedImage = nil
         extractedColors = []
-        selectedPhotoColor = nil
-        isPickingColor = false
         selectedItem = nil
     }
 }
@@ -217,7 +180,6 @@ struct PhotoColorRow: View {
                     Text("Selected")
                         .font(.headline)
                 }
-                
                 Spacer()
             }
             
@@ -238,113 +200,10 @@ struct PhotoColorRow: View {
     }
 }
 
-// MARK: - Color Picker Overlay
-
-struct ColorPickerOverlay: View {
-    let image: UIImage
-    @Binding var isActive: Bool
-    @Binding var selectedColor: PhotoColor?
-    @Binding var position: CGPoint
-
-    @State private var currentPosition: CGPoint = .zero
-    @State private var previewColor: Color = .clear
-    @Environment(\.colorScheme) private var colorScheme
-
-    var body: some View {
-        GeometryReader { geometry in
-            ZStack {
-                Color.black.opacity(0.3).ignoresSafeArea()
-
-                ZStack {
-                    Circle()
-                        .fill(previewColor)
-                        .frame(width: 80, height: 100)
-                        .shadow(radius: 6)
-                        .overlay(
-                            Circle()
-                                .stroke(Color.white, lineWidth: 3)
-                        )
-                        .offset(y: -70)
-                        .position(currentPosition)
-
-                    Circle()
-                        .fill(.white)
-                        .frame(width: 18, height: 18)
-                        .overlay(
-                            Circle()
-                                .fill(previewColor)
-                                .frame(width: 10, height: 10)
-                        )
-                        .shadow(radius: 3)
-                        .position(currentPosition)
-                }
-            }
-            .gesture(
-                DragGesture(minimumDistance: 0)
-                    .onChanged { value in
-                        let newPosition = CGPoint(
-                            x: max(0, min(geometry.size.width, value.location.x)),
-                            y: max(0, min(geometry.size.height, value.location.y))
-                        )
-                        currentPosition = newPosition
-                        updatePreviewColor(at: newPosition, in: geometry)
-                    }
-                    .onEnded { value in
-                        let finalPosition = CGPoint(
-                            x: max(0, min(geometry.size.width, value.location.x)),
-                            y: max(0, min(geometry.size.height, value.location.y))
-                        )
-                        selectColor(at: finalPosition, in: geometry)
-                        isActive = false
-                    }
-            )
-            .onAppear {
-                currentPosition = CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2)
-                updatePreviewColor(at: currentPosition, in: geometry)
-            }
-        }
-    }
-
-    private func normalizedPoint(for position: CGPoint, in geometry: GeometryProxy) -> CGPoint? {
-        let imageSize = image.size
-        let viewSize = geometry.size
-        let scale = min(viewSize.width / imageSize.width, viewSize.height / imageSize.height)
-        let displaySize = CGSize(width: imageSize.width * scale, height: imageSize.height * scale)
-        let xOffset = (viewSize.width - displaySize.width) / 2
-        let yOffset = (viewSize.height - displaySize.height) / 2
-
-        guard position.x >= xOffset, position.x <= xOffset + displaySize.width,
-              position.y >= yOffset, position.y <= yOffset + displaySize.height else { return nil }
-
-        let normalizedX = (position.x - xOffset) / displaySize.width
-        let normalizedY = (position.y - yOffset) / displaySize.height
-        
-        return CGPoint(x: normalizedX, y: normalizedY)
-    }
-
-    private func updatePreviewColor(at position: CGPoint, in geometry: GeometryProxy) {
-        guard let normalized = normalizedPoint(for: position, in: geometry),
-              let color = ColorExtractor.extractColor(from: image, at: normalized)
-        else { return }
-
-        previewColor = color.color
-    }
-
-    private func selectColor(at position: CGPoint, in geometry: GeometryProxy) {
-        guard let normalized = normalizedPoint(for: position, in: geometry),
-              let color = ColorExtractor.extractColor(from: image, at: normalized)
-        else { return }
-
-        selectedColor = color
-        self.position = position
-    }
-}
-
 // MARK: - Camera View
 
 struct CameraView: UIViewControllerRepresentable {
     @Environment(\.dismiss) private var dismiss
-    
     let onCapture: (UIImage) -> Void
     
     func makeUIViewController(context: Context) -> UIImagePickerController {
@@ -368,11 +227,9 @@ struct CameraView: UIViewControllerRepresentable {
         }
         
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-            
             if let image = info[.originalImage] as? UIImage {
                 parent.onCapture(image)
             }
-            
             parent.dismiss()
         }
         
