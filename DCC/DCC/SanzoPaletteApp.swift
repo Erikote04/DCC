@@ -8,12 +8,12 @@
 import SwiftUI
 
 @main
-struct DCCApp: App {
+struct SanzoPaletteApp: App {
     @State private var viewModel = ColorCombinationViewModel()
     
     var body: some Scene {
         WindowGroup {
-            ColorCombinationView(viewModel: viewModel)
+            TabBarView(viewModel: viewModel)
                 .environment(viewModel)
         }
     }
