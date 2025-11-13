@@ -29,6 +29,23 @@ extension View {
                 }
             }
     }
+    
+    func copyFormats(of color: PhotoColor) -> some View {
+        self
+            .contextMenu {
+                Button("Copy HEX") {
+                    copyToClipboard(color.hex)
+                }
+                
+                Button("Copy RGB") {
+                    copyToClipboard(color.rgb)
+                }
+                
+                Button("Copy CMYK") {
+                    copyToClipboard(color.cmyk)
+                }
+            }
+    }
 }
 
 private func copyToClipboard(_ text: String) {
