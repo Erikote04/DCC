@@ -10,6 +10,7 @@ import SwiftUI
 enum TabItem: String, CaseIterable, Identifiable, Hashable {
     case colors
     case combinations
+    case scan
     
     var id: String { rawValue }
     
@@ -17,6 +18,7 @@ enum TabItem: String, CaseIterable, Identifiable, Hashable {
         switch self {
         case .colors: return "Colors"
         case .combinations: return "Combinations"
+        case .scan: return "Scanner"
         }
     }
     
@@ -24,6 +26,7 @@ enum TabItem: String, CaseIterable, Identifiable, Hashable {
         switch self {
         case .colors: return "paintpalette.fill"
         case .combinations: return "swatchpalette.fill"
+        case .scan: return "camera"
         }
     }
     
@@ -32,6 +35,7 @@ enum TabItem: String, CaseIterable, Identifiable, Hashable {
         switch self {
         case .colors: ColorsView()
         case .combinations: CombinationsView()
+        case .scan: PhotoColorPickerView()
         }
     }
 }
