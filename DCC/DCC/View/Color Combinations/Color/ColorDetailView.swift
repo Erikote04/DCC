@@ -41,53 +41,28 @@ struct ColorDetailView: View {
                 LazyVStack(alignment: .leading, pinnedViews: .sectionHeaders) {
                     Section {
                         ForEach(color.combinations, id: \.self) { combinationId in
-                            let combination = viewModel.getCombination(by: combinationId)
-                            
-                            NavigationLink(value: combination) {
-                                VStack {
-                                    HStack {
-                                        VStack(alignment: .leading) {
-                                            Text("#\(combinationId)").padding()
+                            if let combination = viewModel.getCombination(by: combinationId) {
+                                NavigationLink(value: combination) {
+                                    VStack {
+                                        HStack(spacing: .zero) {
+                                            CombinationRow(combination: combination)
+                                                .padding(.vertical, 4)
+                                            
+                                            Image(systemName: "chevron.right")
+                                                .font(.footnote.bold())
+                                                .foregroundStyle(Color.gray)
+                                                .frame(width: 24, height: 24)
+                                                .padding(.trailing, 8)
                                         }
                                         
-                                        Spacer()
-                                        
-                                        Image(systemName: "chevron.right")
-                                            .resizable()
-                                            .scaledToFit()
-                                            .frame(width: 16, height: 16)
-                                            .foregroundStyle(.secondary)
-                                            .padding()
+                                        Divider()
                                     }
-                                    
-                                    Divider()
+                                    .padding(.leading)
                                 }
                             }
                         }
                     } header: {
-                        VStack(alignment: .leading) {
-                            Text(color.name)
-                                .font(.largeTitle)
-                                .multilineTextAlignment(.leading)
-                            
-                            Text(color.hex)
-                                .font(.headline)
-                                .multilineTextAlignment(.leading)
-                            
-                            Text(color.rgb)
-                                .font(.subheadline)
-                                .foregroundStyle(.secondary)
-                                .multilineTextAlignment(.leading)
-                            
-                            Text(color.cmyk)
-                                .font(.subheadline)
-                                .foregroundStyle(.secondary)
-                                .multilineTextAlignment(.leading)
-                        }
-                        .padding()
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .background(backgroundColor)
-                        .copyFormats(of: color)
+                        detailHeader(for: color)
                     }
                 }
             }
@@ -131,6 +106,33 @@ struct ColorDetailView: View {
                 Text("Color Data")
             }
         }
+    }
+    
+    @ViewBuilder
+    private func detailHeader(for color: ColorModel) -> some View {
+        VStack(alignment: .leading) {
+            Text(color.name)
+                .font(.largeTitle)
+                .multilineTextAlignment(.leading)
+            
+            Text(color.hex)
+                .font(.headline)
+                .multilineTextAlignment(.leading)
+            
+            Text(color.rgb)
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+                .multilineTextAlignment(.leading)
+            
+            Text(color.cmyk)
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+                .multilineTextAlignment(.leading)
+        }
+        .padding()
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(backgroundColor)
+        .copyFormats(of: color)
     }
     
     @MainActor
