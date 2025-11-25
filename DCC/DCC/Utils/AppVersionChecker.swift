@@ -67,14 +67,3 @@ final class AppVersionChecker {
         return false
     }
 }
-
-// MARK: - Models
-
-private struct AppStoreResponse: Codable {
-    let results: [AppStoreResult]
-}
-
-private struct AppStoreResult: Codable {
-    let version: String
-    let trackId: Int
-}
