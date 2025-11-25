@@ -23,13 +23,12 @@ struct CombinationsView: View {
         }
         
         return viewModel.combinations.filter { combination in
-            let idMatch = String(combination.id).contains(searchText)
-            
-            let colorNameMatch = combination.colors.contains { color in
-                color.name.localizedCaseInsensitiveContains(searchText)
+            let colorMatch = combination.colors.contains { color in
+                color.name.localizedCaseInsensitiveContains(searchText) ||
+                color.hex.localizedCaseInsensitiveContains(searchText)
             }
             
-            return idMatch || colorNameMatch
+            return colorMatch
         }
     }
     
@@ -52,7 +51,7 @@ struct CombinationsView: View {
         .navigationTitle("Combinations")
         .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(backgroundColor)
-        .searchable(text: $searchText, prompt: "Search combinations by ID or color names")
+        .searchable(text: $searchText, prompt: "Search by color name or HEX code")
     }
 }
 
