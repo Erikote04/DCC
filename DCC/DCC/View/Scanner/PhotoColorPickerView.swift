@@ -5,11 +5,13 @@
 //  Created by Erik Sebastian de Erice Jerez on 13/11/25.
 //
 
+import StoreKit
 import SwiftUI
 import PhotosUI
 
 struct PhotoColorPickerView: View {
     @Environment(\.colorScheme) private var colorScheme
+    @Environment(\.requestReview) private var requestReview
     @State private var viewModel = PhotoColorPickerViewModel()
     
     private var backgroundColor: Color {
@@ -112,6 +114,7 @@ struct PhotoColorPickerView: View {
             if viewModel.selectedImage != nil {
                 Button {
                     viewModel.resetView()
+                    requestReview()
                 } label: {
                     Label("Try Another", systemImage: "arrow.counterclockwise")
                         .frame(maxWidth: .infinity)
