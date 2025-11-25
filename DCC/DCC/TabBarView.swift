@@ -5,12 +5,11 @@
 //  Created by Erik Sebastian de Erice Jerez on 28/6/25.
 //
 
-import StoreKit
 import SwiftUI
 
 struct TabBarView: View {
     @Environment(\.colorScheme) private var colorScheme
-    @Environment(\.requestReview) private var requestReview
+    @Environment(\.openURL) private var openURL
     @Bindable var viewModel: ColorCombinationViewModel
     
     private var backgroundColor: Color {
@@ -31,9 +30,18 @@ struct TabBarView: View {
         .sheet(isPresented: $viewModel.isShowingInfo) {
             InfoView()
         }
+        .alert("New version available", isPresented: $viewModel.versionChecker.showUpdateAlert) {
+            Button("Cancel", role: .cancel) { }
+            Button("Update") {
+                if let url = viewModel.versionChecker.appStoreURL {
+                    openURL(url)
+                }
+            }
+        } message: {
+            Text("There is a new version available in the App Store.")
+        }
         .task {
-            try? await Task.sleep(for: .seconds(5))
-            requestReview()
+            await viewModel.versionChecker.checkForUpdate()
         }
     }
     
@@ -61,8 +69,6 @@ struct TabBarView: View {
         }
     }
 }
-
-
 
 #Preview {
     TabBarView(viewModel: ColorCombinationViewModel())

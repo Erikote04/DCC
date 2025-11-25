@@ -15,6 +15,7 @@ final class ColorCombinationViewModel {
     var combinations: [Combination] = []
     var isShowingGrid: Bool = true
     var isShowingInfo: Bool = false
+    var versionChecker = AppVersionChecker()
     
     var appVersion: String {
         guard let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String else {
