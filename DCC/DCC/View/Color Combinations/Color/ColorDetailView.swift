@@ -56,8 +56,8 @@ struct ColorDetailView: View {
                                         }
                                         
                                         Divider()
+                                            .padding(.leading)
                                     }
-                                    .padding(.leading)
                                 }
                             }
                         }
