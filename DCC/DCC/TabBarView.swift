@@ -31,7 +31,8 @@ struct TabBarView: View {
         .sheet(isPresented: $viewModel.isShowingInfo) {
             InfoView()
         }
-        .onAppear {
+        .task {
+            try? await Task.sleep(for: .seconds(5))
             requestReview()
         }
     }
