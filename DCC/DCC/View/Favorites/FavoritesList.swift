@@ -53,7 +53,9 @@ struct FavoritesList: View {
                 case (.dictionary, .color):
                     if let colorId = item.colorId,
                        let color = getColorById(colorId) {
-                        NavigationLink(value: color) {
+                        NavigationLink {
+                            FavoriteColorDetailView(color: color)
+                        } label: {
                             colorRowView(color: color, item: item)
                         }
                     }
@@ -61,19 +63,35 @@ struct FavoritesList: View {
                 case (.dictionary, .combination):
                     if let combinationId = item.combinationId,
                        let combination = viewModel.getCombination(by: combinationId) {
-                        NavigationLink(value: combination) {
+                        NavigationLink {
+                            FavoriteCombinationDetailView(combination: combination)
+                        } label: {
                             combinationRowView(combination: combination, item: item)
                         }
                     }
                     
                 case (.scanner, .color):
                     if let scannerColor = item.scannerColor {
-                        scannerColorRowView(scannerColor: scannerColor, item: item)
+                        NavigationLink {
+                            ScannerColorDetailView(
+                                photoColorData: scannerColor,
+                                favoriteItem: item
+                            )
+                        } label: {
+                            scannerColorRowView(scannerColor: scannerColor, item: item)
+                        }
                     }
                     
                 case (.scanner, .combination):
                     if let scannerCombination = item.scannerCombination {
-                        scannerCombinationRowView(scannerCombination: scannerCombination, item: item)
+                        NavigationLink {
+                            ScannerCombinationDetailView(
+                                scannerCombination: scannerCombination,
+                                favoriteItem: item
+                            )
+                        } label: {
+                            scannerCombinationRowView(scannerCombination: scannerCombination, item: item)
+                        }
                     }
                 }
             }
@@ -113,6 +131,7 @@ struct FavoritesList: View {
             } label: {
                 Label("Delete", systemImage: "trash")
             }
+            .tint(.red)
         }
     }
     
@@ -145,6 +164,7 @@ struct FavoritesList: View {
             } label: {
                 Label("Delete", systemImage: "trash")
             }
+            .tint(.red)
         }
     }
     
@@ -178,6 +198,7 @@ struct FavoritesList: View {
             } label: {
                 Label("Delete", systemImage: "trash")
             }
+            .tint(.red)
         }
         .contextMenu {
             Button {
@@ -243,6 +264,7 @@ struct FavoritesList: View {
             } label: {
                 Label("Delete", systemImage: "trash")
             }
+            .tint(.red)
         }
     }
     
