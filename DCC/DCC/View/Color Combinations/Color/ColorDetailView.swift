@@ -11,6 +11,7 @@ struct ColorDetailView: View {
     @Environment(\.colorScheme) private var colorScheme
     @Environment(\.displayScale) var displayScale
     @Environment(ColorCombinationViewModel.self) private var viewModel
+    @Environment(FavoritesManager.self) private var favoritesManager
     
     let color: ColorModel
     
@@ -19,6 +20,10 @@ struct ColorDetailView: View {
     
     private var backgroundColor: Color {
         colorScheme == .dark ? .black : .white
+    }
+    
+    private var isFavorite: Bool {
+        favoritesManager.isFavoriteColor(id: color.id)
     }
     
     var body: some View {
@@ -67,10 +72,17 @@ struct ColorDetailView: View {
                 }
             }
         }
-        .navigationTitle(color.name)
-        .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(backgroundColor)
         .toolbar {
+            ToolbarItem(placement: .secondaryAction) {
+                Button {
+                    toggleFavorite()
+                } label: {
+                    Image(systemName: isFavorite ? "heart.fill" : "heart")
+                        .foregroundStyle(isFavorite ? .red : .primary)
+                }
+            }
+            
             ToolbarItem(placement: .primaryAction) {
                 Button {
                     showingShareDialog = true
@@ -166,6 +178,11 @@ struct ColorDetailView: View {
         
         return Image(systemName: "photo")
     }
+    
+    private func toggleFavorite() {
+        let favoriteItem = FavoriteItem(colorId: color.id)
+        favoritesManager.toggleFavorite(favoriteItem)
+    }
 }
 
 #Preview {
@@ -182,5 +199,6 @@ struct ColorDetailView: View {
         ))
     }
     .environment(ColorCombinationViewModel())
+    .environment(FavoritesManager())
     .tint(.primary)
 }

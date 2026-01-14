@@ -12,6 +12,7 @@ import PhotosUI
 struct PhotoColorPickerView: View {
     @Environment(\.colorScheme) private var colorScheme
     @Environment(\.requestReview) private var requestReview
+    @Environment(FavoritesManager.self) private var favoritesManager
     @State private var viewModel = PhotoColorPickerViewModel()
     
     private var backgroundColor: Color {
@@ -98,9 +99,22 @@ struct PhotoColorPickerView: View {
     @ViewBuilder
     private var colorsListSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("Extracted Colors")
-                .font(.title2.bold())
-                .frame(maxWidth: .infinity, alignment: .leading)
+            HStack {
+                Text("Extracted Colors")
+                    .font(.title2.bold())
+                
+                Spacer()
+                
+                Button {
+                    saveAllColors()
+                } label: {
+                    Image(systemName: "heart")
+                        .font(.title3)
+                        .padding(8)
+                }
+                .buttonStyle(.bordered)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
             
             ForEach(viewModel.extractedColors) { color in
                 PhotoColorRow(photoColor: color)
@@ -145,10 +159,17 @@ struct PhotoColorPickerView: View {
             }
         }
     }
+    
+    private func saveAllColors() {
+        let colorsData = viewModel.extractedColors.map { PhotoColorData(from: $0) }
+        let favoriteItem = FavoriteItem(scannerCombination: colorsData)
+        favoritesManager.toggleFavorite(favoriteItem)
+    }
 }
 
 #Preview {
     NavigationStack {
         PhotoColorPickerView()
     }
+    .environment(FavoritesManager())
 }

@@ -12,6 +12,7 @@ struct CombinationDetailView: View {
     @Environment(\.colorScheme) private var colorScheme
     @Environment(\.displayScale) var displayScale
     @Environment(ColorCombinationViewModel.self) private var viewModel
+    @Environment(FavoritesManager.self) private var favoritesManager
     
     @State private var shareImage = Image(systemName: "photo")
     
@@ -41,6 +42,10 @@ struct CombinationDetailView: View {
         colorScheme == .dark ? .black : .white
     }
     
+    private var isFavorite: Bool {
+        favoritesManager.isFavoriteCombination(id: combination.id)
+    }
+    
     var body: some View {
         VStack(spacing: .zero) {
             GeometryReader { geometry in
@@ -58,6 +63,15 @@ struct CombinationDetailView: View {
         .toolbarBackground(backGroundColor)
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
+                Button {
+                    toggleFavorite()
+                } label: {
+                    Image(systemName: isFavorite ? "heart.fill" : "heart")
+                        .foregroundStyle(isFavorite ? .red : .primary)
+                }
+            }
+            
+            ToolbarItem(placement: .secondaryAction) {
                 ShareLink(
                     item: shareImage,
                     preview: SharePreview(
@@ -138,5 +152,10 @@ struct CombinationDetailView: View {
     private func navigateToNextCombination() {
         guard let nextComb = nextCombination else { return }
         combination = nextComb
+    }
+    
+    private func toggleFavorite() {
+        let favoriteItem = FavoriteItem(combinationId: combination.id)
+        favoritesManager.toggleFavorite(favoriteItem)
     }
 }

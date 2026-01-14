@@ -10,11 +10,13 @@ import SwiftUI
 @main
 struct SanzoPaletteApp: App {
     @State private var viewModel = ColorCombinationViewModel()
+    @State private var favoritesManager = FavoritesManager()
     
     var body: some Scene {
         WindowGroup {
             TabBarView(viewModel: viewModel)
                 .environment(viewModel)
+                .environment(favoritesManager)
         }
     }
 }
