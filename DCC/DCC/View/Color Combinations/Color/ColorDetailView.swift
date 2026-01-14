@@ -74,7 +74,7 @@ struct ColorDetailView: View {
         }
         .toolbarBackground(backgroundColor)
         .toolbar {
-            ToolbarItem(placement: .secondaryAction) {
+            ToolbarItem {
                 Button {
                     toggleFavorite()
                 } label: {
@@ -83,7 +83,7 @@ struct ColorDetailView: View {
                 }
             }
             
-            ToolbarItem(placement: .primaryAction) {
+            ToolbarItem {
                 Button {
                     showingShareDialog = true
                 } label: {
