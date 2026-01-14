@@ -77,30 +77,6 @@ struct ScannerCombinationDetailView: View {
         Rectangle()
             .fill(color)
             .frame(maxWidth: .infinity, maxHeight: geometry.size.height / CGFloat(scannerCombination.count))
-            .overlay {
-                VStack(alignment: .leading, spacing: 8) {
-                    Text(colorData.hex)
-                        .font(.largeTitle)
-                        .multilineTextAlignment(.leading)
-                    
-                    Text(colorData.rgb)
-                        .font(.subheadline)
-                        .multilineTextAlignment(.leading)
-                    
-                    Text(colorData.cmyk)
-                        .font(.subheadline)
-                        .multilineTextAlignment(.leading)
-                    
-                    if colorData.percentage > 0 {
-                        Text(String(format: "%.1f%%", colorData.percentage))
-                            .font(.subheadline)
-                            .multilineTextAlignment(.leading)
-                    }
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .foregroundStyle(color.contrastingTextColor())
-                .padding(.leading)
-            }
             .contextMenu {
                 Button {
                     UIPasteboard.general.string = colorData.hex
