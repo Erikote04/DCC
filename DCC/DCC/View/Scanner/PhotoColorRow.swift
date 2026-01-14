@@ -12,7 +12,10 @@ struct PhotoColorRow: View {
     @Environment(FavoritesManager.self) private var favoritesManager
     
     let photoColor: PhotoColor
-    @State private var isFavorite = false
+    
+    private var isFavorite: Bool {
+        favoritesManager.isFavoriteScannerColor(hex: photoColor.hex)
+    }
     
     var body: some View {
         HStack(spacing: 0) {
@@ -45,21 +48,16 @@ struct PhotoColorRow: View {
         .background(photoColor.color)
         .cornerRadius(8)
         .copyFormats(of: photoColor)
-        .onAppear {
-            checkIfFavorite()
-        }
     }
     
     private func toggleFavorite() {
         let colorData = PhotoColorData(from: photoColor)
-        let favoriteItem = FavoriteItem(scannerColor: colorData)
-        favoritesManager.toggleFavorite(favoriteItem)
-        isFavorite = favoritesManager.isFavorite(favoriteItem)
-    }
-    
-    private func checkIfFavorite() {
-        let colorData = PhotoColorData(from: photoColor)
-        let favoriteItem = FavoriteItem(scannerColor: colorData)
-        isFavorite = favoritesManager.isFavorite(favoriteItem)
+        
+        if let existingItem = favoritesManager.getFavoriteItemForScannerColor(hex: photoColor.hex) {
+            favoritesManager.removeFavorite(existingItem)
+        } else {
+            let favoriteItem = FavoriteItem(scannerColor: colorData)
+            favoritesManager.addFavorite(favoriteItem)
+        }
     }
 }

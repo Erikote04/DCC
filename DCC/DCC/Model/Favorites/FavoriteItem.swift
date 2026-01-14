@@ -23,16 +23,9 @@ struct FavoriteItem: Codable, Identifiable, Hashable {
     let type: FavoriteType
     let timestamp: Date
     
-    // Para colores del diccionario
     let colorId: Int?
-    
-    // Para combinaciones del diccionario
     let combinationId: Int?
-    
-    // Para colores del scanner
     let scannerColor: PhotoColorData?
-    
-    // Para combinaciones del scanner
     let scannerCombination: [PhotoColorData]?
     
     init(colorId: Int, source: FavoriteSource = .dictionary) {
@@ -58,7 +51,7 @@ struct FavoriteItem: Codable, Identifiable, Hashable {
     }
     
     init(scannerColor: PhotoColorData) {
-        self.id = "scanner-color-\(UUID().uuidString)"
+        self.id = "scanner-color-\(scannerColor.hex)"
         self.source = .scanner
         self.type = .color
         self.timestamp = Date()
@@ -69,7 +62,8 @@ struct FavoriteItem: Codable, Identifiable, Hashable {
     }
     
     init(scannerCombination: [PhotoColorData]) {
-        self.id = "scanner-combination-\(UUID().uuidString)"
+        let hexString = scannerCombination.map { $0.hex }.joined(separator: "-")
+        self.id = "scanner-combination-\(hexString)"
         self.source = .scanner
         self.type = .combination
         self.timestamp = Date()
@@ -91,5 +85,12 @@ struct PhotoColorData: Codable, Hashable {
         self.rgb = photoColor.rgb
         self.cmyk = photoColor.cmyk
         self.percentage = photoColor.percentage
+    }
+    
+    init(hex: String, rgb: String, cmyk: String, percentage: Double) {
+        self.hex = hex
+        self.rgb = rgb
+        self.cmyk = cmyk
+        self.percentage = percentage
     }
 }

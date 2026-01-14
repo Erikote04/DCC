@@ -19,6 +19,11 @@ struct PhotoColorPickerView: View {
         colorScheme == .dark ? .black : .white
     }
     
+    private var isCombinationFavorite: Bool {
+        let hexValues = viewModel.extractedColors.map { $0.hex }
+        return favoritesManager.isFavoriteScannerCombination(hexValues: hexValues)
+    }
+    
     var body: some View {
         ScrollView {
             VStack(spacing: 20) {
@@ -108,7 +113,8 @@ struct PhotoColorPickerView: View {
                 Button {
                     saveAllColors()
                 } label: {
-                    Image(systemName: "heart")
+                    Image(systemName: isCombinationFavorite ? "heart.fill" : "heart")
+                        .foregroundStyle(isCombinationFavorite ? .red : .primary)
                         .font(.title3)
                         .padding(8)
                 }
@@ -162,8 +168,14 @@ struct PhotoColorPickerView: View {
     
     private func saveAllColors() {
         let colorsData = viewModel.extractedColors.map { PhotoColorData(from: $0) }
-        let favoriteItem = FavoriteItem(scannerCombination: colorsData)
-        favoritesManager.toggleFavorite(favoriteItem)
+        let hexValues = colorsData.map { $0.hex }
+        
+        if let existingItem = favoritesManager.getFavoriteItemForScannerCombination(hexValues: hexValues) {
+            favoritesManager.removeFavorite(existingItem)
+        } else {
+            let favoriteItem = FavoriteItem(scannerCombination: colorsData)
+            favoritesManager.addFavorite(favoriteItem)
+        }
     }
 }
 

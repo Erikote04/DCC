@@ -68,6 +68,38 @@ class FavoritesManager {
         return favorites.contains { $0.id == itemId }
     }
     
+    // MARK: - Scanner Specific Methods
+    
+    func isFavoriteScannerColor(hex: String) -> Bool {
+        return favorites.contains { item in
+            guard item.source == .scanner, item.type == .color else { return false }
+            return item.scannerColor?.hex == hex
+        }
+    }
+    
+    func isFavoriteScannerCombination(hexValues: [String]) -> Bool {
+        return favorites.contains { item in
+            guard item.source == .scanner, item.type == .combination else { return false }
+            let itemHexValues = item.scannerCombination?.map { $0.hex } ?? []
+            return itemHexValues == hexValues
+        }
+    }
+    
+    func getFavoriteItemForScannerColor(hex: String) -> FavoriteItem? {
+        return favorites.first { item in
+            guard item.source == .scanner, item.type == .color else { return false }
+            return item.scannerColor?.hex == hex
+        }
+    }
+    
+    func getFavoriteItemForScannerCombination(hexValues: [String]) -> FavoriteItem? {
+        return favorites.first { item in
+            guard item.source == .scanner, item.type == .combination else { return false }
+            let itemHexValues = item.scannerCombination?.map { $0.hex } ?? []
+            return itemHexValues == hexValues
+        }
+    }
+    
     // MARK: - Filter Methods
     
     func getFavorites(source: FavoriteSource, type: FavoriteType) -> [FavoriteItem] {
