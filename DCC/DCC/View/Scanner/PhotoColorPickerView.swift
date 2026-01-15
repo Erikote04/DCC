@@ -113,8 +113,8 @@ struct PhotoColorPickerView: View {
                 Button {
                     saveAllColors()
                 } label: {
-                    Image(systemName: isCombinationFavorite ? "heart.fill" : "heart")
-                        .foregroundStyle(isCombinationFavorite ? .red : .primary)
+                    Image(systemName: isCombinationFavorite ? "bookmark.fill" : "bookmark")
+                        .foregroundStyle(isCombinationFavorite ? .yellow : .primary)
                         .font(.title3)
                         .padding(8)
                 }

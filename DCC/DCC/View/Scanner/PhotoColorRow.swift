@@ -36,10 +36,10 @@ struct PhotoColorRow: View {
             Button {
                 toggleFavorite()
             } label: {
-                Image(systemName: isFavorite ? "heart.fill" : "heart")
-                    .foregroundStyle(isFavorite ? .red : photoColor.color.contrastingTextColor())
+                Image(systemName: isFavorite ? "bookmark.fill" : "bookmark")
+                    .foregroundStyle(isFavorite ? .yellow : photoColor.color.contrastingTextColor())
                     .font(.title3)
-                    .padding(12)
+                    .padding(8)
                     .contentShape(Rectangle())
             }
         }

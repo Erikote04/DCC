@@ -37,7 +37,7 @@ struct FavoritesList: View {
     @ViewBuilder
     private var emptyStateView: some View {
         ContentUnavailableView {
-            Label("No Favorites Yet", systemImage: "heart.slash")
+            Label("No Favorites Yet", systemImage: "bookmark.slash")
         } description: {
             Text("Items you favorite will appear here")
         }

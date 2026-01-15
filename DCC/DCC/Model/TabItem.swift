@@ -28,7 +28,7 @@ enum TabItem: String, CaseIterable, Identifiable, Hashable {
         switch self {
         case .colors: return "paintpalette.fill"
         case .combinations: return "swatchpalette.fill"
-        case .favorites: return "heart.fill"
+        case .favorites: return "bookmark.fill"
         case .scan: return "camera"
         }
     }

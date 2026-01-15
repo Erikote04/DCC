@@ -47,8 +47,8 @@ struct FavoriteCombinationDetailView: View {
                     Button {
                         toggleFavorite()
                     } label: {
-                        Image(systemName: isFavorite ? "heart.fill" : "heart")
-                            .foregroundStyle(isFavorite ? .red : .primary)
+                        Image(systemName: isFavorite ? "bookmark.fill" : "bookmark")
+                            .foregroundStyle(isFavorite ? .yellow : .primary)
                     }
                     
                     ShareLink(
