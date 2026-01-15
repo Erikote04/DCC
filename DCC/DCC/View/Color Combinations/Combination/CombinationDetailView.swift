@@ -58,32 +58,9 @@ struct CombinationDetailView: View {
                 }
             }
         }
-        .navigationTitle("#\(combination.id)")
-        .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(backGroundColor)
         .toolbar {
-            ToolbarItem(placement: .primaryAction) {
-                Button {
-                    toggleFavorite()
-                } label: {
-                    Image(systemName: isFavorite ? "heart.fill" : "heart")
-                        .foregroundStyle(isFavorite ? .red : .primary)
-                }
-            }
-            
-            ToolbarItem(placement: .secondaryAction) {
-                ShareLink(
-                    item: shareImage,
-                    preview: SharePreview(
-                        "Color Combination #\(combination.id)",
-                        image: shareImage
-                    )
-                ) {
-                    Image(systemName: "square.and.arrow.up")
-                }
-            }
-            
-            ToolbarItemGroup(placement: .navigation) {
+            ToolbarItemGroup {
                 HStack {
                     Button { navigateToPreviousCombination() }
                     label: { Image(systemName: "chevron.left") }
@@ -92,6 +69,27 @@ struct CombinationDetailView: View {
                     Button { navigateToNextCombination() }
                     label: { Image(systemName: "chevron.right") }
                         .disabled(!hasNextCombination)
+                }
+            }
+            
+            ToolbarItem {
+                Button {
+                    toggleFavorite()
+                } label: {
+                    Image(systemName: isFavorite ? "heart.fill" : "heart")
+                        .foregroundStyle(isFavorite ? .red : .primary)
+                }
+            }
+            
+            ToolbarItem {
+                ShareLink(
+                    item: shareImage,
+                    preview: SharePreview(
+                        "Color Combination #\(combination.id)",
+                        image: shareImage
+                    )
+                ) {
+                    Image(systemName: "square.and.arrow.up")
                 }
             }
         }
