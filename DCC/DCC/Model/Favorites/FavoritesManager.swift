@@ -28,6 +28,8 @@ class FavoritesManager {
     }
     
     private func saveFavorites() {
+        favorites.sort { $0.timestamp > $1.timestamp }
+        
         if let encoded = try? JSONEncoder().encode(favorites) {
             UserDefaults.standard.set(encoded, forKey: userDefaultsKey)
         }
@@ -45,7 +47,7 @@ class FavoritesManager {
     
     func addFavorite(_ item: FavoriteItem) {
         guard !isFavorite(item) else { return }
-        favorites.append(item)
+        favorites.insert(item, at: 0)
         saveFavorites()
     }
     
