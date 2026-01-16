@@ -19,7 +19,7 @@ final class AppVersionChecker {
     private let appId: String = "6755197266"
     
     init(bundleId: String = "com.erikerice.Colors",
-         currentVersion: String = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0") {
+         currentVersion: String = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "2.0") {
         self.bundleId = bundleId
         self.currentVersion = currentVersion
     }
