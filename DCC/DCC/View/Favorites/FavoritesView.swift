@@ -65,7 +65,7 @@ struct FavoritesView: View {
         Section("Scanner") {
             NavigationLink {
                 FavoritesList(
-                    title: "Scanner Colors",
+                    title: "Scanned Colors",
                     items: favoritesManager.getScannerColors()
                 )
             } label: {
@@ -79,7 +79,7 @@ struct FavoritesView: View {
             
             NavigationLink {
                 FavoritesList(
-                    title: "Scanner Combinations",
+                    title: "Scanned Combinations",
                     items: favoritesManager.getScannerCombinations()
                 )
             } label: {

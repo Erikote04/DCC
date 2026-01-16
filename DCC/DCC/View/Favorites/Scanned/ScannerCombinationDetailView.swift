@@ -15,7 +15,9 @@ struct ScannerCombinationDetailView: View {
     let scannerCombination: [PhotoColorData]
     let favoriteItem: FavoriteItem
     
-    @State private var shareImage = Image(systemName: "photo")
+    @State private var plainImage = Image(systemName: "photo")
+    @State private var imageWithLabels = Image(systemName: "photo")
+    @State private var showingShareDialog = false
     
     private var backgroundColor: Color {
         colorScheme == .dark ? .black : .white
@@ -55,19 +57,43 @@ struct ScannerCombinationDetailView: View {
                             .foregroundStyle(isFavorite ? .yellow : .primary)
                     }
                     
-                    ShareLink(
-                        item: shareImage,
-                        preview: SharePreview(
-                            "Scanner Combination",
-                            image: shareImage
-                        )
-                    ) {
+                    Button {
+                        showingShareDialog = true
+                    } label: {
                         Image(systemName: "square.and.arrow.up")
                     }
                 }
             }
         }
-        .onAppear { renderCombinationImage() }
+        .onAppear {
+            renderPlainImage()
+            renderImageWithLabels()
+        }
+        .confirmationDialog(
+            Text("How do you want to share this combination?"),
+            isPresented: $showingShareDialog,
+            titleVisibility: .visible
+        ) {
+            ShareLink(
+                item: plainImage,
+                preview: SharePreview(
+                    "Scanner Combination",
+                    image: plainImage
+                )
+            ) {
+                Text("Plain Colors")
+            }
+            
+            ShareLink(
+                item: imageWithLabels,
+                preview: SharePreview(
+                    "Scanner Combination with Labels",
+                    image: imageWithLabels
+                )
+            ) {
+                Text("Colors with HEX Codes")
+            }
+        }
     }
     
     @ViewBuilder
@@ -77,29 +103,34 @@ struct ScannerCombinationDetailView: View {
         Rectangle()
             .fill(color)
             .frame(maxWidth: .infinity, maxHeight: geometry.size.height / CGFloat(scannerCombination.count))
+            .overlay {
+                Text(colorData.hex)
+                    .font(.headline)
+                    .foregroundStyle(color.contrastingTextColor())
+            }
             .contextMenu {
                 Button {
                     UIPasteboard.general.string = colorData.hex
                 } label: {
-                    Label("Copy HEX", systemImage: "doc.on.doc")
+                    Text("Copy HEX")
                 }
                 
                 Button {
                     UIPasteboard.general.string = colorData.rgb
                 } label: {
-                    Label("Copy RGB", systemImage: "doc.on.doc")
+                    Text("Copy RGB")
                 }
                 
                 Button {
                     UIPasteboard.general.string = colorData.cmyk
                 } label: {
-                    Label("Copy CMYK", systemImage: "doc.on.doc")
+                    Text("Copy CMYK")
                 }
             }
     }
     
     @MainActor
-    private func renderCombinationImage() {
+    private func renderPlainImage() {
         let combinationForImage = VStack(spacing: 0) {
             ForEach(scannerCombination, id: \.hex) { colorData in
                 Rectangle()
@@ -114,7 +145,32 @@ struct ScannerCombinationDetailView: View {
         renderer.scale = displayScale
         
         if let uiImage = renderer.uiImage {
-            shareImage = Image(uiImage: uiImage)
+            plainImage = Image(uiImage: uiImage)
+        }
+    }
+    
+    @MainActor
+    private func renderImageWithLabels() {
+        let combinationForImage = VStack(spacing: 0) {
+            ForEach(scannerCombination, id: \.hex) { colorData in
+                Rectangle()
+                    .fill(Color(hex: colorData.hex) ?? .gray)
+                    .frame(maxWidth: .infinity)
+                    .overlay(
+                        Text(colorData.hex)
+                            .font(.headline)
+                            .foregroundStyle((Color(hex: colorData.hex) ?? .gray).contrastingTextColor())
+                    )
+            }
+        }
+        .frame(width: 400, height: 700)
+        .background(Color(UIColor.systemBackground))
+        
+        let renderer = ImageRenderer(content: combinationForImage)
+        renderer.scale = displayScale
+        
+        if let uiImage = renderer.uiImage {
+            imageWithLabels = Image(uiImage: uiImage)
         }
     }
     

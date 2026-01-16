@@ -65,6 +65,7 @@ struct FavoritesList: View {
                        let combination = viewModel.getCombination(by: combinationId) {
                         NavigationLink {
                             FavoriteCombinationDetailView(combination: combination)
+                                .toolbarVisibility(.hidden, for: .tabBar)
                         } label: {
                             combinationRowView(combination: combination, item: item)
                         }
@@ -89,6 +90,7 @@ struct FavoritesList: View {
                                 scannerCombination: scannerCombination,
                                 favoriteItem: item
                             )
+                            .toolbarVisibility(.hidden, for: .tabBar)
                         } label: {
                             scannerCombinationRowView(scannerCombination: scannerCombination, item: item)
                         }
@@ -97,6 +99,7 @@ struct FavoritesList: View {
             }
             .onDelete(perform: deleteItems)
         }
+        .listStyle(.plain)
     }
     
     // MARK: - Dictionary Color Row
@@ -106,7 +109,7 @@ struct FavoritesList: View {
         HStack {
             RoundedRectangle(cornerRadius: 8)
                 .fill(color.color)
-                .frame(width: 60, height: 60)
+                .frame(width: 44, height: 44)
                 .overlay {
                     if colorScheme == .dark && color.hex == "#000000" {
                         RoundedRectangle(cornerRadius: 8)
@@ -139,33 +142,16 @@ struct FavoritesList: View {
     
     @ViewBuilder
     private func combinationRowView(combination: Combination, item: FavoriteItem) -> some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Text("Combination #\(combination.id)")
-                .font(.headline)
-            
-            HStack(spacing: 0) {
-                ForEach(combination.colors) { color in
-                    Rectangle()
-                        .fill(color.color)
-                        .frame(maxWidth: .infinity)
+        CombinationRow(combination: combination)
+            .padding(.vertical, 4)
+            .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                Button(role: .destructive) {
+                    favoritesManager.removeFavorite(item)
+                } label: {
+                    Label("Delete", systemImage: "trash")
                 }
+                .tint(.red)
             }
-            .frame(height: 40)
-            .clipShape(RoundedRectangle(cornerRadius: 8))
-            .overlay(
-                RoundedRectangle(cornerRadius: 8)
-                    .stroke(.tertiary, lineWidth: 2)
-            )
-        }
-        .padding(.vertical, 4)
-        .swipeActions(edge: .trailing, allowsFullSwipe: true) {
-            Button(role: .destructive) {
-                favoritesManager.removeFavorite(item)
-            } label: {
-                Label("Delete", systemImage: "trash")
-            }
-            .tint(.red)
-        }
     }
     
     // MARK: - Scanner Color Row
@@ -175,7 +161,7 @@ struct FavoritesList: View {
         HStack {
             RoundedRectangle(cornerRadius: 8)
                 .fill(Color(hex: scannerColor.hex) ?? .gray)
-                .frame(width: 60, height: 60)
+                .frame(width: 44, height: 44)
             
             VStack(alignment: .leading, spacing: 4) {
                 Text(scannerColor.hex)
@@ -225,39 +211,19 @@ struct FavoritesList: View {
     
     @ViewBuilder
     private func scannerCombinationRowView(scannerCombination: [PhotoColorData], item: FavoriteItem) -> some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Text("Scanner Combination")
-                .font(.headline)
-            
-            HStack(spacing: 0) {
-                ForEach(scannerCombination, id: \.hex) { colorData in
-                    Rectangle()
-                        .fill(Color(hex: colorData.hex) ?? .gray)
-                        .frame(maxWidth: .infinity)
-                }
-            }
-            .frame(height: 40)
-            .clipShape(RoundedRectangle(cornerRadius: 8))
-            .overlay(
-                RoundedRectangle(cornerRadius: 8)
-                    .stroke(.tertiary, lineWidth: 2)
-            )
-            
-            VStack(alignment: .leading, spacing: 4) {
-                ForEach(scannerCombination, id: \.hex) { colorData in
-                    HStack {
-                        Circle()
-                            .fill(Color(hex: colorData.hex) ?? .gray)
-                            .frame(width: 12, height: 12)
-                        
-                        Text(colorData.hex)
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
-                    }
-                }
+        HStack(spacing: .zero) {
+            ForEach(scannerCombination, id: \.hex) { colorData in
+                Rectangle()
+                    .fill(Color(hex: colorData.hex) ?? .gray)
+                    .frame(maxWidth: .infinity)
             }
         }
-        .padding(.vertical, 4)
+        .frame(height: 44)
+        .clipShape(RoundedRectangle(cornerRadius: 8))
+        .overlay(
+            RoundedRectangle(cornerRadius: 8)
+                .stroke(.tertiary, lineWidth: 2)
+        )
         .swipeActions(edge: .trailing, allowsFullSwipe: true) {
             Button(role: .destructive) {
                 favoritesManager.removeFavorite(item)

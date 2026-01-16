@@ -51,6 +51,7 @@ struct TabBarView: View {
             tab.body
                 .navigationDestination(for: Combination.self) { combination in
                     CombinationDetailView(combination: combination)
+                        .toolbarVisibility(.hidden, for: .tabBar)
                 }
                 .navigationDestination(for: ColorModel.self) { color in
                     ColorDetailView(color: color)
