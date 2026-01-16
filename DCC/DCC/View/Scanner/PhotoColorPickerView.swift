@@ -173,7 +173,10 @@ struct PhotoColorPickerView: View {
         if let existingItem = favoritesManager.getFavoriteItemForScannerCombination(hexValues: hexValues) {
             favoritesManager.removeFavorite(existingItem)
         } else {
-            let favoriteItem = FavoriteItem(scannerCombination: colorsData)
+            let favoriteItem = FavoriteItem(
+                scannerCombination: colorsData,
+                thumbnail: viewModel.selectedImage
+            )
             favoritesManager.addFavorite(favoriteItem)
         }
     }

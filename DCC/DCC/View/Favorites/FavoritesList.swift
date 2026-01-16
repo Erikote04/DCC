@@ -207,23 +207,43 @@ struct FavoritesList: View {
         }
     }
     
-    // MARK: - Scanner Combination Row
-    
     @ViewBuilder
     private func scannerCombinationRowView(scannerCombination: [PhotoColorData], item: FavoriteItem) -> some View {
-        HStack(spacing: .zero) {
-            ForEach(scannerCombination, id: \.hex) { colorData in
-                Rectangle()
-                    .fill(Color(hex: colorData.hex) ?? .gray)
-                    .frame(maxWidth: .infinity)
+        VStack(alignment: .leading, spacing: 8) {
+            HStack(spacing: 12) {
+                if let thumbnailData = item.thumbnailData,
+                   let uiImage = UIImage(data: thumbnailData) {
+                    Image(uiImage: uiImage)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 44, height: 44)
+                        .clipShape(RoundedRectangle(cornerRadius: 8))
+                } else {
+                    RoundedRectangle(cornerRadius: 8)
+                        .fill(Color.secondary.opacity(0.2))
+                        .frame(width: 44, height: 44)
+                        .overlay {
+                            Image(systemName: "photo")
+                                .foregroundStyle(.secondary)
+                        }
+                }
+                
+                HStack(spacing: 0) {
+                    ForEach(scannerCombination, id: \.hex) { colorData in
+                        Rectangle()
+                            .fill(Color(hex: colorData.hex) ?? .gray)
+                            .frame(maxWidth: .infinity)
+                    }
+                }
+                .frame(height: 44)
+                .clipShape(RoundedRectangle(cornerRadius: 8))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(.tertiary, lineWidth: 2)
+                )
             }
         }
-        .frame(height: 44)
-        .clipShape(RoundedRectangle(cornerRadius: 8))
-        .overlay(
-            RoundedRectangle(cornerRadius: 8)
-                .stroke(.tertiary, lineWidth: 2)
-        )
+        .padding(.vertical, 4)
         .swipeActions(edge: .trailing, allowsFullSwipe: true) {
             Button(role: .destructive) {
                 favoritesManager.removeFavorite(item)
@@ -248,15 +268,4 @@ struct FavoritesList: View {
             favoritesManager.removeFavorite(item)
         }
     }
-}
-
-#Preview {
-    NavigationStack {
-        FavoritesList(
-            title: "Dictionary Colors",
-            items: []
-        )
-    }
-    .environment(ColorCombinationViewModel())
-    .environment(FavoritesManager())
 }

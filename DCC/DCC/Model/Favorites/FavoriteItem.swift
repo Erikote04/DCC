@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum FavoriteSource: String, Codable {
     case dictionary
@@ -27,6 +28,7 @@ struct FavoriteItem: Codable, Identifiable, Hashable {
     let combinationId: Int?
     let scannerColor: PhotoColorData?
     let scannerCombination: [PhotoColorData]?
+    let thumbnailData: Data?
     
     init(colorId: Int, source: FavoriteSource = .dictionary) {
         self.id = "\(source.rawValue)-color-\(colorId)"
@@ -37,6 +39,7 @@ struct FavoriteItem: Codable, Identifiable, Hashable {
         self.combinationId = nil
         self.scannerColor = nil
         self.scannerCombination = nil
+        self.thumbnailData = nil
     }
     
     init(combinationId: Int, source: FavoriteSource = .dictionary) {
@@ -48,6 +51,7 @@ struct FavoriteItem: Codable, Identifiable, Hashable {
         self.combinationId = combinationId
         self.scannerColor = nil
         self.scannerCombination = nil
+        self.thumbnailData = nil
     }
     
     init(scannerColor: PhotoColorData) {
@@ -59,9 +63,10 @@ struct FavoriteItem: Codable, Identifiable, Hashable {
         self.combinationId = nil
         self.scannerColor = scannerColor
         self.scannerCombination = nil
+        self.thumbnailData = nil
     }
     
-    init(scannerCombination: [PhotoColorData]) {
+    init(scannerCombination: [PhotoColorData], thumbnail: UIImage? = nil) {
         let hexString = scannerCombination.map { $0.hex }.joined(separator: "-")
         self.id = "scanner-combination-\(hexString)"
         self.source = .scanner
@@ -71,6 +76,21 @@ struct FavoriteItem: Codable, Identifiable, Hashable {
         self.combinationId = nil
         self.scannerColor = nil
         self.scannerCombination = scannerCombination
+        
+        if let thumbnail = thumbnail {
+            self.thumbnailData = Self.generateThumbnail(from: thumbnail)
+        } else {
+            self.thumbnailData = nil
+        }
+    }
+    
+    private static func generateThumbnail(from image: UIImage, size: CGSize = CGSize(width: 64, height: 64)) -> Data? {
+        let renderer = UIGraphicsImageRenderer(size: size)
+        let thumbnail = renderer.image { _ in
+            image.draw(in: CGRect(origin: .zero, size: size))
+        }
+        
+        return thumbnail.jpegData(compressionQuality: 0.5)
     }
 }
 
