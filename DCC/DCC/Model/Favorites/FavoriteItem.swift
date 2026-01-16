@@ -85,9 +85,30 @@ struct FavoriteItem: Codable, Identifiable, Hashable {
     }
     
     private static func generateThumbnail(from image: UIImage, size: CGSize = CGSize(width: 64, height: 64)) -> Data? {
+        let aspectRatio = image.size.width / image.size.height
+        var drawRect = CGRect.zero
+        
+        if aspectRatio > 1 {
+            let scaledWidth = size.height * aspectRatio
+            drawRect = CGRect(
+                x: -(scaledWidth - size.width) / 2,
+                y: 0,
+                width: scaledWidth,
+                height: size.height
+            )
+        } else {
+            let scaledHeight = size.width / aspectRatio
+            drawRect = CGRect(
+                x: 0,
+                y: -(scaledHeight - size.height) / 2,
+                width: size.width,
+                height: scaledHeight
+            )
+        }
+        
         let renderer = UIGraphicsImageRenderer(size: size)
-        let thumbnail = renderer.image { _ in
-            image.draw(in: CGRect(origin: .zero, size: size))
+        let thumbnail = renderer.image { context in
+            image.draw(in: drawRect)
         }
         
         return thumbnail.jpegData(compressionQuality: 0.5)
