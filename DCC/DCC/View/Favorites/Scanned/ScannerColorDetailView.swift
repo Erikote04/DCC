@@ -15,7 +15,8 @@ struct ScannerColorDetailView: View {
     let photoColorData: PhotoColorData
     let favoriteItem: FavoriteItem
     
-    @State private var shareImage = Image(systemName: "photo")
+    @State private var plainImage = Image(systemName: "photo")
+    @State private var showingShareDialog = false
     
     private var backgroundColor: Color {
         colorScheme == .dark ? .black : .white
@@ -103,27 +104,48 @@ struct ScannerColorDetailView: View {
                     Button {
                         toggleFavorite()
                     } label: {
-                        Image(systemName: isFavorite ? "bookmark.fill" : "bookmark")
-                            .foregroundStyle(isFavorite ? .yellow : .primary)
+                        Image(systemName: isFavorite ? "heart.fill" : "heart")
+                            .foregroundStyle(isFavorite ? .red : .primary)
                     }
                     
-                    ShareLink(
-                        item: shareImage,
-                        preview: SharePreview(
-                            "Scanner Color: \(photoColorData.hex)",
-                            image: shareImage
-                        )
-                    ) {
+                    Button {
+                        showingShareDialog = true
+                    } label: {
                         Image(systemName: "square.and.arrow.up")
                     }
                 }
             }
         }
-        .onAppear { renderColorImage() }
+        .onAppear { renderPlainImage() }
+        .confirmationDialog(
+            Text("How do you want to share this color?"),
+            isPresented: $showingShareDialog,
+            titleVisibility: .visible
+        ) {
+            ShareLink(
+                item: plainImage,
+                preview: SharePreview(
+                    "Scanner Color: \(photoColorData.hex)",
+                    image: plainImage
+                )
+            ) {
+                Text("Plain Color")
+            }
+            
+            ShareLink(
+                item: renderColorDataImage(),
+                preview: SharePreview(
+                    "Scanner Color Data: \(photoColorData.hex)",
+                    image: renderColorDataImage()
+                )
+            ) {
+                Text("Color Data")
+            }
+        }
     }
     
     @MainActor
-    private func renderColorImage() {
+    private func renderPlainImage() {
         let plainColorForImage = Rectangle()
             .fill(color)
             .frame(width: 400, height: 700)
@@ -133,11 +155,49 @@ struct ScannerColorDetailView: View {
         renderer.scale = displayScale
         
         if let uiImage = renderer.uiImage {
-            shareImage = Image(uiImage: uiImage)
+            plainImage = Image(uiImage: uiImage)
         }
+    }
+    
+    @MainActor
+    private func renderColorDataImage() -> Image {
+        let colorDataForImage = ScannedColorData(photoColorData: photoColorData)
+            .frame(width: 400, height: 700)
+            .background(Color(UIColor.systemBackground))
+        
+        let renderer = ImageRenderer(content: colorDataForImage)
+        renderer.scale = displayScale
+        
+        if let uiImage = renderer.uiImage {
+            return Image(uiImage: uiImage)
+        }
+        
+        return Image(systemName: "photo")
     }
     
     private func toggleFavorite() {
         favoritesManager.toggleFavorite(favoriteItem)
     }
+}
+
+#Preview {
+    NavigationStack {
+        ScannerColorDetailView(
+            photoColorData: PhotoColorData(
+                hex: "#FF5733",
+                rgb: "RGB(255, 87, 51)",
+                cmyk: "CMYK(0, 66, 80, 0)",
+                percentage: 45.5
+            ),
+            favoriteItem: FavoriteItem(
+                scannerColor: PhotoColorData(
+                    hex: "#FF5733",
+                    rgb: "RGB(255, 87, 51)",
+                    cmyk: "CMYK(0, 66, 80, 0)",
+                    percentage: 45.5
+                )
+            )
+        )
+    }
+    .environment(FavoritesManager())
 }
